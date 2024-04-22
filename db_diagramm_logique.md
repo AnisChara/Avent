@@ -12,9 +12,9 @@ erDiagram
         date date_naissance
         date date_inscription
         bool is_verif
-        foreign_key is_marque
-        foreign_key pp
-        foreign_key genre
+        int FK_is_marque
+        int FK_pp
+        int FK_genre
     }
 
     avent {
@@ -35,16 +35,16 @@ erDiagram
         string sous_genre
         date date_creation
         int age_minimum
-        foreign_key state
-        foreign_key createur
+        int FK_state
+        int FK_createur
     }
 
     task {
         int task_id
         string content
         bool state
-        foreign_key avent_id
-        foreign_key finisseur
+        int FK_avent_id
+        int FK_finisseur
     }
 
     state {
@@ -74,38 +74,38 @@ erDiagram
     }
 
     photo_for_avent {
-        foreign_key photo_id
-        foreign_key avent_id
+        int FK_photo_id
+        int FK_avent_id
     }
 
     fav_avent_for_user {
-        foreign_key user_id
-        foreign_key avent_id
+        int FK_user_id
+        int FK_avent_id
     }
 
     fav_theme_for_user {
-        foreign_key user_id
-        foreign_key theme_id
+        int FK_user_id
+        int FK_theme_id
     }
 
     organisateur_avent {
-        foreign_key user_id
-        foreign_key avent_id
+        int FK_user_id
+        int FK_avent_id
     }
 
     sponso_avent {
-        foreign_key brand_id
-        foreign_key avent_id
+        int FK_brand_id
+        int FK_avent_id
     }
 
     theme_for_avent {
-        foreign_key theme_id
-        foreign_key avent_id
+        int FK_theme_id
+        int FK_avent_id
     }
 
     inscrit {
-        foreign_key user_id
-        foreign_key avent_id
+        int FK_user_id
+        int FK_avent_id
     }
 
     user }|--o| brand : represents
