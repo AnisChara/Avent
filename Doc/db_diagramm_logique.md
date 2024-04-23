@@ -32,7 +32,7 @@ erDiagram
         int capacity
         bool is_payant
         bool is_public
-        string sous_genre
+        int  FK_sous_genre
         date date_creation
         int age_minimum
         int FK_state
@@ -108,6 +108,11 @@ erDiagram
         int FK_avent_id
     }
 
+    sous_genre {
+        int sous_genre_id
+        string sous_genre_name
+    }
+
     user }|--o| brand : represents
     user }o--|| genre : is
     user }o--|| photo : has
@@ -126,6 +131,7 @@ erDiagram
     avent }o--|{ photo_for_avent : has
     photo_for_avent }o--|{ photo : has
     avent ||--o{ task : has
+    avent ||--o{ sous_genre : has
 
     avent }o--|{ organisateur_avent : organize
     organisateur_avent }o--|{ user : organize

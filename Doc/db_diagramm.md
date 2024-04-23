@@ -29,7 +29,6 @@ erDiagram
         int capacity
         bool is_payant
         bool is_public
-        string sous_genre
         date date_creation
         int age_minimum
     }
@@ -66,6 +65,11 @@ erDiagram
         blob photo
     }
 
+    sous_genre {
+        int sous_genre_id
+        string sous_genre_name
+    }
+
     user }|--o| brand : represents
     user }o--|| genre : is
     user }o--|| photo : has
@@ -80,6 +84,7 @@ erDiagram
     avent }o--|{ user : organize
     avent }o--o{ brand : sponsorized_by
     avent }o--|{ theme : has
+    avent ||--o{ sous_genre : has
 
     task }o--|| user : finished
 
