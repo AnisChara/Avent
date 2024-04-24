@@ -33,10 +33,10 @@ CREATE TABLE photo
     photo_file BLOB
 );
 
-CREATE TABLE sous_genre
+CREATE TABLE sous_theme
 (
-    sous_genre_id INT PRIMARY KEY AUTO_INCREMENT,
-    sous_genre_name VARCHAR(255)
+    sous_theme_id INT PRIMARY KEY AUTO_INCREMENT,
+    sous_theme_name VARCHAR(255)
 );
 
 CREATE TABLE task
@@ -79,7 +79,7 @@ CREATE TABLE avent
     is_public BOOLEAN,
     date_creation DATE,
     age_minimum TINYINT,
-    sous_genre INT,
+    sous_theme INT,
     etat INT,
     createur INT
 );
@@ -130,7 +130,7 @@ ALTER TABLE user ADD FOREIGN KEY (is_brand) REFERENCES brand(brand_id);
 ALTER TABLE user ADD FOREIGN KEY (genre) REFERENCES genre(genre_id);
 ALTER TABLE user ADD FOREIGN KEY (pp) REFERENCES photo(photo_id);
  
-ALTER TABLE avent ADD FOREIGN KEY (sous_genre) REFERENCES sous_genre(sous_genre_id);
+ALTER TABLE avent ADD FOREIGN KEY (sous_theme) REFERENCES sous_theme(sous_theme_id);
 ALTER TABLE avent ADD FOREIGN KEY (etat) REFERENCES etat_type(etat_id);
 ALTER TABLE avent ADD FOREIGN KEY (createur) REFERENCES user(user_id);
  
