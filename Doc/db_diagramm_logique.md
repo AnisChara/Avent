@@ -113,34 +113,50 @@ erDiagram
         string sous_genre_name
     }
 
+    suggestion {
+        int user_id
+        int avent_id
+    }
+
+    views {
+        int user_id
+        int avent_id
+    }
+
     user }|--o| brand : represents
     user }o--|| genre : is
     user }o--|| photo : has
 
-    user }o--o{ fav_avent_for_user : a_fav
-    fav_avent_for_user }o--o{ avent : a_fav
+    user ||--o{ suggestion : has_suggestion
+    avent ||--o{ suggestion : suggested_for
 
-    user }o--o{ fav_theme_for_user : like 
-    fav_theme_for_user }o--o{ theme : like 
+    user ||--o{ views : saw
+    avent ||--o{ views : saw_by
 
-    user }o--o{ inscrit : inscrit_a
-    inscrit }o--o{ avent : inscrit_a
+    user ||--o{ fav_avent_for_user : a_fav
+    fav_avent_for_user }o--|| avent : a_fav
+
+    user ||--o{ fav_theme_for_user : like 
+    fav_theme_for_user }o--|| theme : like 
+
+    user ||--o{ inscrit : inscrit_a
+    inscrit }o--|| avent : inscrit_a
     
     avent }o--|| state : is
     avent }o--|| user : create
-    avent }o--|{ photo_for_avent : has
-    photo_for_avent }o--|{ photo : has
+    avent ||--|{ photo_for_avent : has
+    photo_for_avent }o--|| photo : has
     avent ||--o{ task : has
     avent ||--o{ sous_genre : has
 
-    avent }o--|{ organisateur_avent : organize
-    organisateur_avent }o--|{ user : organize
+    avent ||--|{ organisateur_avent : organize
+    organisateur_avent }o--|| user : organize
 
-    avent }o--o{ sponso_avent : sponsorized_by
-    sponso_avent }o--o{ brand : sponsorized_by
+    avent ||--o{ sponso_avent : sponsorized_by
+    sponso_avent }o--|| brand : sponsorized_by
 
-    avent }o--|{ theme_for_avent : has
-    theme_for_avent }o--|{ theme : has
+    avent ||--|{ theme_for_avent : has
+    theme_for_avent }o--|| theme : has
 
     task }o--o| user : finished
 

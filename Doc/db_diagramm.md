@@ -70,12 +70,24 @@ erDiagram
         string sous_genre_name
     }
 
+    suggestion {
+        int user_id
+        int avent_id
+    }
+
+    views {
+        int user_id
+        int avent_id
+    }
+
     user }|--o| brand : represents
     user }o--|| genre : is
     user }o--|| photo : has
     user }o--o{ avent : a_fav
     user }o--o{ theme : like 
     user }o--o{ avent : inscrit_a
+    user }o--o{ avent : saw
+    user }o--o{ avent : suggested_for
     
     avent }o--|| state : is
     avent }o--|| user : create
