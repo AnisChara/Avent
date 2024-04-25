@@ -142,7 +142,7 @@ ALTER TABLE photo_for_avent ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id
  
 ALTER TABLE fav_avent_for_user ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
 ALTER TABLE fav_avent_for_user ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id);
- 
+
 ALTER TABLE fav_theme_for_user ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
 ALTER TABLE fav_theme_for_user ADD FOREIGN KEY (theme_id) REFERENCES theme(theme_id);
  
