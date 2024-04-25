@@ -126,6 +126,18 @@ CREATE TABLE inscrit
     avent_id INT
 );
 
+CREATE TABLE suggestion
+(
+    user_id INT,
+    avent_id INT
+);
+
+CREATE TABLE views
+(
+    user_id INT,
+    avent_id INT
+);
+
 ALTER TABLE user ADD FOREIGN KEY (is_brand) REFERENCES brand(brand_id);
 ALTER TABLE user ADD FOREIGN KEY (genre) REFERENCES genre(genre_id);
 ALTER TABLE user ADD FOREIGN KEY (pp) REFERENCES photo(photo_id);
@@ -157,3 +169,9 @@ ALTER TABLE theme_for_avent ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id
  
 ALTER TABLE inscrit ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id);
 ALTER TABLE inscrit ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
+
+ALTER TABLE suggestion ADD FOREIGN KEY(user_id) REFERENCES user(user_id);
+ALTER TABLE suggestion ADD FOREIGN KEY(avent_id) REFERENCES avent(avent_id);
+
+ALTER TABLE views ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
+ALTER TABLE views ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id);
