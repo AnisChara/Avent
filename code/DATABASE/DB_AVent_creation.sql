@@ -129,13 +129,15 @@ CREATE TABLE inscrit
 CREATE TABLE suggestion
 (
     user_id INT,
-    avent_id INT
+    avent_id INT,
+    order INT
 );
 
 CREATE TABLE views
 (
     user_id INT,
-    avent_id INT
+    avent_id INT,
+    date_view datetime
 );
 
 ALTER TABLE user ADD FOREIGN KEY (is_brand) REFERENCES brand(brand_id);
