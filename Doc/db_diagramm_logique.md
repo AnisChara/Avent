@@ -116,6 +116,7 @@ erDiagram
     suggestion {
         int user_id
         int avent_id
+        int order
     }
 
     views {
