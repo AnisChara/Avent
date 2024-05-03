@@ -122,6 +122,7 @@ erDiagram
     views {
         int user_id
         int avent_id
+        datetime date_view
     }
 
     user }|--o| brand : represents
