@@ -27,7 +27,7 @@
                 <!-- adresse mail -->
 				<div class = "box">
 					<input type="text" name="adresse_mail" value="">
-					<label>Identifiant</label>
+					<label>mail</label>
 				</div>
                 <!-- case genre -->
                 <div class = "box">
@@ -50,9 +50,17 @@
 				</div>
                 <!-- thème -->
                 <div class = "box">
-                    <input type="text" name="theme" value="">
+                    <input type="text" name="theme1" value="">
                     <label>Thème</label>
-                </div>    
+                </div>
+                <div class = "box">
+                    <input type="text" name="theme2" value="">
+                    <label>Thème</label>
+                </div> 
+                <div class = "box">
+                    <input type="text" name="theme3" value="">
+                    <label>Thème</label>
+                </div>   
                 <!-- inscription -->
 				<div class = "connect">
 					<input type="submit" name="action" value="inscription">

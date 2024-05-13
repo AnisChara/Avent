@@ -32,3 +32,16 @@ INSERT INTO theme (theme_name) VALUES
 ('Musées'),
 ('Caritatif'),
 ('Rencontres');
+
+INSERT INTO etat_type (etat_nom) VALUES
+
+('coming'),
+('going'),
+('finish');
+
+INSERT INTO genre (genre_name) VALUES
+
+('Homme'),
+('Femme'),
+('Autre');
+

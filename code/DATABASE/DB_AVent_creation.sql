@@ -66,9 +66,9 @@ CREATE TABLE avent
 (
     avent_id INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(255),
-    date_debut datetime
-    date_fin datetime
-    fin_inscription datetime
+    date_debut datetime,
+    date_fin datetime,
+    fin_inscription datetime,
     information VARCHAR(255),
     lien_site VARCHAR(255),
     lien_billeterie VARCHAR(255),
@@ -76,7 +76,7 @@ CREATE TABLE avent
     capacity INT,
     is_payant BOOLEAN,
     is_public BOOLEAN,
-    date_creation DATE,
+    date_creation DATETIME,
     age_minimum TINYINT,
     sous_theme INT,
     etat INT,
@@ -136,7 +136,7 @@ CREATE TABLE views
 (
     user_id INT,
     avent_id INT,
-    date_view datetime
+    date_view TIMESTAMP
 );
 
 ALTER TABLE user ADD FOREIGN KEY (is_brand) REFERENCES brand(brand_id);
