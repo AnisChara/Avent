@@ -130,7 +130,7 @@ CREATE TABLE suggestion
 (
     user_id INT,
     avent_id INT,
-    order INT
+    indice INT
 );
 
 CREATE TABLE views
