@@ -6,25 +6,24 @@
     <title>page de connexion AVent</title>
 </head>
 <body>
-<div class="login-box">
-				<form action="/req_identifier" method="GET">
-					<h1>login</h1>
-					<div class = "box">
-						<input type="text" name="adresse_mail" value="">
-						<label>Identifiant</label>
-					</div>
-					<div class = "box">
-						<input type="password" name="password" value="">
-					<label>Mot de passe</label>
-					</div>
-					<div class = "connect">
-						<input type="submit" name="action" value="Se connecter">
-					</div>
-					<div class="register">
-						<p>pas encore de compte ? <a href="/v_inscription.php">Créer compte</a></p>
-					</div>
-				</form>
-			</div>
-
+    <div class="login-box">
+        <form action="/c_connexion" method="GET">
+			<h1>login</h1>
+				<div class = "box">
+					<input type="text" name="adresse_mail" value="">
+					<label>Identifiant</label>
+				</div>
+				<div class = "box">
+					<input type="password" name="password" value="">
+				    <label>Mot de passe</label>
+				</div>
+				<div class = "connect">
+					<input type="submit" name="action" value="Se connecter">
+				</div>
+				<div class="register">
+					<p>pas encore de compte ? <a href="/v_inscription.php">Créer compte</a></p>
+				</div>
+		</form>
+    </div>
 </body>
 </html>
