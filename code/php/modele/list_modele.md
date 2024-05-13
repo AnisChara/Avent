@@ -4,7 +4,9 @@
 
 - m_connexion (identifiants) => bool
 
-- m_inscription (data) => bool
+- m_verif_inscription (user_data) => bool
+
+- m_create_user (user_data) => bool
 
 - m_recup_info_compte (user_id) => data
 
