@@ -1,0 +1,43 @@
+# liste des controllers
+
+- C_accueil
+- C_afficher_page_co
+- C_afficher_page_inscription
+- C_create_user
+- C_connexion
+- C_gen_suggestion
+- C_back_avent
+- C_next_avent
+- C_fav_unfav
+- C_inscription_desincvription_avent
+- C_aff_compte
+- C_aff_form_edit_compte
+- C_modif_compte
+- C_recherche
+- C_aff_full_avent
+- C_aff_my_avent
+- C_aff_fav_avent
+- C_aff_avent_inscrit
+- C_aff_result_recherche
+- C_aff_TL
+- C_aff_form_create_avent
+- C_create_avent
+- C_add_image
+- C_add_task
+- C_delete_task
+- C_invit_orga
+- C_aff_co_orga
+- C_co_orga
+- C_add_orga
+- C_delete_orga
+- C_aff_full_avent_my_avent
+- C_aff_edit_avent_admin
+- C_aff_edit_avent_orga
+- C_valid_unvalid_task
+- C_edit_avent
+- C_delete_avent
+- C_back_url
+
+- C_add_pp
+- C_verif_user
+- C_verif_brand
