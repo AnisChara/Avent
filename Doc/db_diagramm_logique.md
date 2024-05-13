@@ -21,10 +21,9 @@ erDiagram
 
         int avent_id
         string nom
-        date date_debut
-        date date_fin
-        string horaire_debut
-        string horaire_fin
+        datetime date_debut
+        datetime date_fin
+        datetime fin_inscription 
         string description
         string lien_site
         string lien_billeterie

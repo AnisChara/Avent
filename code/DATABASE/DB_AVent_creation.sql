@@ -66,10 +66,9 @@ CREATE TABLE avent
 (
     avent_id INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(255),
-    date_debut DATE,
-    date_fin DATE,
-    horaire_debut VARCHAR(255),
-    horaire_fin VARCHAR(255),
+    date_debut datetime
+    date_fin datetime
+    fin_inscription datetime
     information VARCHAR(255),
     lien_site VARCHAR(255),
     lien_billeterie VARCHAR(255),
