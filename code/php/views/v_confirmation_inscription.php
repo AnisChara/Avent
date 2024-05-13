@@ -6,6 +6,12 @@
     <title>confirmation inscription</title>
 </head>
 <body>
-    
+<div class="login-box">
+        <form action="/c_confirmation_inscription" method="POST">
+				<div class="inscrit">
+					<p>Bravo vous êtes dorénavant inscrit sur AVent !</p>
+				</div>
+		</form>
+    </div>
 </body>
 </html>

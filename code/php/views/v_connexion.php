@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="login-box">
-        <form action="/c_connexion" method="GET">
+        <form action="/c_connexion" method="POSTs">
 			<h1>login</h1>
 				<div class = "box">
 					<input type="text" name="adresse_mail" value="">
