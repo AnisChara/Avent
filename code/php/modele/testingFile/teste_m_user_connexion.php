@@ -2,7 +2,7 @@
 
 require_once '../m_user_connexion.php';
 
-$mail_of_user = 'APANYAN';
+$mail_of_user = 'APfANYAN';
 $mdp_of_user = 'PROUT';
 /*
 $mail_of_user = "APANYAN'--";
@@ -14,13 +14,13 @@ $mdp_of_user = '';
 
 $response = user_connexion($mail_of_user,$mdp_of_user);
 
-if($response == true)
+if ($response != false)
 {
-    ECHO "1 - TRUE";
+    var_dump($response);
 }
-else
+else 
 {
-    echo "1 - FALSE";
+    echo "false";
 }
 
 ?>
