@@ -56,11 +56,11 @@ CREATE TABLE user
     pseudo VARCHAR(255),
     mot_de_passe VARCHAR(255),
     date_naissance DATE,
-    date_creation DATE,
     is_verif BOOLEAN,
     is_brand INT,
     pp INT,
-    genre INT
+    genre INT,
+    date_creation DATE
 );
 
 CREATE TABLE avent
