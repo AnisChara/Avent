@@ -1,2 +1,2 @@
 <?php
-require_once "../views/v_inscription.php";
+require "../views/v_inscription.php";

@@ -1,6 +1,6 @@
 <?php
 
-require_once "../modele/m_user_connexion.php";
+require "../modele/m_user_connexion.php";
 
 
 if (isset($_COOKIE["mail"]) && isset($_COOKIE["mot_de_passe"]))
