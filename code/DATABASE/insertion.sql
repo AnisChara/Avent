@@ -45,3 +45,6 @@ INSERT INTO genre (genre_name) VALUES
 ('Femme'),
 ('Autre');
 
+INSERT INTO user (email,mot_de_passe) VALUES
+
+('APANYAN','PROUT');
