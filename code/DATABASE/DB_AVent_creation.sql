@@ -54,6 +54,7 @@ CREATE TABLE user
     prenom VARCHAR(255),
     email VARCHAR(255),
     pseudo VARCHAR(255),
+    mot_de_passe VARCHAR(255),
     date_naissance DATE,
     is_verif BOOLEAN,
     is_brand INT,
