@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="login-box">
-        <form action="/c_connexion" method="POSTs">
+        <form action="/c_connexion.php" method="POSTs">
 			<h1>login</h1>
 				<div class = "box">
 					<input type="text" name="adresse_mail" value="">
@@ -21,7 +21,7 @@
 					<input type="submit" name="action" value="Se connecter">
 				</div>
 				<div class="register">
-					<p>pas encore de compte ? <a href="/v_inscription.php">Créer compte</a></p>
+					<p>pas encore de compte ? <a href="./c_afficher_page_inscription.php">Créer compte</a></p>
 				</div>
 		</form>
     </div>

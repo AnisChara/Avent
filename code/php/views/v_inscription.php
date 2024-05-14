@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="login-box">
-        <form action="/c_inscription" method="POST">
+        <form action="/c_inscription.php" method="POST">
 			<h1>inscription</h1>
                 <!-- nom -->
                 <div class = "box">
