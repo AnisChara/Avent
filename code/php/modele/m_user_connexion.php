@@ -13,7 +13,7 @@
         
         if(COUNT($res) > 0)
         {
-            return true;
+            return $res;
         }
         else
         {
