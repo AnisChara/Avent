@@ -1,3 +1,3 @@
 <?php
 
-require_once "../modele/m_inscription.php";
+require "../modele/m_inscription.php";

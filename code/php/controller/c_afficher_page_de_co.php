@@ -1,2 +1,2 @@
 <?php
-require_once "../views/v_connexion.php";
+require "../views/v_connexion.php";
