@@ -25,9 +25,9 @@
         if(($requete[0] = "S" || $requete[0] = "s") && ($requete[1] = "E" || $requete[1] = "e") && ($requete[2] = "L" || $requete[2] = "l") && ($requete[3] = "E" || $requete[3] = "e") && ($requete[4] = "C" || $requete[4] = "c") && ($requete[5] = "T" || $requete[5] = "t"))
         {
             $donnee = $give -> fetchAll(PDO::FETCH_ASSOC);
+            return $donnee;
         }
         
-        return $donnee;
     }
 
 ?>
