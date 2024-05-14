@@ -17,7 +17,7 @@
             {
                 for($i = 0; $i < COUNT($argument); $i++)
                 {
-                    $give ->bindParam($argument[0],$argument[1]);  // $argument = [[":nom",$nom],[":id",$id]]
+                    $give ->bindParam($argument[$i][0],$argument[$i][1]);  // $argument = [[":nom",$nom],[":id",$id]]
                 }
                 $give ->execute();
             }
