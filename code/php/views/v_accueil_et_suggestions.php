@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>accueil et suggestions</title>
-    <link rel="stylesheet" href="v_accueil_et_suggestions.css">
+    <link rel="stylesheet" href="../views/v_accueil_et_suggestions.css">
 </head>
 <body>
     <div class = "nav_options ">
         <ul>
-            <li class = "active"><a href="#">Home</a></li>
+            <li class = "active"><a href="./c_afficher_TL.php">Home</a></li>
             <li class = "active"><a href="#">Avent</a></li>
             <li class = "active"><a href="#">Compte</a></li>
             <li class = "active"><a href="#">Création</a></li>
