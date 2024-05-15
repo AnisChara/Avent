@@ -48,3 +48,9 @@ INSERT INTO genre (genre_name) VALUES
 INSERT INTO user (email,pseudo,mot_de_passe) VALUES
 
 ('APANYAN','COUBEH','PROUT');
+
+INSERT INTO fav_theme_for_user(user_id,theme_id) VALUES
+
+('2','1'),
+('2','2'),
+('2','3');
