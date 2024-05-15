@@ -5,7 +5,7 @@
      * @param array - si il y'a des conditions marqueurs ? sous forme d'une liste avec a chaque élément une liste indice 0 la string et indice 1 la variable. 
      * @return array - array du résultat de la requête.
      */
-    function TakeFromDB($pdo,$requete,$argument = false)
+    function queryDB($pdo,$requete,$argument = false)
     {
         $give = $pdo ->prepare("$requete");
         
