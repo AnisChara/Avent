@@ -10,8 +10,15 @@
 
         $brutdata = queryDB($db,$query,$arguments);
 
-        $res = [$brutdata[0]['theme_name'],$brutdata[1]['theme_name'],$brutdata[2]['theme_name']];
+        
+        $res = [];
+        for($i = 0; $i < COUNT($brutdata); $i++)
+        {
+            $res[COUNT($res)] = $brutdata[$i]['theme_name'];
+        }
+        
         return $res;
+        
     }
 
 ?>
