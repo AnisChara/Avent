@@ -8,7 +8,7 @@ $query = "SELECT theme_name FROM theme WHERE theme_id = :id";       // Ma query 
 $id = 2;                    
 $argument = [[":id",$id]];                                          //les arguments  : [0] -> ou remplacer dans la requête  [1] -> ce qu'il faut mettre à la place
 
-echo var_dump(TakeFromDB($pdo,$query,$argument));                   //affiche en var_dump le résultat
+echo var_dump(queryDB($pdo,$query,$argument));                   //affiche en var_dump le résultat
 
 ?>
 
