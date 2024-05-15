@@ -17,19 +17,19 @@
         $verif = [];
         if(COUNT($resEmail) > 0)
         {
-            $verif[0] = true; 
+            $verif[0] = false; 
         }
         else
         {
-            $verif[0] = false;
+            $verif[0] = true;
         }
         if(COUNT($resPseudo) > 0)
         {
-            $verif[1] = true;
+            $verif[1] = false;
         }
         else
         {
-            $verif[1] = false;
+            $verif[1] = true;
         }
 
         return $verif;
