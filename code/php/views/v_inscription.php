@@ -21,7 +21,7 @@
 				</div>
                 <!-- date de naissance -->
                 <div class = "box">
-                    <input type="date" name="date_de_naissance" value="" min="1900-01-01" max="2024-12-31" />
+                    <input type="date" name="date_naissance" value="" min="1900-01-01" max="2024-12-31" />
                     <label>Date de naissance</label>
                 </div>
                 <!-- adresse mail -->

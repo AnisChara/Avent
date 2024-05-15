@@ -10,7 +10,7 @@
         <form action="./c_accueil.php" method="POST">
 			<h1>login</h1>
 				<div class = "box">
-					<input type="text" name="mail" value="">
+					<input type="text" name="email" value="">
 					<label>Identifiant</label>
 				</div>
 				<div class = "box">

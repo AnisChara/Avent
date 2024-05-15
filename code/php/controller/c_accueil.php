@@ -8,5 +8,5 @@ if (isset($connexion) && $connexion == true)
 }
 else 
 {
-    header("Location:./c_afficher_page_de_co.php");
+    require "./c_afficher_page_de_co.php";
 }

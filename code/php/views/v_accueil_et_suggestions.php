@@ -9,7 +9,7 @@
 <body>
     <div class = "nav_options ">
         <ul>
-            <li class = "active"><a href="./c_afficher_TL.php">Home</a></li>
+            <li class = "active"><a href="./c_accueil.php">Home</a></li>
             <li class = "active"><a href="#">Avent</a></li>
             <li class = "active"><a href="#">Compte</a></li>
             <li class = "active"><a href="#">Création</a></li>
