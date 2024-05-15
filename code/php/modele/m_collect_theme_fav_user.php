@@ -8,7 +8,7 @@
         $query = 'SELECT theme.theme_name FROM theme INNER JOIN fav_theme_for_user ON theme.theme_id = fav_theme_for_user.theme_id WHERE fav_theme_for_user.user_id = :user_id';
         $arguments = [[":user_id",$userID]];
 
-        $brutdata = TakeFromDB($db,$query,$arguments);
+        $brutdata = queryDB($db,$query,$arguments);
 
         $res = [$brutdata[0]['theme_name'],$brutdata[1]['theme_name'],$brutdata[2]['theme_name']];
         return $res;

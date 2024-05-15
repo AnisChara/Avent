@@ -11,8 +11,8 @@
         $argumentEmail = [[":email",$email]];
         $argumentPseudo = [[":pseudo",$pseudo]];
 
-        $resEmail = TakeFromDB($db,$queryEmail,$argumentEmail);
-        $resPseudo = TakeFromDB($db,$queryPseudo,$argumentPseudo);
+        $resEmail = queryDB($db,$queryEmail,$argumentEmail);
+        $resPseudo = queryDB($db,$queryPseudo,$argumentPseudo);
         
         $verif = [];
         if(COUNT($resEmail) > 0)

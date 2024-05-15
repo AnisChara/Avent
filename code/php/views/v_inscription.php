@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="login-box">
-        <form action="/c_inscription.php" method="POST">
+        <form action="./c_inscription.php" method="POST">
 			<h1>inscription</h1>
                 <!-- nom -->
                 <div class = "box">
@@ -26,16 +26,16 @@
                 </div>
                 <!-- adresse mail -->
 				<div class = "box">
-					<input type="text" name="adresse_mail" value="">
+					<input type="text" name="email" value="">
 					<label>mail</label>
 				</div>
                 <!-- case genre -->
                 <div class = "box">
-                    <input type="radio" name="genre" value="homme">
+                    <input type="radio" name="genre" value="1">
                     <label>Homme</label>
-                    <input type="radio" name="genre" value="femme">
+                    <input type="radio" name="genre" value="2">
                     <label>Femme</label>
-                    <input type="radio" name="genre" value="autre">
+                    <input type="radio" name="genre" value="3">
                     <label>Autre</label>
                 </div>
                 <!-- pseudo -->
@@ -45,7 +45,7 @@
 				</div>
                 <!-- mot de passe -->
 				<div class = "box">
-					<input type="password" name="password" value="">
+					<input type="password" name="mot_de_passe" value="">
 				    <label>Mot de passe</label>
 				</div>
                 <!-- thème -->

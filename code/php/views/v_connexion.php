@@ -7,14 +7,14 @@
 </head>
 <body>
     <div class="login-box">
-        <form action="/c_connexion.php" method="POSTs">
+        <form action="./c_accueil.php" method="POST">
 			<h1>login</h1>
 				<div class = "box">
-					<input type="text" name="adresse_mail" value="">
+					<input type="text" name="mail" value="">
 					<label>Identifiant</label>
 				</div>
 				<div class = "box">
-					<input type="password" name="password" value="">
+					<input type="password" name="mot_de_passe" value="">
 				    <label>Mot de passe</label>
 				</div>
 				<div class = "connect">

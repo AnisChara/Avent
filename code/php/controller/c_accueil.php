@@ -2,11 +2,11 @@
 
 require "./c_connexion.php";
 
-if ($connexion == true)
+if (isset($connexion) && $connexion == true)
 {
-    require "./c_afficher_TL.php";
+    require './c_afficher_TL.php' ;
 }
 else 
 {
-    require "./c_afficher_page_de_co.php";
+    header("Location:./c_afficher_page_de_co.php");
 }
