@@ -1,10 +1,10 @@
 <?php
 
-    require_once 'm_recuperationDB.php';
 
     function verif_inscription($email,$pseudo)
     {
-        require_once 'm_connexion_bdd.php';
+        require 'm_connexion_bdd.php';
+        require_once 'm_recuperationDB.php';
 
         $queryEmail = 'SELECT * FROM user WHERE email = :email';
         $queryPseudo = 'SELECT * FROM user WHERE pseudo = :pseudo';
