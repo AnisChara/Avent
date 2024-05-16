@@ -60,7 +60,7 @@ CREATE TABLE user
     is_brand INT,
     pp INT,
     genre INT,
-    date_creation DATE TIMESTAMP
+    date_creation TIMESTAMP
 );
 
 CREATE TABLE avent
@@ -77,7 +77,7 @@ CREATE TABLE avent
     capacity INT,
     is_payant BOOLEAN,
     is_public BOOLEAN,
-    date_creation DATETIME TIMESTAMP,
+    date_creation TIMESTAMP,
     age_minimum TINYINT,
     sous_theme INT,
     createur INT
@@ -144,7 +144,6 @@ ALTER TABLE user ADD FOREIGN KEY (genre) REFERENCES genre(genre_id);
 ALTER TABLE user ADD FOREIGN KEY (pp) REFERENCES photo(photo_id);
  
 ALTER TABLE avent ADD FOREIGN KEY (sous_theme) REFERENCES sous_theme(sous_theme_id);
-ALTER TABLE avent ADD FOREIGN KEY (etat) REFERENCES etat_type(etat_id);
 ALTER TABLE avent ADD FOREIGN KEY (createur) REFERENCES user(user_id);
  
 ALTER TABLE task ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id);

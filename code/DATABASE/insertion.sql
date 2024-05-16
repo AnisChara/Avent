@@ -48,9 +48,9 @@ INSERT INTO user (email,pseudo,mot_de_passe) VALUES
 
 INSERT INTO fav_theme_for_user(user_id,theme_id) VALUES
 
-('2','1'),
-('2','2'),
-('2','3');
+('1','1'),
+('1','2'),
+('1','3');
 
 INSERT INTO avent (nom) VALUES
 
@@ -73,5 +73,11 @@ INSERT INTO theme_for_avent (theme_id,avent_id) VALUES
 
 INSERT INTO views (user_id,avent_id) VALUES
 
-('2','1'),
-('2','3');
+('1','1'),
+('1','3'),
+('1','2');
+
+INSERT INTO fav_avent_for_user (user_id,avent_id) VALUES
+
+('1','1'),
+('1','3');

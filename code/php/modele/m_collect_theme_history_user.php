@@ -8,7 +8,7 @@ function collectThemeHistory($UserID)
     $collectNumber = 25;
     $collectPourcentage = 10;
     
-    $queryLastSeenByUser = 'SELECT avent_id FROM views WHERE user_id = :user_id ORDER BY views.date_view ASC /*LIMIT :collectNumber*/;';
+    $queryLastSeenByUser = 'SELECT fav_avent_for_user.avent_id FROM fav_avent_for_user INNER JOIN views ON fav_avent_for_user.avent_id = views.avent_id WHERE views.user_id = :user_id ORDER BY views.date_view ASC /*LIMIT :collectNumber*/;';
     $argumentsLastSeenByUser = [[":user_id",$UserID]]; //,[":collectNumber",$collectNumber]
 
     $brutdataLastSeenByUser = queryDB($db,$queryLastSeenByUser,$argumentsLastSeenByUser);
