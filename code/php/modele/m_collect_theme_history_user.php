@@ -2,7 +2,7 @@
 
 function collectThemeHistory($UserID)
 {
-    require_once 'm_connexion_bdd.php';
+    require 'm_connexion_bdd.php';
     require_once 'm_recuperationDB.php';
 
     $collectNumber = 25;
