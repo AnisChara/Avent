@@ -60,7 +60,7 @@ CREATE TABLE user
     is_brand INT,
     pp INT,
     genre INT,
-    date_creation DATE
+    date_creation DATE TIMESTAMP
 );
 
 CREATE TABLE avent
@@ -77,10 +77,9 @@ CREATE TABLE avent
     capacity INT,
     is_payant BOOLEAN,
     is_public BOOLEAN,
-    date_creation DATETIME,
+    date_creation DATETIME TIMESTAMP,
     age_minimum TINYINT,
     sous_theme INT,
-    etat INT,
     createur INT
 );
 
