@@ -18,7 +18,25 @@
             {
                 for($i = 0; $i < COUNT($argument); $i++)
                 {
-                    $give ->bindParam($argument[$i][0],$argument[$i][1]);  // $argument = [[":nom",$nom],[":id",$id]]
+                    if(COUNT($argument[$i]) == 3)
+                    {
+                        if(($argument[$i][2][0] == "S" || $argument[$i][2][0] == "s") && ($argument[$i][2][1] == "T" || $argument[$i][2][1] == "t") && ($argument[$i][2][2] == "R" || $argument[$i][2][2] == "r"))
+                        {
+                            $give ->bindParam($argument[$i][0],$argument[$i][1],PDO::PARAM_STR);
+                        }
+                        else if(($argument[$i][2][0] == "I" || $argument[$i][2][0] == "i") && ($argument[$i][2][1] == "N" || $argument[$i][2][1] == "n") && ($argument[$i][2][2] == "T" || $argument[$i][2][2] == "t"))
+                        {
+                            $give ->bindParam($argument[$i][0],$argument[$i][1],PDO::PARAM_INT);
+                        }
+                        else
+                        {
+                            $give ->bindParam($argument[$i][0],$argument[$i][1]); 
+                        }
+                    }
+                    else
+                    {
+                        $give ->bindParam($argument[$i][0],$argument[$i][1]);   // $argument = [[":nom",$nom],[":id",$id]]
+                    }
                 }
                 $give ->execute();
             };
