@@ -7,7 +7,7 @@ function create_user($nom,$prenom,$date_naissance,$email,$genre,$pseudo,$mot_de_
     $argument = [[":nom",$nom],[":prenom",$prenom],[":date_naissance",$date_naissance],[":email",$email],[":genre",$genre],[":pseudo",$pseudo],[":mot_de_passe",$mot_de_passe]];
     try {
         $creation = queryDB($db,$req,$argument);
-    } catch (Exception $error) { echo 'error'; return false;};
+    } catch (Exception $error) { echo 'error creation user'; return false;};
     return true;
 }
 function relier_themename_themeid($theme1, $theme2, $theme3) {
@@ -17,7 +17,7 @@ function relier_themename_themeid($theme1, $theme2, $theme3) {
     $argument = [[':theme1' , $theme1], [':theme2', $theme2], [':theme3' , $theme3]];
     try {
         $resultat = queryDB($db,$requete,$argument);
-    } catch (Exception $error) { echo 'error'; return false;};
+    } catch (Exception $error) { echo 'error relier theme name'; return false;};
     $theme_ids = array();
     foreach ($resultat as $row) {
         array_push($theme_ids, $row['theme_id']) ;
@@ -35,6 +35,6 @@ function insert_theme_for_user($user_id, $theme1, $theme2, $theme3) {
             $argument = [[':user_id' , $user_id], [':theme_id', $theme_ids[$i]]];
             $result = queryDB($db,$requete,$argument);
         }
-    } catch (Exception $error) { echo 'error'; return false;};
+    } catch (Exception $error) { echo 'error insert theme'; return false;};
     return true;
 }
