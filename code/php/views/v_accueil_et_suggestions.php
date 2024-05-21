@@ -27,6 +27,11 @@
     <div class = "bouton">
         <img src="bouton.jpg" alt="menu" class="bouton_avent">
     </div>
+    <div class = "suggestions">
+        <div class = "suggestions_prod">
+            <img src="fond_oasis.jpg" alt="">
+        </div>
+    </div>
 </body>
    <script>
         const menu_avent = document.querySelector(".bouton_avent");

@@ -7,66 +7,81 @@
     <title>Création AVent</title>
 </head>
 <body>
-<div class = "nav_options ">
+    <!-- partie de redirection vers différentes pages -->
+    <div class = "nav_options ">
         <ul>
             <li class = "active"><a href="#">Home</a></li>
             <li class = "active"><a href="#">Avent</a></li>
             <li class = "active"><a href="#">Compte</a></li>
             <li class = "active"><a href="#">Création</a></li>
         </ul>
-    </div>  
-    <nav class = "navbar">
-        <Select name="Nom">
-            <option>Nom de référence</option>
-            <option value="">a</option>
-            <option value="">b</option>
-            <option value="">c</option>
-            <option value="">d</option>
-        </Select>
-        <Select name="theme">
-            <option>Thématique 1</option>
-            <option value="">a</option>
-            <option value="">b</option>
-            <option value="">c</option>
-            <option value="">d</option>
-        </Select>
-        <Select name="theme">
-            <option>Thématique 2</option>
-            <option value="">a</option>
-            <option value="">b</option>
-            <option value="">c</option>
-            <option value="">d</option>
-        </Select>
-        <Select name="theme">
-            <option>Thématique 3</option>
-            <option value="">a</option>
-            <option value="">b</option>
-            <option value="">c</option>
-            <option value="">d</option>
-        </Select>
-        <Select name="ajouter">
-            <option>Ajouter organisateur</option>
-            <option value="">a</option>
-            <option value="">b</option>
-            <option value="">c</option>
-            <option value="">d</option>
-        </Select>
-        <li>
-        Évènement publique 
-        <input type="checkbox" name="interest" value="" />
-        </li>
-            <label for="description">Description :</label>
-            <li>
-            <textarea id="description" name="description" placeholder="Décrivez votre évènement ! " required></textarea>
-            </li>
-            <label for="tag">Autre Tag :</label>
-            <li>
-            <textarea id="tag" name="tag" placeholder="Ajouter d'autre tag pour d'écrire votre évènement ! " required></textarea>
-            </li>
-    </nav>
-    <div class="logo">
-        <img src="AVent.png" alt="menu" class="menu_avent">
+    <!-- partie de la création -->
+    <section class="container_colon">
+        <div class="first_colon">
+            <form action="" method="POST">
+                <Select name="Nom">
+                    <option>Nom de référence</option>
+                    <option value="">a</option>
+                    <option value="">b</option>
+                    <option value="">c</option>
+                    <option value="">d</option>
+                </Select>
+                <Select name="theme">
+                    <option>Thématique 1</option>
+                    <option value="">a</option>
+                    <option value="">b</option>
+                    <option value="">c</option>
+                    <option value="">d</option>
+                </Select>
+                <Select name="theme">
+                    <option>Thématique 2</option>
+                    <option value="">a</option>
+                    <option value="">b</option>
+                    <option value="">c</option>
+                    <option value="">d</option>
+                </Select>
+                <Select name="theme">
+                    <option>Thématique 3</option>
+                    <option value="">a</option>
+                    <option value="">b</option>
+                    <option value="">c</option>
+                    <option value="">d</option>
+                </Select>
+                <Select name="ajouter">
+                    <option>Ajouter organisateur</option>
+                    <option value="">a</option>
+                    <option value="">b</option>
+                    <option value="">c</option>
+                    <option value="">d</option>
+                </Select>
+                    <label><input type="checkbox" name="interest" value="" /> Évènement publique</label>
+                    <label>Titre :</label>
+                    <textarea name="titre"></textarea>
+                    <label>Description :</label>
+                    <textarea name="description"></textarea>
+                    <label>Autre Tag :</label>
+                    <textarea name="tag"></textarea>
+            </form>
+        </div>
+        <div class="second_colon">
+            <form action="" method="POST">
+                <label>Ajouter une image</label>
+                <input type="file" name="image">
+                    <div class="image">
+                        <div class="image-prod">
+                            <img src=fond_oasis.jpg alt="">
+                        </div>
+                    </div>
+                <input type="submit" value="Ajouter" name="btn-ajouter">
+            </form> 
+        </div>
+    </section>
+      <!-- logo -->
+        <div class="logo">
+            <img src="AVent.png" alt="menu" class="menu_avent">
+        </div>
     </div>
+
     <!-- <div class = "bouton">
         <img src="bouton.jpg" alt="menu" class="bouton_avent">
     </div>
