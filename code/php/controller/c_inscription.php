@@ -15,6 +15,7 @@ if ($inscription[0] == true && $inscription[1] == true) {
 
     if ($user_creation == true && $theme_insertion == true) {
         require "../views/v_confirmation_inscription.php";
+        //cookies
     }
     else {
         echo "Error";
@@ -23,14 +24,17 @@ if ($inscription[0] == true && $inscription[1] == true) {
 }
 else if ($inscription[0] == true && $inscription[1] == false)
 {
-    echo "pseudo utilisé";
+    $error_inscription_msg = "pseudo utilisé";
+    require "./c_afficher_page_inscription.php";
 }
 else if ($inscription[0] == false && $inscription[1] == true)
 {
-    echo "mail utilisé";
+    $error_inscription_msg = "mail utilisé";
+    require "./c_afficher_page_inscription.php";
 }
 else if ($inscription[0] == false && $inscription[1] == false)
 {
-    echo "mail et pseudo utilisé";
+    $error_inscription_msg = "pseudo et mail utilisés";
+    require "./c_afficher_page_inscription.php";
 }
 

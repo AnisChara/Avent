@@ -9,6 +9,9 @@
     <div class="login-box">
         <form action="./c_inscription.php" method="POST">
 			<h1>inscription</h1>
+
+            <?php if (isset($error_inscription_msg)) echo $error_inscription_msg;?>
+            
                 <!-- nom -->
                 <div class = "box">
 					<input type="nom" name="nom" value="">

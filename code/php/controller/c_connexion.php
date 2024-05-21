@@ -11,7 +11,7 @@ else if (isset($_POST["email"]) && isset($_POST["mot_de_passe"]))
 {
     $connexion = user_connexion($_POST["email"], $_POST["mot_de_passe"]);
 
-    if ($connexion == true)
+    if ($connexion ==! false)
     {
         setcookie("mot_de_passe", $_POST["mot_de_passe"]);
         setcookie("email", $_POST["email"]);
