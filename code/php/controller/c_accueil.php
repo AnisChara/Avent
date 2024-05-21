@@ -1,6 +1,8 @@
 <?php
 
-require "./c_connexion.php";
+require "../utils/u_connexion.php";
+
+$connexion = confirm_connexion();
 
 if (isset($connexion) && $connexion ==! false)
 {
