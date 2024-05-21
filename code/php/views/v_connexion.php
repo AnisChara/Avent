@@ -10,20 +10,20 @@
         <form action="./c_accueil.php" method="POST">
 			<h1>login</h1>
 			<?php if (isset($error_connexion_msg))echo $error_connexion_msg;?>
-				<div class = "box">
-					<input type="text" name="email" value="">
-					<label>Identifiant</label>
-				</div>
-				<div class = "box">
-					<input type="password" name="mot_de_passe" value="">
-				    <label>Mot de passe</label>
-				</div>
-				<div class = "connect">
-					<input type="submit" name="action" value="Se connecter">
-				</div>
-				<div class="register">
-					<p>pas encore de compte ? <a href="./c_afficher_page_inscription.php">Créer compte</a></p>
-				</div>
+			<div class = "box">
+				<input type="text" name="email" value="">
+				<label>Identifiant</label>
+			</div>
+			<div class = "box">
+				<input type="password" name="mot_de_passe" value="">
+				<label>Mot de passe</label>
+			</div>
+			<div class = "connect">
+				<input type="submit" name="action" value="Se connecter">
+			</div>
+			<div class="register">
+				<p>pas encore de compte ? <a href="./c_afficher_page_inscription.php">Créer compte</a></p>
+			</div>
 		</form>
     </div>
 </body>

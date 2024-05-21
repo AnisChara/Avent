@@ -1,42 +1,16 @@
-* {
-    margin : 0; 
-    padding : 0;
-    text-decoration: none;
-    list-style: none;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-body
-{
-    font-family: 'poppins';
-    background-image: url("fond_blanc.avif");
-    background-size: cover;
-    height: 100vh;
+body {
+    font-family: 'Poppins', 'sans-serif';
+   /* background-color: blueviolet;*/
     width: 100%;
-}
-
-.navbar 
-{
-    align-items: center;
-    padding: 0px 900px 0px 120px;
-    display: flex;
-    justify-content: space-evenly;
     height: 100vh;
-    box-sizing: border-box;
-    border: 1px solid black; 
-    flex-direction: column;
 }
 
-.logo {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.menu_avent {
-    top: 6px;
-    width: 120px;
-    height: 120px;
-    position: absolute;
-}
+/* partie de redirection vers différentes pages */
 
 .nav_options ul {
     position: absolute;
@@ -65,4 +39,97 @@ body
 
 .nav_options ul li.active a:hover {
     background-size: 100% 100%;
+}
+
+/* container colon */
+
+.container_colon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* first colon partie création*/
+.first_colon {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 100vh;
+}
+
+.first_colon form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    /*background-color: #fff;*/
+    padding: 1% 1% 1% 15%;
+   /* box-shadow: 0 0 50px rgb(0, 0, 0, 0.4);
+    border-radius: 6px; */
+}
+
+textarea {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    outline: 0;
+    padding: 5px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+/* Seconde colon de la partie création*/
+
+.second_colon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 100vh;
+}
+
+.second_colon form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    /*background-color: #fff;*/
+    padding: 1% 10% 1% 1%;
+ /*   box-shadow: 0 0 50px rgb(0, 0, 0, 0.4);
+    border-radius: 6px;*/
+}
+
+.image {
+    margin: 20px 0;
+    height: 697px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image .image-prod {
+    height: 100%;
+    width: 100%;
+}
+
+.image .image-prod img {
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* logo */
+
+.logo {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.menu_avent {
+    top: 6px;
+    width: 120px;
+    height: 120px;
+    position: absolute;
 }

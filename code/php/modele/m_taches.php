@@ -6,7 +6,7 @@ function recuperer_toutes_les_taches() {
     require "m_connexion_bdd.php";
     $requete = $db->prepare("SELECT * FROM task WHERE avent_id = ?;");
     $requete->execute();
-    $resultat = $requete->fetchAll();
+    $resultat = $requete;
     return $resultat;
 }
 
