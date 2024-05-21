@@ -94,6 +94,9 @@ input[type="submit"] {
     display: none;
 }
 
+
+/* format téléphone tablette */ 
+
 @media screen and (max-width: 1150px) {
     form {
         display: flex;
