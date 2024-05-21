@@ -45,5 +45,6 @@
         {
             $donnee = $give -> fetchAll(PDO::FETCH_ASSOC);
             return $donnee;
-        };
+        }
+        else return [];
     };

@@ -4,11 +4,11 @@ require "../utils/u_connexion.php";
 
 $connexion = confirm_connexion();
 
-if (isset($connexion) && $connexion ==! false)
+if ($connexion ==! false)
 {
     require './c_afficher_TL.php' ;
 }
-else if (isset($connexion) && $connexion === false)
+else if ($connexion === false)
 {
     $error_connexion_msg = "Mot de passe ou email non trouvé";
     require "./c_afficher_page_de_co.php";

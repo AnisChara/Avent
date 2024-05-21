@@ -4,6 +4,16 @@ require "../modele/m_verif_inscription.php";
 require "../modele/m_create_user.php";
 require "../modele/m_getID_from_mail.php";
 
+$data = array('nom','prenom','date_naissance','email','genre','pseudo','mot_de_passe','theme1','theme2','theme3');
+
+for ($i = 0; $i <COUNT($data); $i++) {
+
+    if (empty($_POST[$data[$i]])) {
+        $error_inscription_msg = "Veuillez remplir tous les champs";
+        require "./c_afficher_page_inscription.php";
+        exit();
+    }
+}
 
 $inscription = verif_inscription($_POST['email'],$_POST['pseudo']);
 
