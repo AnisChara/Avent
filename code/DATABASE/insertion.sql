@@ -57,7 +57,8 @@ INSERT INTO avent (nom) VALUES
 ('Sortie Ciné'),
 ('Plage copine'),
 ('Expo Arts & Métiers'),
-('Soirée Caritative');
+('Soirée Caritative'),
+('Concert');
 
 INSERT INTO theme_for_avent (theme_id,avent_id) VALUES
 
@@ -69,7 +70,8 @@ INSERT INTO theme_for_avent (theme_id,avent_id) VALUES
 ('5','3'),
 ('11','3'),
 ('24','4'),
-('25','4');
+('25','4'),
+('2','5');
 
 INSERT INTO views (user_id,avent_id) VALUES
 
@@ -81,3 +83,8 @@ INSERT INTO fav_avent_for_user (user_id,avent_id) VALUES
 
 ('1','1'),
 ('1','3');
+
+INSERT INTO suggestion (user_id,avent_id,indice) VALUES
+
+('1','4','1'),
+('1','5','2');
