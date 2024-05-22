@@ -24,8 +24,11 @@ if ($inscription[0] == true && $inscription[1] == true) {
     $theme_insertion = insert_theme_for_user($id,$_POST['theme1'], $_POST['theme2'], $_POST['theme3']);
 
     if ($user_creation == true && $theme_insertion == true) {
+
+        setcookie("mot_de_passe", $_POST["mot_de_passe"]);
+        setcookie("email", $_POST["email"]);
         require "../views/v_confirmation_inscription.php";
-        //cookies
+        
     }
     else {
         echo "Error";

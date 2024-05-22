@@ -4,7 +4,7 @@
 
     function user_connexion($email,$mdp)
     {
-        require_once 'm_connexion_bdd.php';
+        require 'm_connexion_bdd.php';
 
         $query = "SELECT * FROM user WHERE email = :email AND mot_de_passe = :mdp";
         $argument = [[":email",$email],[":mdp",$mdp]];
@@ -20,5 +20,3 @@
             return false;
         }
     }
-
-?>

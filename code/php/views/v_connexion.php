@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="login-box">
-        <form action="./c_accueil.php" method="POST">
+        <form action="./c_connexion.php" method="POST">
 			<h1>login</h1>
 			<?php if (isset($error_connexion_msg))echo $error_connexion_msg;?>
 			<div class = "box">

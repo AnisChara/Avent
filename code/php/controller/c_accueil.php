@@ -1,19 +1,7 @@
 <?php
 
-require "../utils/u_connexion.php";
+require_once '../modele/m_verif_cookies.php';
 
-$connexion = confirm_connexion();
+verif_cookies(); //si pas de cookies redirection page de co
 
-if ($connexion ==! false)
-{
-    require './c_afficher_TL.php' ;
-}
-else if ($connexion === false)
-{
-    $error_connexion_msg = "Mot de passe ou email non trouvé";
-    require "./c_afficher_page_de_co.php";
-}
-else
-{
-    require "./c_afficher_page_de_co.php";
-}
+require './c_afficher_TL.php'; // cookies bien présent
