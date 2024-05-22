@@ -1,16 +1,16 @@
 <?php
 
-    require_once '../m_algo_compatibility.php';
+    require_once 'C:\xampp\htdocs\exercices\avent\code\PHP\modele\m_algo_compatibility.php';
 
     $User1 = ['Cinéma'];
     $User2 = ['Cinema'];
     $User3 = ['Plage','Mer'];
-    $User4 = ['Cuisine','Viande','Féculent','Riz','Poulet',"mim","aaa","JDZFA"];
+    $User4 = ['Cuisine','Viande','Féculent','Riz','Poulet',"mim","aaa","JDZFA", "apanyer",'Encore','Encore','Encore','Encore','Encore','Encore'];
 
     $Content1 = ['CîémA'];
     $Content2 = ['Action','Film','Cinéma'];
     $Content3 = ['Voile','Mer','Bateau'];
-$Content4 = ['Aventure','Nature','Montagne','Roche','Falaise','Hauteur','Cuisine','Encore','ETencore','Viande','test',"sport","qiuo","coubeh"];
+$Content4 = ['Aventure','Nature','Montagne','Roche','Falaise','Hauteur','Cuisine','ETencore','ecoire','Viande','apanyer','test',"sport","qiuo","coubeh","coubeh","coubeh","coubeh","coubeh","coubeh","coubeh","coubeh","coubeh","coubeh"];
 
     $Expect1 = compatibility($User1,$Content1);
     $Expect2 = compatibility($User2,$Content2);
