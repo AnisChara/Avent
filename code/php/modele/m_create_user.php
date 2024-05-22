@@ -10,6 +10,13 @@ function create_user($nom,$prenom,$date_naissance,$email,$genre,$pseudo,$mot_de_
     } catch (Exception $error) { echo 'error creation user'; return false;};
     return true;
 }
+function modif_user($nom,$prenom,$date_naissance,$email,$genre,$pseudo,$mot_de_passe, $id){
+    require "m_connexion_bdd.php";
+    $requete = $db->prepare("UPDATE user SET nom =?, prenom =?, date_naissance =?, email =?, genre =?, pseudo =?, mot_de_passe =? WHERE user_id =?");
+    $requete->execute(array($nom, $prenom, $date_naissance, $email, $genre, $pseudo, $mot_de_passe, $user_id));
+    $resultat = $requete;
+    return $resultat;
+}
 function relier_themename_themeid($theme1, $theme2, $theme3) {
     require "m_connexion_bdd.php";
     require_once 'm_recuperationDB.php';
