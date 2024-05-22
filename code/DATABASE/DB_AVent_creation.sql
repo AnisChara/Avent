@@ -125,11 +125,11 @@ CREATE TABLE inscrit
     avent_id INT
 );
 
-CREATE TABLE suggestion
+CREATE TABLE suggestions
 (
     user_id INT,
     avent_id INT,
-    indice INT
+    indice INT AUTO_INCREMENT
 );
 
 CREATE TABLE views

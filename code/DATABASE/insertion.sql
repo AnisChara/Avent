@@ -84,7 +84,7 @@ INSERT INTO fav_avent_for_user (user_id,avent_id) VALUES
 ('1','1'),
 ('1','3');
 
-INSERT INTO suggestion (user_id,avent_id,indice) VALUES
+INSERT INTO suggestion (user_id,avent_id) VALUES
 
-('1','4','1'),
-('1','5','2');
+('1','4'),
+('1','5');
