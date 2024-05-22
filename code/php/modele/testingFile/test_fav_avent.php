@@ -2,4 +2,5 @@
 
 require "../m_fav_unfav_db.php";
 
-unfav(1,3);
+//fav(1,3);
+//unfav(1,3);
