@@ -170,8 +170,8 @@ ALTER TABLE theme_for_avent ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id
 ALTER TABLE inscrit ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id);
 ALTER TABLE inscrit ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
 
-ALTER TABLE suggestion ADD FOREIGN KEY(user_id) REFERENCES user(user_id);
-ALTER TABLE suggestion ADD FOREIGN KEY(avent_id) REFERENCES avent(avent_id);
+ALTER TABLE suggestions ADD FOREIGN KEY(user_id) REFERENCES user(user_id);
+ALTER TABLE suggestions ADD FOREIGN KEY(avent_id) REFERENCES avent(avent_id);
 
 ALTER TABLE views ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
 ALTER TABLE views ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id);
