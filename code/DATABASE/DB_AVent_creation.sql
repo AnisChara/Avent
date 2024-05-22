@@ -129,7 +129,7 @@ CREATE TABLE suggestions
 (
     user_id INT,
     avent_id INT,
-    indice INT AUTO_INCREMENT
+    indice INT PRIMARY KEY AUTO_INCREMENT
 );
 
 CREATE TABLE views
