@@ -1,0 +1,148 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(A\ V\ E\ N\ T.svg);
+}
+
+h1 {
+  font-size: 90px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 10px 8px 80px 8px;
+  color: #000000;
+}
+
+.login-box
+{
+    position: relative;
+    max-width: 400px;
+    height: 450px;
+    background-color: transparent;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background-color: #F1A03C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+.logo 
+{
+  text-align: center;
+  margin: 30px 0px 0px 0px;
+  width: 30%;
+}
+
+.titre {
+  text-align: center;
+}
+
+h2
+{
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: #000000;
+}
+
+.login-box .box
+{
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #000000;
+}
+
+.login-box input:focus~label,
+.login-box input:valid~label
+{
+    top: -20px;
+    left: 0;
+    color: #000000;
+    font-size: 12px;
+}
+
+.login-box input
+{
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.login-box label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+    transition: 5s;
+}
+
+.connect input 
+{
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: none;
+    position: relative;
+    max-width: 300px;
+    height: 75px;
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    backdrop-filter: blur(55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+.connect input:hover
+{
+    box-shadow: 0 0 5px #e4c7a5, 0 0 25px #e4c7a5, 0 0 50px #e4c7a5;
+}
+
+.register 
+{
+    font-size: 0.9em;
+    color: #000000;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+p 
+{
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.icon {
+  text-align: center;
+}
+
+img {
+  width: 20%;
+}

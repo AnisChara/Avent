@@ -3,42 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>accueil et suggestions</title>
-    <link rel="stylesheet" href="../views/v_accueil_et_suggestions.css">
+    <title>Accueil et Suggestions</title>
+    <link rel="stylesheet" href="v_accueil_et_suggestions.css">
 </head>
 <body>
-    <div class = "nav_options ">
+    <!-- Navigation Bar -->
+    <nav class="nav_options">
         <ul>
-            <li class = "active"><a href="./c_afficher_TL.php">Home</a></li>
-            <li class = "active"><a href="#">Avent</a></li>
-            <li class = "active"><a href="#">Compte</a></li>
-            <li class = "active"><a href="#">Création</a></li>
+            <li><a href="./c_accueil.php">Home</a></li>
+            <li><a href="#">Avent</a></li>
+            <li><a href="#">Compte</a></li>
+            <li><a href="#">Création</a></li>
         </ul>
-    </div>  
-    <nav class = "navbar">
-        <form name="fo" method="GET" action="">
-            <input type="text" name="words" placeholder="Mots-clés">
-            <input type="submit" name="valider" value="Rechercher">
-        </form>
     </nav>
-    <div class="logo">
-        <img src="AVent.png" alt="menu" class="menu_avent">
+    
+    <!-- Search Bar -->
+    <div class="navbar">
+        <form method="GET" action="">
+            <input type="text" placeholder="Mots-clés">
+            <input type="submit" value="Rechercher">
+        </form>
+        <!-- Floating Button -->
+        <div class="floating-btn">
+            <img src="AVent.png" alt="Floating Menu" class="menu_avent">
+        </div>
     </div>
-    <div class = "bouton">
-        <img src="bouton.jpg" alt="menu" class="bouton_avent">
-    </div>
-    <div class = "suggestions">
-        <div class = "suggestions_prod">
-            <img src="fond_oasis.jpg" alt="">
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Suggestions Section -->
+        <div class="container_sug">
+            <div class="suggestion">
+                <div class="card">
+                    <div class="image">
+                        <img src="fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                    </div>
+                    <div class="contente">
+                        <div class="content">
+                            <h2 class="titre">Je suis un titre</h2>
+                            <p class="description">Description détaillée ici...</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ajout d'autres cartes si nécessaire -->
+            </div>
+            <!-- Boutons de navigation -->
+            <div class="nav-buttons left">
+                <button class="nav-button">1</button>
+                <button class="nav-button">2</button>
+                <button class="nav-button">3</button>
+            </div>
+            <div class="nav-buttons right">
+                <button class="nav-button">1</button>
+                <button class="nav-button">2</button>
+                <button class="nav-button">3</button>
+            </div>
         </div>
     </div>
 </body>
-   <script>
-        const menu_avent = document.querySelector(".bouton_avent");
-        const nav_options = document.querySelector(".nav_options");
-
-        menu_avent.addEventListener("click", () => {
-        nav_options.classList.toggle("mobile_menu")
-        })
-    </script>
 </html>
