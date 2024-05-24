@@ -30,7 +30,7 @@ CREATE TABLE theme
 CREATE TABLE photo
 (
     photo_id INT PRIMARY KEY AUTO_INCREMENT,
-    photo_file BLOB
+    photo_file LONGBLOB
 );
 
 CREATE TABLE sous_theme
@@ -85,7 +85,7 @@ CREATE TABLE avent
 
 CREATE TABLE photo_for_avent
 (
-    photo_id INT,
+    photo_id INT PRIMARY KEY AUTO_INCREMENT,
     avent_id INT
 );
 
