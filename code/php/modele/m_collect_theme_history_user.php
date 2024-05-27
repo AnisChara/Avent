@@ -36,5 +36,3 @@ function collectThemeHistory($UserID)
     return $dataThemeLastSeenByUser;
 
 }
-
-?>
