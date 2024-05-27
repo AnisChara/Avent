@@ -1,0 +1,148 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(A\ V\ E\ N\ T.svg);
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display:inline-block;
+    margin: 10px 8px 10px 8px;
+    color: #000000;
+}
+
+.info-box
+{
+    position: relative;
+    max-width: 400px;
+    height: 650px;
+    background-color: transparent;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background-color: #F1A03C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+.logo 
+{
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    width: 50%;
+}
+
+.titre {
+    text-align: center;
+}
+
+h2
+{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display:inline-block;
+    margin: 40px 8px 10px 8px; 
+    color: #000000;
+}
+
+.info-box .box
+{
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #000000;
+}
+
+.info-box input:focus~label,
+.info-box input:valid~label
+{
+    top: -30px;
+    left: 0;
+    color: #000000;
+    font-size: 18px;
+}
+
+.info-box input
+{
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.info-box label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+    transition: 5s;
+}
+
+.info-box .sauvegarder input 
+{
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: none;
+    position: relative;
+    max-width: 300px;
+    height: 35px;
+    background-color: whitesmoke;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    backdrop-filter: blur(55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+.info-box .sauvegarder input:hover
+{
+    box-shadow: 0 0 5px #e4c7a5, 0 0 25px #e4c7a5, 0 0 50px #e4c7a5;
+}
+
+.info-box .sauvegarder 
+{
+    font-size: 1em;
+    color: #000000;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+p 
+{
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.icon {
+    text-align: center;
+}
+
+img {
+    width: 20%;
+}
