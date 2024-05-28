@@ -75,7 +75,7 @@ CREATE TABLE avent
     lien_billeterie VARCHAR(255),
     lieu VARCHAR(255),
     capacity INT,
-    etat BOOLEAN
+    etat BOOLEAN,
     is_payant BOOLEAN,
     is_public BOOLEAN,
     date_creation TIMESTAMP,

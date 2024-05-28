@@ -52,14 +52,14 @@ INSERT INTO fav_theme_for_user(user_id,theme_id) VALUES
 ('1','2'),
 ('1','3');
 
-INSERT INTO avent (nom) VALUES
+INSERT INTO avent (nom,etat) VALUES
 
-('Sortie Ciné'),
-('Plage copine'),
-('Expo Arts & Métiers'),
-('Soirée Caritative'),
-('Concert'),
-('Entretien');
+('Sortie Ciné', true),
+('Plage copine', true),
+('Expo Arts & Métiers', true),
+('Soirée Caritative', true),
+('Concert', true),
+('Entretien', true);
 
 INSERT INTO theme_for_avent (theme_id,avent_id) VALUES
 
