@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'C:\xampp\htdocs\exercices\avent\code\PHP\modele\m_algo_compatibility.php';
+    require_once '..\m_algo_compatibility.php';
 
     $User1 = ['Cinéma'];
     $User2 = ['Cinema'];
