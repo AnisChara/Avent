@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title>info compte</title>
-		<link rel="stylesheet" type="text/css" href="v_user_info.css">
+		<link rel="stylesheet" type="text/css" href="../views/css/v_user_info.css">
 		<meta charset="utf-8">
 	</head>
 <body>	
 	<h1>Avent, créez, partagez, profitez !</h1>
 	<div class="logo">
-		<img src="AVent.png" alt="">
+		<img src="../views/images/AVent.png" alt="">
 	</div>	
 		<div class="info-box">
 			<form action="./c_afficher_page_compte.php" method="POST">
@@ -17,26 +17,26 @@
 				</div>
 				<!-- <?php if ( isset($error_modif_msg)) echo $error_modif_msg; ?>-->
 				<div class="icon">
-					<img src="user.svg" alt=""/>
+					<img src="../views/images/user.svg" alt=""/>
 				</div>
                 <div class = "box">
-                    <input type="text" name="nom" value="">
+                    <input type="text" name="nom" value=<?php echo $nom ?>>
 					<label>nom</label>
                 </div>
                 <div class = "box">
-                    <input type="text" name="prenom" value="">
+                    <input type="text" name="prenom" value="<?php echo $prenom ?>">
 					<label>prenom</label>
                 </div>
                 <div class = "box">
-                    <input type="text" name="pseudo" value="">
+                    <input type="text" name="pseudo" value="<?php echo $pseudo ?>">
 					<label>pseudo</label>
                 </div>
 				<div class = "box">
-					<input type="password" name="password" value="">
+					<input type="text" name="password" value="<?php echo $mot_de_passe ?>">
 					<label>Mot de passe</label>
 				</div>
                 <div class = "box" >
-                    <input type="img" name="pp" value="">
+                    <input type="img" name="pp" value="<?php echo $pp ?>">
 					<label>photo de profil</label>
                 </div>
 				<div class = "sauvegarder">

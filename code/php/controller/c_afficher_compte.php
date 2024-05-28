@@ -2,7 +2,7 @@
 
 require '../modele/m_recuperation_info_user.php';
 require '../modele/m_verif_cookies.php';
-require '../modele/m_get_ID_from_mail.php';
+require '../modele/m_getID_from_mail.php';
 require '../modele/m_collect_img_profil.php';
 
 verif_cookies();
@@ -16,11 +16,11 @@ $nom = $info['nom'];
 $prenom = $info['prenom'];
 $pseudo = $info['pseudo'];
 $mot_de_passe = $info['mot_de_passe'];
-$date_de_naissance = $info['date_de_naissance'];
+$date_de_naissance = $info['date_naissance'];
 $is_verif = $info['is_verif'];
 $is_brand = $info['is_brand'];
 $pp = img_profil($user_id);
 $genre = $info['genre'];
-$date_de_creation = $info['date_de_creation'];
+$date_de_creation = $info['date_creation'];
 
 require 'c_afficher_page_compte.php';
