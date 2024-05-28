@@ -58,7 +58,7 @@
                     <label>Titre :</label>
                     <textarea name="titre"></textarea>
                     <label>Description :</label>
-                    <textarea name="description"></textarea>
+                    <textarea name="information"></textarea>
                     <label>Autre Tag :</label>
                     <textarea name="tag"></textarea>
             </form>
@@ -69,7 +69,7 @@
                 <input type="file" name="image">
                     <div class="image">
                         <div class="image-prod">
-                            <img src=fond_oasis.jpg alt="">
+                            <img src="fond_oasis.jpg" alt="">
                         </div>
                     </div>
                 <input type="submit" value="Ajouter" name="btn-ajouter">
