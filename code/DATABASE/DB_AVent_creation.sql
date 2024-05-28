@@ -92,7 +92,8 @@ CREATE TABLE photo_for_avent
 CREATE TABLE fav_avent_for_user
 (
     user_id INT,
-    avent_id INT
+    avent_id INT,
+    date_fav TIMESTAMP
 );
 
 CREATE TABLE fav_theme_for_user
@@ -122,7 +123,8 @@ CREATE TABLE theme_for_avent
 CREATE TABLE inscrit
 (
     user_id INT,
-    avent_id INT
+    avent_id INT,
+    date_inscription TIMESTAMP
 );
 
 CREATE TABLE suggestions
