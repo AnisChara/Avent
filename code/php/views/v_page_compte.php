@@ -11,7 +11,7 @@
 		<img src="AVent.png" alt="">
 	</div>	
 		<div class="info-box">
-			<form action="./c_aff_compte.php" method="POST">
+			<form action="./c_afficher_page_compte.php" method="POST">
 				<div class ="titre">
 					<h2 class="light">compte</h2>
 				</div>
