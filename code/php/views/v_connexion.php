@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Accueil</title>
-		<link rel="stylesheet" type="text/css" href="v_connexion.css">
+		<link rel="stylesheet" type="text/css" href="../views/v_connexion.css">
 		<meta charset="utf-8">
 	</head>
 <body>	
