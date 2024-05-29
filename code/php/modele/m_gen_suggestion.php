@@ -67,7 +67,7 @@
         $order = quickSort($order);
 
         $queryADDSuggestion = 'INSERT INTO suggestions (user_id,avent_id) VALUES (:user_id,:avent_id);';
-        $genNumber = 1;
+        $genNumber = 25;
         
         if(COUNT($order) < $genNumber)
         {
