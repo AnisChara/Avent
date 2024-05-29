@@ -11,7 +11,7 @@
 
         require 'm_algo_compatibility.php';
 
-        if(collect_suggestion($userID) ==! false)
+        if(collect_suggestion($userID) !== false)
         {
             $query = 'DELETE FROM suggestions WHERE user_id = :id';
             $argument = [[':id',$userID]];
@@ -69,14 +69,24 @@
         $queryADDSuggestion = 'INSERT INTO suggestions (user_id,avent_id) VALUES (:user_id,:avent_id);';
         $genNumber = 25;
         
-        if(COUNT($order) < 25)
+        if(COUNT($order) < $genNumber)
         {
             $genNumber = COUNT($order);
+            $notenought = true;
         }
 
         for($y = 0; $y < $genNumber; $y++)
         {
-            $argument = [[':user_id',$userID],[':avent_id',$order[$y][0]]];
+            $random = rand(0,100); 
+            if(!(isset($notenought)) && ($random > 50 && $random < 85))
+            {
+                $argument = [[':user_id',$userID],[':avent_id',$order[rand($genNumber,COUNT($order)-1)][0]]];
+            }
+            else
+            {
+                $argument = [[':user_id',$userID],[':avent_id',$order[$y][0]]];
+            }
+            
             queryDB($db,$queryADDSuggestion,$argument);
         }
     }

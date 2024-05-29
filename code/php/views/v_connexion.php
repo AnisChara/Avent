@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Accueil</title>
-		<link rel="stylesheet" type="text/css" href="../views/v_connexion.css">
+		<link rel="stylesheet" type="text/css" href="../views/css/v_connexion.css">
 		<meta charset="utf-8">
 	</head>
 <body>	
@@ -15,14 +15,14 @@
 				</div>
 				<?php if ( isset($error_connexion_msg)) echo $error_connexion_msg; ?>
 				<div class="icon">
-					<img src="user.svg" alt=""/>
+					<img src="../views/images/user.svg" alt=""/>
 				</div>
 				<div class = "box">
-					<input type="text" name="pseudo" value="">
+					<input type="text" name="email" value="">
 					<label>Email</label>
 				</div>
 				<div class = "box">
-					<input type="password" name="password" value="">
+					<input type="password" name="mot_de_passe" value="">
 					<label>Mot de passe</label>
 				</div>
 				<div class = "connect">
@@ -34,7 +34,7 @@
 			</form>
 		</div>
 	<div class="logo">
-		<img src="AVent.png" alt="">
+		<img src="../views/images/AVent.png" alt="">
 	</div>
 </body>
 </html>

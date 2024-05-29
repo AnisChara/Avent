@@ -6,12 +6,12 @@ function collectThemeHistory($UserID)
     require_once 'm_recuperationDB.php';
 
     $collectNumber = 25;
-    $collectPourcentage = 10;
     
-    $queryLastSeenByUser = 'SELECT fav_avent_for_user.avent_id FROM fav_avent_for_user INNER JOIN views ON fav_avent_for_user.avent_id = views.avent_id WHERE views.user_id = :user_id ORDER BY views.date_view ASC LIMIT :collectNumber';
+    $queryLastSeenByUser = 'SELECT fav_avent_for_user.avent_id FROM fav_avent_for_user INNER JOIN views ON fav_avent_for_user.avent_id = views.avent_id LEFT JOIN inscrit ON fav_avent_for_user.avent_id = inscrit.avent_id WHERE views.user_id = :user_id ORDER BY views.date_view ASC LIMIT :collectNumber';
     $argumentsLastSeenByUser = [[":user_id",$UserID],[":collectNumber",$collectNumber,"INT"]];
 
     $brutdataLastSeenByUser = queryDB($db,$queryLastSeenByUser,$argumentsLastSeenByUser);
+
 
     $queryThemeLastSeenByUser = 'SELECT theme.theme_name FROM theme INNER JOIN theme_for_avent ON theme.theme_id = theme_for_avent.theme_id WHERE avent_id = :avent_id;';
     $brutdataThemeLastSeenByUser = [];

@@ -11,7 +11,7 @@ function get_userID($email)
 
     $id = queryDB($db, $requete, $argument);
 
-    return $id;
+    return $id[0]["user_id"];
 }
 
 
