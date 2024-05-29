@@ -6,7 +6,7 @@ verif_cookies();
 
 if(isset($_COOKIE['MotherURL']))
 {
-    $ParentUrl = $_COOKIE['MotherURL'];
+    $MotherUrl = $_COOKIE['MotherURL'];
 }
 else
 {
