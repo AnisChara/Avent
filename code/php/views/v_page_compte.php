@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>info compte</title>
-		<link rel="stylesheet" type="text/css" href="../views/css/v_user_info.css">
+		<link rel="stylesheet" type="text/css" href="../views/css/v_page_compte.css">
 		<meta charset="utf-8">
 	</head>
 <body>
@@ -15,24 +15,13 @@
             <li><a href="./c_create_avent.php">Création</a></li>
         </ul>
     </nav>
-    
-    <!-- Search Bar -->
-    <div class="navbar">
-        <form method="GET" action="">
-            <input type="text" placeholder="Mots-clés">
-            <input type="submit" value="Rechercher">
-        </form>
-        <!-- Floating Button -->
-        <div class="floating-btn">
-            <img src="../views/images/AVent.png" alt="Floating Menu" class="menu_avent">
-        </div>
-    </div>
 
-<!-- Main Content -->	
-	<h1>Avent, créez, partagez, profitez !</h1>
-	<div class="logo">
-		<img src="../views/images/AVent.png" alt="">
-	</div>	
+<!-- Main Content -->
+	<div class="container">
+		<h1>Avent, créez, partagez, profitez !</h1>
+		<div class="logo">
+			<img src="../views/images/AVent.png" alt="">
+		</div>	
 		<div class="info-box">
 			<form action="./c_afficher_page_compte.php" method="POST">
 				<div class ="titre">
@@ -67,5 +56,6 @@
 				</div>
 			</form>
 		</div>
+	</div>
 </body>
 </html>
