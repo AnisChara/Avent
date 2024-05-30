@@ -5,7 +5,30 @@
 		<link rel="stylesheet" type="text/css" href="../views/css/v_user_info.css">
 		<meta charset="utf-8">
 	</head>
-<body>	
+<body>
+	<!-- Navigation Bar -->
+	<nav class="nav_options">
+        <ul>
+            <li><a href="./c_accueil.php">Home</a></li>
+            <li><a href="#">Avent</a></li>
+            <li><a href="#">Compte</a></li>
+            <li><a href="#">Création</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Search Bar -->
+    <div class="navbar">
+        <form method="GET" action="">
+            <input type="text" placeholder="Mots-clés">
+            <input type="submit" value="Rechercher">
+        </form>
+        <!-- Floating Button -->
+        <div class="floating-btn">
+            <img src="images/AVent.png" alt="Floating Menu" class="menu_avent">
+        </div>
+    </div>
+
+<!-- Main Content -->	
 	<h1>Avent, créez, partagez, profitez !</h1>
 	<div class="logo">
 		<img src="../views/images/AVent.png" alt="">

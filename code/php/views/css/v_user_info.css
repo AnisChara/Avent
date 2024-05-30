@@ -14,6 +14,89 @@ body
     min-height: 100vh;
     background-image: url(A\ V\ E\ N\ T.svg);
 }
+.nav_options {
+    background-color: black;
+    width: 250px;
+    height: 120vh;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav_options ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.nav_options ul li {
+    margin: 20px 0;
+}
+
+.nav_options ul li a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.nav_options ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+.navbar {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: #f0f0f0;
+}
+
+.navbar form {
+    display: flex;
+}
+
+.navbar input[type="text"] {
+    width: 500px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+
+.navbar input[type="submit"] {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    background-color: #00f;
+    color: white;
+    cursor: pointer;
+}
+
+/* logo */
+
+.floating-btn {
+    position: fixed;
+    top: 8px;
+    right: 20px;
+}
+
+.floating-btn img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
 
 h1 {
     font-size: 30px;
