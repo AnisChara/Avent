@@ -10,9 +10,9 @@
 	<nav class="nav_options">
         <ul>
             <li><a href="./c_accueil.php">Home</a></li>
-            <li><a href="#">Avent</a></li>
-            <li><a href="#">Compte</a></li>
-            <li><a href="#">Création</a></li>
+            <li><a href="./c_avent.php">Avent</a></li>
+            <li><a href="./c_afficher_compte.php">Compte</a></li>
+            <li><a href="./c_create_avent.php">Création</a></li>
         </ul>
     </nav>
     
@@ -24,7 +24,7 @@
         </form>
         <!-- Floating Button -->
         <div class="floating-btn">
-            <img src="images/AVent.png" alt="Floating Menu" class="menu_avent">
+            <img src="../views/images/AVent.png" alt="Floating Menu" class="menu_avent">
         </div>
     </div>
 

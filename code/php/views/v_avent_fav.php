@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="v_avent.css">
+    <link rel="stylesheet" href="../views/css/v_avent.css">
     <title>AVENT</title>
 </head>
 <body>
@@ -11,23 +11,23 @@
     <nav class="nav_options">
         <ul>
             <li><a href="./c_accueil.php">Home</a></li>
-            <li><a href="#">Avent</a></li>
-            <li><a href="#">Compte</a></li>
-            <li><a href="#">Création</a></li>
+            <li><a href="./c_avent.php">Avent</a></li>
+            <li><a href="./c_afficher_compte.php">Compte</a></li>
+            <li><a href="./c_create_avent.php">Création</a></li>
         </ul>
     </nav>
     
     <!-- link Bar -->
     <div class="link_container">
         <div class="link">
-            <a href="#"></a><h2 class="underline unline">My AVent</h2></a>
-            <a href="#"><h2 class="underline unline">My AVent Favoris</h2></a>
-            <h2 class="line">My inscription</h2>
+            <a href="./c_avent.php"><h2 class="underline unline">My AVent</h2></a>
+            <h2 class="line">My AVent Favoris</h2>
+            <a href="./c_avent_inscription.php"><h2 class="underline unline">My inscription</h2></a>
         </div>
 
         <!-- Floating Button -->
         <div class="floating-btn">
-            <img src="AVent.png" alt="Floating Menu" class="menu_avent">
+            <img src="../views/images/AVent.png" alt="Floating Menu" class="menu_avent">
         </div>
     </div>
 
@@ -38,7 +38,7 @@
             <div class="list_avent">
                 <div class="avent">
                     <div class="image">
-                        <img src="fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
                     </div>
                     <div class="content">
                         <strong><p class="titre">Je suis un titre</p></strong>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="avent">
                     <div class="image">
-                        <img src="fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
                     </div>
                     <div class="content">
                         <strong><p class="titre">Je suis un titre</p></strong>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="avent">
                     <div class="image">
-                        <img src="fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
                     </div>
                     <div class="content">
                         <strong><p class="titre">Je suis un titre</p></strong>

@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="v_creation_avent.css">
+    <link rel="stylesheet" href="../views/css/v_creation_avent.css">
     <title>Création AVent</title>
 </head>
 <body>
     <!-- partie de redirection vers différentes pages -->
     <div class = "nav_options ">
         <ul>
-            <li class = "active"><a href="#">Home</a></li>
-            <li class = "active"><a href="#">Avent</a></li>
-            <li class = "active"><a href="#">Compte</a></li>
-            <li class = "active"><a href="#">Création</a></li>
+            <li><a href="./c_accueil.php">Home</a></li>
+            <li><a href="./c_avent.php">Avent</a></li>
+            <li><a href="./c_afficher_compte.php">Compte</a></li>
+            <li><a href="./c_create_avent.php">Création</a></li>
         </ul>
     <!-- partie de la création -->
     <section class="container_colon">
         <div class="first_colon">
-            <form action="" method="POST">
+            <form action="" method="GET">
                 <Select name="Nom">
                     <option>Nom de référence</option>
                     <option value="">a</option>
@@ -64,12 +64,12 @@
             </form>
         </div>
         <div class="second_colon">
-            <form action="" method="POST">
+            <form action="" method="GET">
                 <label>Ajouter une image</label>
                 <input type="file" name="image">
                     <div class="image">
                         <div class="image-prod">
-                            <img src="fond_oasis.jpg" alt="">
+                            <img src="../views/images/fond_oasis.jpg" alt="">
                         </div>
                     </div>
                 <input type="submit" value="Ajouter" name="btn-ajouter">
@@ -78,7 +78,7 @@
     </section>
       <!-- logo -->
         <div class="logo">
-            <img src="AVent.png" alt="menu" class="menu_avent">
+            <img src="../views/images/AVent.png" alt="menu" class="menu_avent">
         </div>
     </div>
 

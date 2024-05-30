@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="v_avent_search.css">
+    <link rel="stylesheet" href="../views/css/v_avent_search.css">
     <title>result search</title>
 </head>
 <body>
@@ -11,9 +11,9 @@
     <nav class="nav_options">
         <ul>
             <li><a href="./c_accueil.php">Home</a></li>
-            <li><a href="#">Avent</a></li>
-            <li><a href="#">Compte</a></li>
-            <li><a href="#">Création</a></li>
+            <li><a href="./c_avent.php">Avent</a></li>
+            <li><a href="./c_afficher_compte.php">Compte</a></li>
+            <li><a href="./c_create_avent.php">Création</a></li>
         </ul>
     </nav>
     
@@ -25,7 +25,7 @@
         </form>
         <!-- Floating Button -->
         <div class="floating-btn">
-            <img src="images/AVent.png" alt="Floating Menu" class="menu_avent">
+            <img src="../views/images/AVent.png" alt="Floating Menu" class="menu_avent">
         </div>
     </div>
 
@@ -36,7 +36,7 @@
             <div class="list_avent">
                 <div class="avent">
                     <div class="image">
-                        <img src="images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
                         <div class="content">
                             <strong><p class="titre">Je suis un titre</p></strong>
                             <p class="createur">Créateur</p>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="avent">
                     <div class="image">
-                        <img src="images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
                         <div class="content">
                             <strong><p class="titre">Je suis un titre</p></strong>
                             <p class="createur">Créateur</p>
@@ -54,36 +54,7 @@
                 </div>
                 <div class="avent">
                     <div class="image">
-                        <img src="images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="list_avent">
-                <div class="avent">
-                    <div class="image">
-                        <img src="images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
                         <div class="content">
                             <strong><p class="titre">Je suis un titre</p></strong>
                             <p class="createur">Créateur</p>
@@ -94,7 +65,7 @@
             <div class="list_avent">
                 <div class="avent">
                     <div class="image">
-                        <img src="images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
                         <div class="content">
                             <strong><p class="titre">Je suis un titre</p></strong>
                             <p class="createur">Créateur</p>
@@ -103,7 +74,7 @@
                 </div>
                 <div class="avent">
                     <div class="image">
-                        <img src="images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
                         <div class="content">
                             <strong><p class="titre">Je suis un titre</p></strong>
                             <p class="createur">Créateur</p>
@@ -112,7 +83,36 @@
                 </div>
                 <div class="avent">
                     <div class="image">
-                        <img src="images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <div class="content">
+                            <strong><p class="titre">Je suis un titre</p></strong>
+                            <p class="createur">Créateur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list_avent">
+                <div class="avent">
+                    <div class="image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <div class="content">
+                            <strong><p class="titre">Je suis un titre</p></strong>
+                            <p class="createur">Créateur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="avent">
+                    <div class="image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                        <div class="content">
+                            <strong><p class="titre">Je suis un titre</p></strong>
+                            <p class="createur">Créateur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="avent">
+                    <div class="image">
+                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
                         <div class="content">
                             <strong><p class="titre">Je suis un titre</p></strong>
                             <p class="createur">Créateur</p>
