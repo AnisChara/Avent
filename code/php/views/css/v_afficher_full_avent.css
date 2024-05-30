@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.nav_options {
+    background-color: black;
+    width: 250px;
+    height: 120vh;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav_options ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.nav_options ul li {
+    margin: 20px 0;
+}
+
+.nav_options ul li a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.nav_options ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* logo */
+
+.floating-btn {
+    position: fixed;
+    top: 8px;
+    right: 20px;
+}
+
+.floating-btn img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.main-content {
+    position: relative;
+    margin: 0 auto;
+    width: calc(100% - 250px);
+    max-width: 1000px; /* Augmenter la largeur maximale */
+    min-height: 120vh; /* Augmenter la hauteur du contenu principal */
+    padding-bottom: 200px;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; /* Ajouter un padding supérieur */
+    padding-bottom: 80px; /* Ajouter un padding inférieur */
+}
+.navbar {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: #f0f0f0;
+}
+
+.navbar form {
+    display: flex;
+}
+
+.navbar input[type="text"] {
+    width: 500px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+
+.navbar input[type="submit"] {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    background-color: #00f;
+    color: white;
+    cursor: pointer;
+}
+
+.avent_container {
+    width: calc(100% - 250px);
+    height: calc(100vh - 80px);
+    margin: 80px 0px 0px 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avent {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;   
+}
+.main_content .avent_container .avent .card_avent .image 
+{
+    width: 5%;
+    height: 1%;
+}
