@@ -42,7 +42,7 @@
                     echo' 
                     <div class="avent">
                         <div class="image">
-                            <img src="'.img_avent($list_avent[$i]['avent_id']).'" alt="" class="suggestion-image">
+                            <img src=data:image/jpg;base64,"'.img_avent($list_avent[$i]['avent_id']).'" alt="" class="suggestion-image">
                         </div>
                         <div class="content">
                             <strong><p class="titre">'.$list_avent[$i]['nom'].'</p></strong>
