@@ -86,8 +86,8 @@ CREATE TABLE avent
 
 CREATE TABLE photo_for_avent
 (
-    photo_id INT PRIMARY KEY AUTO_INCREMENT,
-    avent_id INT
+    photo_id INT,
+    avent_id INT PRIMARY KEY
 );
 
 CREATE TABLE fav_avent_for_user

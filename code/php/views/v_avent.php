@@ -36,36 +36,23 @@
         <!-- Suggestions Section -->
         <div class="list_avent_content">
             <div class="list_avent">
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
+                <?php
+                for($i = 0; $i < COUNT($list_avent); $i++)
+                {
+                    echo' 
+                    <div class="avent">
+                        <div class="image">
+                            <img src="'.img_avent($list_avent[$i]['avent_id']).'" alt="" class="suggestion-image">
+                        </div>
+                        <div class="content">
+                            <strong><p class="titre">'.$list_avent[$i]['nom'].'</p></strong>
+                            <p class="createur">'.nom_from_user($list_avent[$i]['createur']).'</p>
+                            <p class="description">'.$list_avent[$i]['information'].'</p>
+                        </div>
                     </div>
-                    <div class="content">
-                        <strong><p class="titre">Je suis un titre</p></strong>
-                        <p class="createur">Créateur</p>
-                        <p class="description">Description détaillée ici...</p>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                    </div>
-                    <div class="content">
-                        <strong><p class="titre">Je suis un titre</p></strong>
-                        <p class="createur">Créateur</p>
-                        <p class="description">Description détaillée ici...</p>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                    </div>
-                    <div class="content">
-                        <strong><p class="titre">Je suis un titre</p></strong>
-                        <p class="createur">Créateur</p>
-                        <p class="description">Description détaillée ici...</p>
-                    </div>
-                </div>
+                    ';
+                };
+                ?>
             </div>
         </div>
     </div>
