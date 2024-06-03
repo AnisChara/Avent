@@ -25,8 +25,6 @@ if ($inscription[0] == true && $inscription[1] == true) {
 
     if ($user_creation == true && $theme_insertion == true) {
 
-        setcookie("mot_de_passe", $_POST["mot_de_passe"]);
-        setcookie("email", $_POST["email"]);
         require "../views/v_confirmation_inscription.php";
         
     }
