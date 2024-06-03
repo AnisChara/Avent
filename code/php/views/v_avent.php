@@ -37,12 +37,16 @@
         <div class="list_avent_content">
             <div class="list_avent">
                 <?php
+                if(COUNT($list_avent) < 1)
+                {
+                    echo ("<p class = "."nothing".">Vous n'avez pas encore crée d'AVENT !".'</p>');
+                }
                 for($i = 0; $i < COUNT($list_avent); $i++)
                 {
                     echo' 
                     <div class="avent">
                         <div class="image">
-                            <img src=data:image/jpg;base64,"'.img_avent($list_avent[$i]['avent_id']).'" alt="" class="suggestion-image">
+                            <img src=data:image/jpg;base64,'.img_avent($list_avent[$i]['avent_id']).' alt="" class="suggestion-image">
                         </div>
                         <div class="content">
                             <strong><p class="titre">'.$list_avent[$i]['nom'].'</p></strong>
