@@ -1,9 +1,9 @@
 <?php
 
-    require_once '../m_collect_suggestion.php';
+    require_once '../m_get_suggestion.php';
 
     $user = 1;
 
-    echo var_dump(collect_suggestion($user));
+    echo var_dump(get_suggestion($user));
 
 ?>

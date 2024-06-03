@@ -36,36 +36,30 @@
         <!-- Suggestions Section -->
         <div class="list_avent_content">
             <div class="list_avent">
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                    </div>
-                    <div class="content">
-                        <strong><p class="titre">Je suis un titre</p></strong>
-                        <p class="createur">Créateur</p>
-                        <p class="description">Description détaillée ici...</p>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                    </div>
-                    <div class="content">
-                        <strong><p class="titre">Je suis un titre</p></strong>
-                        <p class="createur">Créateur</p>
-                        <p class="description">Description détaillée ici...</p>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                    </div>
-                    <div class="content">
-                        <strong><p class="titre">Je suis un titre</p></strong>
-                        <p class="createur">Créateur</p>
-                        <p class="description">Description détaillée ici...</p>
-                    </div>
-                </div>
+                <?php
+                    if(COUNT($list_avent_fav) < 1)
+                    {
+                        echo "<p class = 'nothing'> Vous n'avez pas encore aimé(e) d'AVENT ! </p>";
+                    }
+                    else
+                    {
+                        for($a = 0; $a < COUNT($list_avent_fav); $a++)
+                        {
+                            echo '
+                                <div class="avent">
+                                    <div class="image">
+                                        <img src=data:image/jpg;base64,'.img_avent($list_avent_fav[$a]['avent_id']).' alt="" class="suggestion-image">
+                                    </div>
+                                    <div class="content">
+                                        <strong><p class="titre">'.$list_avent_fav[$a]['nom'].'</p></strong>
+                                        <p class="createur">'.nom_from_user($list_avent_fav[$a]['createur']).'</p>
+                                        <p class="description">'.$list_avent_fav[$a]['information'].'</p>
+                                    </div>
+                                </div>
+                                ';
+                        }
+                    }
+                ?>
             </div>
         </div>
     </div>
