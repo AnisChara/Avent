@@ -7,11 +7,11 @@
 
         require 'm_collect_theme_user.php';
         require 'm_collect_avent_notseen.php';
-        require 'm_collect_suggestion.php';
+        require 'm_get_suggestion.php';
 
         require 'm_algo_compatibility.php';
 
-        if(collect_suggestion($userID) !== false)
+        if(get_suggestion($userID) ==! false)
         {
             $query = 'DELETE FROM suggestions WHERE user_id = :id';
             $argument = [[':id',$userID]];
@@ -90,5 +90,3 @@
             queryDB($db,$queryADDSuggestion,$argument);
         }
     }
-
-?>
