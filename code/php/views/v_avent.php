@@ -39,23 +39,26 @@
                 <?php
                 if(COUNT($list_avent) < 1)
                 {
-                    echo ("<p class = "."nothing".">Vous n'avez pas encore crée d'AVENT !".'</p>');
+                    echo "<p class='nothing'>Vous n'avez pas d'Avent pour le moment.</p>"
                 }
-                for($i = 0; $i < COUNT($list_avent); $i++)
+                else
                 {
-                    echo' 
-                    <div class="avent">
-                        <div class="image">
-                            <img src=data:image/jpg;base64,'.img_avent($list_avent[$i]['avent_id']).' alt="" class="suggestion-image">
+                    for($i = 0; $i < COUNT($list_avent); $i++)
+                    {
+                        echo' 
+                        <div class="avent">
+                            <div class="image">
+                                <img src=data:image/jpg;base64,'.img_avent($list_avent[$i]['avent_id']).' alt="" class="suggestion-image">
+                            </div>
+                            <div class="content">
+                                <strong><p class="titre">'.$list_avent[$i]['nom'].'</p></strong>
+                                <p class="createur">'.nom_from_user($list_avent[$i]['createur']).'</p>
+                                <p class="description">'.$list_avent[$i]['information'].'</p>
+                            </div>
                         </div>
-                        <div class="content">
-                            <strong><p class="titre">'.$list_avent[$i]['nom'].'</p></strong>
-                            <p class="createur">'.nom_from_user($list_avent[$i]['createur']).'</p>
-                            <p class="description">'.$list_avent[$i]['information'].'</p>
-                        </div>
-                    </div>
-                    ';
-                };
+                        ';
+                    }
+                }
                 ?>
             </div>
         </div>
