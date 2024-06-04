@@ -20,7 +20,7 @@ require "../modele/m_getID_from_mail.php";
             gen_suggestion(get_userID($_POST["email"]));
             setcookie("suggestion", 0);
 
-            header("Location:./c_afficher_TL.php");
+            header("Location:./c_accueil.php");
         }
         else if ($connexion === false)
         {
