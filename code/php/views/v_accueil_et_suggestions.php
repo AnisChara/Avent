@@ -34,29 +34,33 @@
         <!-- Suggestions Section -->
         <div class="container_sug">
             <div class="suggestion">
-                <div class="card">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                    </div>
-                    <div class="contente">
-                        <div class="content">
-                            <h2 class="titre">Je suis un titre</h2>
-                            <p class="description">Description détaillée ici...</p>
+                <?php
+
+                echo'
+                    <div class="card">
+                        <div class="image">
+                            <img src=data:image/jpg;base64,'.img_avent($AventDisplay['avent_id']).' alt="" class="suggestion-image">
                         </div>
-                    </div>
-                </div>
+                        <div class="contente">
+                            <div class="content">
+                                <h2 class="titre">'.$AventDisplay['nom'].'</h2>
+                                <p class="description">'.$AventDisplay['information'].'</p>
+                            </div>
+                        </div>
+                    </div>'
+                ?>
                 <!-- Ajout d'autres cartes si nécessaire -->
             </div>
             <!-- Boutons de navigation -->
             <div class="nav-buttons left">
-                <button class="nav-button">1</button>
-                <button class="nav-button">2</button>
-                <button class="nav-button">3</button>
+                <button class="nav-button">theme_1</button>
+                <button class="nav-button">theme_2</button>
+                <button class="nav-button">theme_3</button>
             </div>
             <div class="nav-buttons right">
-                <button class="nav-button">1</button>
-                <button class="nav-button">2</button>
-                <button class="nav-button">3</button>
+                <a href = "./c_change_suggestion_plus.php">up</a>
+                <a href="./c_like_avent.php">Like</a> <!--afficher l'image fav / unfav en fonction de l'avent par rapport à user-->
+                <a href="./c_change_suggestion_minus.php">down</a>
             </div>
         </div>
     </div>
