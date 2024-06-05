@@ -53,14 +53,14 @@
             </div>
             <!-- Boutons de navigation -->
             <div class="nav-buttons left">
-                <a href = "./c_change_suggestion_plus.php">up</a>
-                <a href="./c_like_avent.php">Like</a>
-                <a href="./c_change_suggestion_minus.php">down</a>
-            </div>
-            <div class="nav-buttons right">
                 <button class="nav-button">theme_1</button>
                 <button class="nav-button">theme_2</button>
                 <button class="nav-button">theme_3</button>
+            </div>
+            <div class="nav-buttons right">
+                <a href = "./c_change_suggestion_plus.php">up</a>
+                <a href="./c_like_avent.php">Like</a> <!--afficher l'image fav / unfav en fonction de l'avent par rapport à user-->
+                <a href="./c_change_suggestion_minus.php">down</a>
             </div>
         </div>
     </div>
