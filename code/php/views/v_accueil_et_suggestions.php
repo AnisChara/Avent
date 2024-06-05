@@ -34,8 +34,7 @@
         <!-- Suggestions Section -->
         <div class="container_sug">
             <div class="suggestion">
-                <?php
-
+            <?php
                 echo'
                     <div class="card">
                         <div class="image">
@@ -48,7 +47,7 @@
                             </div>
                         </div>
                     </div>'
-                ?>
+            ?>
                 <!-- Ajout d'autres cartes si nécessaire -->
             </div>
             <!-- Boutons de navigation -->
@@ -58,9 +57,9 @@
                 <button class="nav-button">theme_3</button>
             </div>
             <div class="nav-buttons right">
-                <a href = "./c_change_suggestion_plus.php">up</a>
-                <a href="./c_like_avent.php">Like</a> <!--afficher l'image fav / unfav en fonction de l'avent par rapport à user-->
-                <a href="./c_change_suggestion_minus.php">down</a>
+                <a href="./c_change_suggestion_plus.php" class="nav-link">Up</a>
+                <a href="./c_like_avent.php" class="nav-link">Like</a>
+                <a href="./c_change_suggestion_minus.php" class="nav-link">Down</a>
             </div>
         </div>
     </div>
