@@ -20,13 +20,11 @@ $inscription = verif_inscription($_POST['email'],$_POST['pseudo']);
 if ($inscription[0] == true && $inscription[1] == true) {
     
     $user_creation = create_user($_POST['nom'],$_POST['prenom'],$_POST['date_naissance'],$_POST['email'],$_POST['genre'],$_POST['pseudo'],$_POST['mot_de_passe']);
-    $id = get_userID($_POST['email'])[0]['user_id'];
+    $id = get_userID($_POST['email']);
     $theme_insertion = insert_theme_for_user($id,$_POST['theme1'], $_POST['theme2'], $_POST['theme3']);
 
     if ($user_creation == true && $theme_insertion == true) {
 
-        setcookie("mot_de_passe", $_POST["mot_de_passe"]);
-        setcookie("email", $_POST["email"]);
         require "../views/v_confirmation_inscription.php";
         
     }

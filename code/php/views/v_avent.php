@@ -39,7 +39,7 @@
                 <?php
                 if(COUNT($list_avent) < 1)
                 {
-                    echo "<p class='nothing'>Vous n'avez pas d'Avent pour le moment.</p>";
+                    echo ("<p class = "."nothing".">Vous n'avez pas encore crée d'AVENT !".'</p>');
                 }
                 else
                 {

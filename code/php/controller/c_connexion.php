@@ -1,6 +1,8 @@
 <?php
 
 require "../modele/m_user_connexion.php";
+require "../modele/m_gen_suggestion.php";
+require "../modele/m_getID_from_mail.php";
 
     if(empty($_POST["email"]) || empty($_POST["mot_de_passe"]))
     {
@@ -15,7 +17,10 @@ require "../modele/m_user_connexion.php";
         {
             setcookie("mot_de_passe", $_POST["mot_de_passe"]);
             setcookie("email", $_POST["email"]);
-            header("Location:./c_afficher_TL.php");
+            gen_suggestion(get_userID($_POST["email"]));
+            setcookie("suggestion", 0);
+
+            header("Location:./c_accueil.php");
         }
         else if ($connexion === false)
         {
