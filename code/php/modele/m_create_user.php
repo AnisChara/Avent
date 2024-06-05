@@ -7,7 +7,7 @@ function create_user($nom,$prenom,$date_naissance,$email,$genre,$pseudo,$mot_de_
     $argument = [[":nom",$nom],[":prenom",$prenom],[":date_naissance",$date_naissance],[":email",$email],[":genre",$genre],[":pseudo",$pseudo],[":mot_de_passe",$mot_de_passe]];
     try {
         $creation = queryDB($db,$req,$argument);
-    } catch (Exception $error) { echo 'error creation user'; return false;};
+    } catch (Exception $error) { echo $error; return false;};
     return true;
 }
 function modif_user($nom, $prenom, $date_naissance, $email, $genre, $pseudo, $mot_de_passe, $id) {
