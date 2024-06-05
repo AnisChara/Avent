@@ -48,7 +48,7 @@
 					<label>Mot de passe</label>
 				</div>
                 <div class = "box" >
-                    <input type="img" name="pp" value="<?php echo $pp ?>">
+				<input type="file" name="image">
 					<label>photo de profil</label>
                 </div>
 				<div class = "sauvegarder">
