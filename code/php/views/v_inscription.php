@@ -53,15 +53,33 @@
 				</div>
                 <!-- thème -->
                 <div class = "box">
-                    <input type="text" name="theme1" value="">
+                    <select name="theme2">
+                        <option></option>
+                        <?php foreach ($themelist as $theme) {
+                            echo '<option>'.$theme['theme_name'].'</option>';
+                        };
+                        ?>
+                    </select>
                     <label>Thème</label>
                 </div>
                 <div class = "box">
-                    <input type="text" name="theme2" value="">
+                    <select name="theme2">
+                        <option></option>
+                        <?php foreach ($themelist as $theme) {
+                            echo '<option>'.$theme['theme_name'].'</option>';
+                        };
+                        ?>
+                    </select>
                     <label>Thème</label>
                 </div> 
                 <div class = "box">
-                    <input type="text" name="theme3" value="">
+                    <select name="theme2">
+                        <option></option>
+                        <?php foreach ($themelist as $theme) {
+                            echo '<option>'.$theme['theme_name'].'</option>';
+                        };
+                        ?>
+                    </select>
                     <label>Thème</label>
                 </div>   
                 <!-- inscription -->
