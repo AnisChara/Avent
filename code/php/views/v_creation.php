@@ -20,36 +20,35 @@
     <section class="container_colon">
         <div class="first_colon">
             <form action="" method="GET">
-                <select name="Nom">
-                    <option>Nom de référence</option>
+                <input type="text" name="nom" value="Mon super Avent">
+                <select name="theme1">
+                    <option>Thématique 1</option>
                     <option value="">a</option>
                     <option value="">b</option>
                     <option value="">c</option>
                     <option value="">d</option>
                 </select>
-                <select name="theme1">
-                        <option></option>
-                        <?php foreach ($themelist as $theme) {
-                            echo '<option>'.$theme['theme_name'].'</option>';
-                        };
-                        ?>
-                    </select>
-                    <label>Thème 1</label>
                 <select name="theme2">
-                        <option></option>
-                        <?php foreach ($themelist as $theme) {
-                            echo '<option>'.$theme['theme_name'].'</option>';
-                        };
-                        ?>
-                    </select>
-                    <label>Thème 2</label>
-                    <select name="theme3">
-                        <option></option>
-                        <?php foreach ($themelist as $theme) {
-                            echo '<option>'.$theme['theme_name'].'</option>';
-                        };
-                        ?>
-                    </select>
+                    <option>Thématique 2</option>
+                    <option value="">a</option>
+                    <option value="">b</option>
+                    <option value="">c</option>
+                    <option value="">d</option>
+                </select>
+                <select name="theme3">
+                    <option>Thématique 3</option>
+                    <option value="">a</option>
+                    <option value="">b</option>
+                    <option value="">c</option>
+                    <option value="">d</option>
+                </select>
+                <select name="ajouter">
+                    <option>Ajouter organisateur</option>
+                    <option value="">a</option>
+                    <option value="">b</option>
+                    <option value="">c</option>
+                    <option value="">d</option>
+                </select>
                 <label><input type="checkbox" name="interest" value="" /> Évènement publique</label>
                 <label>Titre :</label>
                 <textarea name="titre"></textarea>
@@ -60,7 +59,7 @@
                 <input type="submit" value="Soumettre">
             </form>
         </div>
-        <div class="second_colon">
+        <div class="second_colon"> 
             <form action="" method="GET">
                 <label>Ajouter une image</label>
                 <input type="file" name="image">
