@@ -13,7 +13,7 @@
             <li><a href="./c_accueil.php">Home</a></li>
             <li><a href="#">Avent</a></li>
             <li><a href="#">Compte</a></li>
-            <li><a href="#">Création</a></li>
+            <li><a href="c_afficher_create_avent">Création</a></li>
         </ul>
     </nav>
     
