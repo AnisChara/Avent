@@ -12,7 +12,7 @@ CREATE TABLE brand
 (
     brand_id INT PRIMARY KEY AUTO_INCREMENT,
     brand_name VARCHAR(255),
-    siret INT
+    siret BIGINT
 );
 
 CREATE TABLE genre
