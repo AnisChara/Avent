@@ -16,5 +16,8 @@ $lieu = 'lieu';
 $age_minimum = 10;
 $sous_theme = 1;
 $createur = 1;
+$theme1 = 'Voyage';
+$theme2 = 'Jeux';
+$theme3 = 'Sport';
 
-create_avent($nom,$date_debut,$date_fin,$fin_inscription, $information, $capacity, $payant, $public, $lien_site, $lien_billeterie, $lieu, $age_minimum, $sous_theme, $createur);
+create_avent($nom,$date_debut,$date_fin,$fin_inscription, $information, $capacity, $payant, $public, $lien_site, $lien_billeterie, $lieu, $age_minimum, $sous_theme, $createur, $theme1, $theme2, $theme3);

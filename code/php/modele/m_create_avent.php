@@ -1,32 +1,34 @@
 <?php 
 
-function create_avent($nom,$date_debut,$date_fin,$fin_inscription, $information, $capacity, $payant, $public, $lien_site, $lien_billeterie, $lieu, $age_minimum, $sous_theme, $createur){
+
+
+function insert_theme_for_avent($avent_id, $theme1, $theme2, $theme3) {
+    require "m_connexion_bdd.php";
+    require "m_create_user.php";
+    require_once 'm_recuperationDB.php';
+    $theme_ids = relier_themename_themeid($theme1, $theme2, $theme3);
+    var_dump($theme_ids);
+    $requete = "INSERT INTO theme_for_avent(avent_id, theme_id) VALUES (:avent_id,:theme_id)";
+    try {
+        for ($i = 0; $i < COUNT($theme_ids); $i++)
+        {
+            $argument = [[':avent_id' , $avent_id], [':theme_id', $theme_ids[$i]]];
+            $result = queryDB($db,$requete,$argument);
+        }
+    } catch (Exception $error) { echo 'error insert theme'; return false;};
+    return true;
+}
+
+function create_avent($nom,$date_debut,$date_fin,$fin_inscription, $information, $capacity, $is_payant, $is_public, $lien_site, $lien_billeterie, $lieu, $age_minimum, $sous_theme, $createur, $theme1, $theme2, $theme3){
     // connect bdd 
     require "m_connexion_bdd.php";
+    require "m_get_aventID_from_name.php";
 
-   /* $nom = $_POST['nom'];
-    $date_debut = $_POST['date_debut'];
-    $date_fin = $_POST['date_fin'];
-    $information = $_POST['information'];
-    $capacity = $_POST['capacity'];
-    $payant = $_POST['is_payant'];
-    $public = $_POST['is_public'];
-    $fin_inscription = $_POST['fin_inscription'];
-    $lien_site = $_POST['lien_site'];
-    $lien_billeterie = $_POST['lien_billetterie'];
-    $lieu = $_POST['lieu'];
-    $age_minimum = $_POST['age_minimum'];
-    $sous_theme = $_POST['sous_theme'];
-    $img = $_POST['image'];*/
-
-
-    // ptit GUARD pour savoir si les tous les champs sont remplies 
-    if ($nom && $date_debut && $date_fin && $fin_inscription && $information && $capacity && $payant && $public && $lien_site && $lien_billeterie && $lieu && $age_minimum && $sous_theme && $createur) 
+    if ($nom && $date_debut && $date_fin && $fin_inscription && $information && $capacity && $is_payant && $is_public && $lien_site && $lien_billeterie && $lieu && $age_minimum && $sous_theme && $createur) 
     {    
-        // j'insert mes donnée dans la bdd 
         $requete = $db->prepare("INSERT INTO avent (nom, date_debut, date_fin, fin_inscription, information, capacity, is_payant, is_public, lien_site, lien_billeterie, lieu, age_minimum, sous_theme, createur) VALUES (:nom, :date_debut, :date_fin, :fin_inscription, :information, :capacity, :payant, :public, :lien_site, :lien_billeterie, :lieu, :age_minimum, :sous_theme, :createur)");
         $requete->execute(array(':nom' => $nom , ':date_debut' => $date_debut, ':date_fin' => $date_fin, ':information' => $information, ':fin_inscription' => $fin_inscription, ':capacity' => $capacity, ':payant' => $payant, ':public' => $public, ':lien_site' => $lien_site, ':lien_billeterie' => $lien_billeterie, ':lieu' => $lieu, ':age_minimum' => $age_minimum, ':sous_theme' => $sous_theme, ':createur' => $createur));
-        // on rajoute un ptit message pour le flex 
+        insert_theme_for_avent(get_avent_id($nom), $theme1, $theme2, $theme3);
         $message = '<p style="color:green">Merci a toi ! L\'avent a bien été ajouté </p>';
         echo $message;
     }
