@@ -1,5 +1,5 @@
 <?php
-require_once '../modele/m_verif_cookies.php';
+require_once 'c_verif_cookies.php';
 
 verif_cookies();
 

@@ -1,6 +1,6 @@
 <?php 
 
-require '../modele/m_verif_cookies.php';
+require 'c_verif_cookies.php';
 
 verif_cookies();
 
