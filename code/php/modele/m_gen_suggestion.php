@@ -11,6 +11,13 @@
 
         require 'm_algo_compatibility.php';
 
+        if(get_suggestion($userID) ==! false && COUNT($order) !== 0)
+        {
+            $query = 'DELETE FROM suggestions WHERE user_id = :id';
+            $argument = [[':id',$userID]];
+            queryDB($db,$query,$argument);
+        }
+
         function quickSort($array) { 
             $length = count($array); 
           
@@ -61,17 +68,6 @@
 
         $queryADDSuggestion = 'INSERT INTO suggestions (user_id,avent_id) VALUES (:user_id,:avent_id);';
         $genNumber = 25;
-
-        if(get_suggestion($userID) ==! false && COUNT($order) !== 0)
-        {
-            $query = 'DELETE FROM suggestions WHERE user_id = :id';
-            $argument = [[':id',$userID]];
-            queryDB($db,$query,$argument);
-        }
-        else
-        {
-            return false;
-        }
         
         if(COUNT($order) < $genNumber)
         {
