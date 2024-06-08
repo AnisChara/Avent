@@ -57,9 +57,15 @@
                 <button class="nav-button">theme_3</button>
             </div>
             <div class="nav-buttons right">
-                <a href="./c_change_suggestion_plus.php" class="nav-link">Up</a>
-                <a href="./c_like_avent.php" class="nav-link">Like</a>
-                <a href="./c_change_suggestion_minus.php" class="nav-link">Down</a>
+                <form action="./c_change_suggestion.php" method="post">
+                    <button type="submit" name="action" value="plus" class="nav-link">up</button>
+                </form>
+                <form action="./c_change_suggestion.php" method="post">
+                    <button type="submit" name="action" value="like" class=<?php if($like == true){echo "nav-link";}else{echo "nav-link";}?>>like</button>
+                </form>
+                <form action="./c_change_suggestion.php" method="post">
+                    <button type="submit" name="action" value="minus" class="nav-link">down</button>
+                </form>
             </div>
         </div>
     </div>

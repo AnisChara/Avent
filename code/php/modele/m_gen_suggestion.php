@@ -11,7 +11,7 @@
 
         require 'm_algo_compatibility.php';
 
-        if(get_suggestion($userID) ==! false && COUNT($order) !== 0)
+        if(get_suggestion($userID) ==! false)
         {
             $query = 'DELETE FROM suggestions WHERE user_id = :id';
             $argument = [[':id',$userID]];
