@@ -35,38 +35,55 @@
         <div class="container_sug">
             <div class="suggestion">
             <?php
-                echo'
-                    <div class="card">
-                        <div class="image">
-                            <img src=data:image/jpg;base64,'.img_avent($AventDisplay['avent_id']).' alt="" class="suggestion-image">
+                if($_COOKIE['suggestion'] > COUNT(get_suggestion(get_userID($_COOKIE['email']))) || $AventDisplay == null)
+                {
+                    echo'
+                        <p class ="endsuggestion">Vous avez vu tous les avents disponibles !</p>
+                        <div class="nav-buttons right">
+                        <form action="./c_change_suggestion.php" method="post">
+                            <button type="submit" name="action" value="plus" class="nav-link">up</button>
+                        </form>
                         </div>
-                        <div class="contente">
-                            <div class="content">
-                                <h2 class="titre">'.$AventDisplay['nom'].'</h2>
-                                <p class="description">'.$AventDisplay['information'].'</p>
+                    ';
+                }
+                else
+                {
+                    echo'
+                        <div class="card">
+                            <div class="image">
+                                <img src=data:image/jpg;base64,'.img_avent($AventDisplay['avent_id']).' alt="" class="suggestion-image">
+                            </div>
+                            <div class="contente">
+                                <div class="content">
+                                    <h2 class="titre">'.$AventDisplay['nom'].'</h2>
+                                    <p class="description">'.$AventDisplay['information'].'</p>
+                                </div>
                             </div>
                         </div>
-                    </div>'
-            ?>
-                <!-- Ajout d'autres cartes si nécessaire -->
-            </div>
-            <!-- Boutons de navigation -->
-            <div class="nav-buttons left">
-                <button class="nav-button">theme_1</button>
-                <button class="nav-button">theme_2</button>
-                <button class="nav-button">theme_3</button>
-            </div>
-            <div class="nav-buttons right">
-                <form action="./c_change_suggestion.php" method="post">
-                    <button type="submit" name="action" value="plus" class="nav-link">up</button>
-                </form>
-                <form action="./c_change_suggestion.php" method="post">
-                    <button type="submit" name="action" value="like" class=<?php if($like == true){echo "nav-link";}else{echo "nav-link";}?>>like</button>
-                </form>
-                <form action="./c_change_suggestion.php" method="post">
-                    <button type="submit" name="action" value="minus" class="nav-link">down</button>
-                </form>
-            </div>
+            
+                            <!-- Ajout d"autres cartes si nécessaire -->
+                        </div>
+                        <!-- Boutons de navigation -->
+                        <div class="nav-buttons left">
+                            <button class="nav-button">theme_1</button>
+                            <button class="nav-button">theme_2</button>
+                            <button class="nav-button">theme_3</button>
+                        </div>
+                        <div class="nav-buttons right">
+                            <form action="./c_change_suggestion.php" method="post">
+                                <button type="submit" name="action" value="plus" class="nav-link">up</button>
+                            </form>
+                            <form action="./c_change_suggestion.php" method="post">
+                                <button type="submit" name="action" value="like" class=';if($like == true){echo "nav-link";}else{echo "nav-link";} echo '>like</button>
+                            </form>
+                            <form action="./c_change_suggestion.php" method="post">
+                                <button type="submit" name="action" value="minus" class="nav-link">down</button>
+                            </form>
+                        </div>
+                        ';
+                }
+                        ?>
+                </div>
         </div>
     </div>
 </body>
