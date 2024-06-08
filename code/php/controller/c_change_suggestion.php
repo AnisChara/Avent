@@ -55,7 +55,7 @@ else if($expect == "minus") //                     2
 
 else if($expect == "plus") //                     3
 {
-    if($_COOKIE['suggestion']-1 <= 0)
+    if($_COOKIE['suggestion']-1 < 0)
     {
         gen_suggestion(get_userID($_COOKIE["email"]));
         setcookie('suggestion',0);
