@@ -1,8 +1,11 @@
 USE db_avent;
-
-INSERT INTO user (email,pseudo,mot_de_passe) VALUES
-
-('APANYAN','COUBEH','PROUT');
+-- Insert data into user
+INSERT INTO user (nom, prenom, email, pseudo, mot_de_passe, date_naissance, is_verif, is_brand, pp, genre, date_creation) VALUES
+("Dupont", "Jean", "jean.dupont@example.com", "jdupont", "password123", "1985-06-15", TRUE, 0, 1, 1, "2024-06-01 12:00:00"),
+("Martin", "Sophie", "sophie.martin@example.com", "smartin", "password123", "1990-08-22", TRUE, 1, 2, 2, "2024-06-01 12:00:00"),
+("Lefevre", "Luc", "luc.lefevre@example.com", "llefevre", "password123", "1988-02-10", FALSE, 0, 3, 3, "2024-06-01 12:00:00"),
+("Bernard", "Marie", "marie.bernard@example.com", "mbernard", "password123", "1992-11-05", TRUE, 0, 4, 1, "2024-06-01 12:00:00"),
+("Dubois", "Paul", "paul.dubois@example.com", "pdubois", "password123", "1987-04-18", FALSE, 1, 5, 2, "2024-06-01 12:00:00");
 
 INSERT INTO fav_theme_for_user(user_id,theme_id) VALUES
 
@@ -97,13 +100,6 @@ INSERT INTO sous_theme (sous_theme_name) VALUES
 ("Programmation"), 
 ("Jeux vidéo");
 
--- Insert data into user
-INSERT INTO user (nom, prenom, email, pseudo, mot_de_passe, date_naissance, is_verif, is_brand, pp, genre, date_creation) VALUES
-("Dupont", "Jean", "jean.dupont@example.com", "jdupont", "password123", "1985-06-15", TRUE, 0, 1, 1, "2024-06-01 12:00:00"),
-("Martin", "Sophie", "sophie.martin@example.com", "smartin", "password123", "1990-08-22", TRUE, 1, 2, 2, "2024-06-01 12:00:00"),
-("Lefevre", "Luc", "luc.lefevre@example.com", "llefevre", "password123", "1988-02-10", FALSE, 0, 3, 3, "2024-06-01 12:00:00"),
-("Bernard", "Marie", "marie.bernard@example.com", "mbernard", "password123", "1992-11-05", TRUE, 0, 4, 1, "2024-06-01 12:00:00"),
-("Dubois", "Paul", "paul.dubois@example.com", "pdubois", "password123", "1987-04-18", FALSE, 1, 5, 2, "2024-06-01 12:00:00");
 
 -- Insert data into avent
 INSERT INTO avent (nom, date_debut, date_fin, fin_inscription, information, lien_site, lien_billeterie, lieu, capacity, etat, is_payant, is_public, date_creation, age_minimum, sous_theme, createur) VALUES
