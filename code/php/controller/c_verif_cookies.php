@@ -3,7 +3,7 @@
 
 function verif_cookies()
 {
-    require_once "m_user_connexion.php";
+    require_once "../modele/m_user_connexion.php";
     
     if (isset($_COOKIE["email"]) && isset($_COOKIE["mot_de_passe"]))
     {

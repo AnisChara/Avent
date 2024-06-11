@@ -7,7 +7,7 @@
 
         require 'm_collect_theme_user.php';
         require 'm_collect_avent_notseen.php';
-        require 'm_get_suggestion.php';
+        require_once 'm_get_suggestion.php';
 
         require 'm_algo_compatibility.php';
 

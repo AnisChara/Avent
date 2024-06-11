@@ -3,7 +3,7 @@
 function create_user($nom,$prenom,$date_naissance,$email,$genre,$pseudo,$mot_de_passe) {
     require "m_connexion_bdd.php";
     require_once 'm_recuperationDB.php';
-    $req = "INSERT INTO user(nom, prenom, date_naissance, email, genre, pseudo, mot_de_passe) VALUES (:nom,:prenom,:date_naissance,:email,:genre,:pseudo,:mot_de_passe)";
+    $req = "INSERT INTO user(nom, prenom, date_naissance, email, genre, pseudo, mot_de_passe, pp) VALUES (:nom,:prenom,:date_naissance,:email,:genre,:pseudo,:mot_de_passe, 1)";
     $argument = [[":nom",$nom],[":prenom",$prenom],[":date_naissance",$date_naissance],[":email",$email],[":genre",$genre],[":pseudo",$pseudo],[":mot_de_passe",$mot_de_passe]];
     try {
         $creation = queryDB($db,$req,$argument);

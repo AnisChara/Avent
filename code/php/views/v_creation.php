@@ -21,39 +21,34 @@
         <div class="first_colon">
             <form action="" method="GET">
                 <input type="text" name="nom" value="Mon super Avent">
-                <select name="theme1">
-                    <option>Thématique 1</option>
-                    <?php foreach ($themelist as $theme) {
+                    <select name="theme1">
+                        <option></option>
+                        <?php foreach ($themelist as $theme) {
                             echo '<option>'.$theme['theme_name'].'</option>';
                         };
                         ?>
-                </select>
-                <select name="theme2">
-                    <option>Thématique 2</option>
-                    <?php foreach ($themelist as $theme) {
+                    </select>
+                    <select name="theme2">
+                        <option></option>
+                        <?php foreach ($themelist as $theme) {
                             echo '<option>'.$theme['theme_name'].'</option>';
                         };
                         ?>
-                </select>
-                <select name="theme3">
-                    <option>Thématique 3</option>
-                    <?php foreach ($themelist as $theme) {
+                    </select>
+                    <select name="theme3">
+                        <option></option>
+                        <?php foreach ($themelist as $theme) {
                             echo '<option>'.$theme['theme_name'].'</option>';
                         };
                         ?>
-                </select>
-                
-                <label><input type="checkbox" name="isPublic" value="" /> Évènement publique</label>
-                <label><input type="checkbox" name="isPayant" value="" /> Évènement payant</label>
+                    </select>
+                <label><input type="checkbox" name="interest" value="" /> Évènement publique</label>
+                <label>Titre :</label>
+                <input type="text" name="titre" value="" placeholder="ajouter un titre">
                 <label>Description :</label>
                 <textarea name="information"></textarea>
                 <label>Autre Tag :</label>
                 <textarea name="tag"></textarea>
-                <input type="submit" value="Soumettre">
-            </form>
-        </div>
-        <div class="second_colon"> 
-            <form action="" method="GET">
                 <label>Ajouter une image</label>
                 <input type="file" name="image">
                 <div class="image">
