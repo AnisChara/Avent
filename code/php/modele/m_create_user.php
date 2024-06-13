@@ -10,13 +10,13 @@ function create_user($nom,$prenom,$date_naissance,$email,$genre,$pseudo,$mot_de_
     } catch (Exception $error) { echo $error; return false;};
     return true;
 }
-function modif_user($nom, $prenom, $date_naissance, $email, $genre, $pseudo, $mot_de_passe, $id) {
+function modif_user($nom, $prenom, $pseudo, $mot_de_passe, $pp) {
     require "m_connexion_bdd.php";
-    $requete1 = $db->prepare("SELECT * FROM user WHERE user_id =?");
-    $requete1->execute(array($id));
+    $requete1 = $db->prepare("SELECT * FROM user WHERE email =?");
+    $requete1->execute(array($email));
     $resultat1 = $requete1->fetch();
 
-    $requete2 = $db->prepare("UPDATE user SET nom =?, prenom =?, date_naissance =?, email =?, genre =?, pseudo =?, mot_de_passe =? WHERE user_id =?");
+    $requete2 = $db->prepare("UPDATE user SET nom =?, prenom =?, pseudo =?, mot_de_passe =? WHERE user_id =?");
     $requete2->execute(array($nom, $prenom, $date_naissance, $email, $genre, $pseudo, $mot_de_passe, $id));
     $resultat2 = $requete2;
     return [$resultat1,$resultat2];
