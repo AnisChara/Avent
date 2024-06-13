@@ -36,7 +36,8 @@ CREATE TABLE photo
 CREATE TABLE sous_theme
 (
     sous_theme_id INT PRIMARY KEY AUTO_INCREMENT,
-    sous_theme_name VARCHAR(255)
+    sous_theme_name VARCHAR(255),
+    avent_id INT
 );
 
 CREATE TABLE task
@@ -80,7 +81,6 @@ CREATE TABLE avent
     is_public BOOLEAN,
     date_creation TIMESTAMP,
     age_minimum TINYINT,
-    sous_theme INT,
     createur INT
 );
 
@@ -178,3 +178,5 @@ ALTER TABLE suggestions ADD FOREIGN KEY(avent_id) REFERENCES avent(avent_id);
 
 ALTER TABLE views ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
 ALTER TABLE views ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id);
+
+ALTER TABLE sous_theme ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id);
