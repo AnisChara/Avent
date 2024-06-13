@@ -31,7 +31,8 @@ INSERT INTO theme (theme_name) VALUES
 ('Famille'),
 ('Musées'),
 ('Caritatif'),
-('Rencontres');
+('Rencontres'),
+('Aucun');
 
 INSERT INTO genre (genre_name) VALUES
 
