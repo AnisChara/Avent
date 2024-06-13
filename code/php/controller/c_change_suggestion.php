@@ -7,6 +7,7 @@ verif_cookies();
 require_once "../modele/m_getID_from_mail.php";
 require_once '../modele/m_get_suggestion.php';
 require '../modele/m_gen_suggestion.php';
+require_once '../modele/m_collect_avent_notseen.php';
 
 $expect = $_POST['action'];
 $suggestion = get_suggestion(get_userID($_COOKIE['email']));
@@ -31,12 +32,11 @@ if($expect == "like") //fonctionne plus toucher   1
 
 else if($expect == "minus") //                     2
 {
-    require '../modele/m_insert_in_views.php';
+    require_once '../modele/m_insert_in_views.php';
     insertviews(get_userID($_COOKIE["email"]), $avent);
 
     if($_COOKIE['suggestion']+1 >= COUNT($suggestion))
     {
-        require '../modele/m_collect_avent_notseen.php';
         if(COUNT(avent_notseen(get_userID($_COOKIE["email"]))) == 0)
         {
             setcookie('suggestion',$_COOKIE['suggestion']+1);
