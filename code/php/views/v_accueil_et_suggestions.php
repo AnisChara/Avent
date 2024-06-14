@@ -22,6 +22,8 @@
         <form method="GET" action="">
             <input type="text" name="search" placeholder="Mots-clés">
             <input type="submit" name="res" value="Rechercher">
+            <input type="text" name="search" placeholder="Mots-clés">
+            <input type="submit" name="res" value="Rechercher">
         </form>
         <!-- Floating Button -->
         <div class="floating-btn">
@@ -52,7 +54,6 @@
                         <div class="card">
                         <form action ="./c_afficher_full_avent.php" method ="post">
                             <button type="submit" name="avent_id" value ="'.$AventDisplay['avent_id'].'" class = "image">
-                        </form>
                             <div class="image">
                                 <img src=data:image/jpg;base64,'.img_avent($AventDisplay['avent_id']).' alt="" class="suggestion-image">
                             </div>
