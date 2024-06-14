@@ -1,8 +1,8 @@
 <?php
 
-require "../modele/m_user_connexion.php";
-require "../modele/m_gen_suggestion.php";
-require "../modele/m_getID_from_mail.php";
+require_once "../modele/m_user_connexion.php";
+require_once "../modele/m_gen_suggestion.php";
+require_once "../modele/m_getID_from_mail.php";
 
     if(empty($_POST["email"]) || empty($_POST["mot_de_passe"]))
     {
