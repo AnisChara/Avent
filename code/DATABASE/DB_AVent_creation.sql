@@ -146,7 +146,6 @@ ALTER TABLE user ADD FOREIGN KEY (is_brand) REFERENCES brand(brand_id);
 ALTER TABLE user ADD FOREIGN KEY (genre) REFERENCES genre(genre_id);
 ALTER TABLE user ADD FOREIGN KEY (pp) REFERENCES photo(photo_id);
  
-ALTER TABLE avent ADD FOREIGN KEY (sous_theme) REFERENCES sous_theme(sous_theme_id);
 ALTER TABLE avent ADD FOREIGN KEY (createur) REFERENCES user(user_id);
  
 ALTER TABLE task ADD FOREIGN KEY (avent_id) REFERENCES avent(avent_id);
