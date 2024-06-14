@@ -20,8 +20,8 @@
     <!-- Search Bar -->
     <div class="navbar">
         <form method="GET" action="">
-            <input type="text" placeholder="Mots-clés">
-            <input type="submit" value="Rechercher">
+            <input type="text" name="search" placeholder="Mots-clés">
+            <input type="submit" name="res" value="Rechercher">
         </form>
         <!-- Floating Button -->
         <div class="floating-btn">
@@ -50,6 +50,8 @@
                 {
                     echo'
                         <div class="card">
+                        <form action ="./c_afficher_full_avent.php" method ="post">
+                            <button type="submit" name="avent_id" value ="'.$AventDisplay['avent_id'].'" class = "image">
                             <div class="image">
                                 <img src=data:image/jpg;base64,'.img_avent($AventDisplay['avent_id']).' alt="" class="suggestion-image">
                             </div>

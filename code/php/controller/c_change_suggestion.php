@@ -1,12 +1,12 @@
 <?php
 
-require 'c_verif_cookies.php';
+require_once 'c_verif_cookies.php';
 
 verif_cookies();
 
 require_once "../modele/m_getID_from_mail.php";
 require_once '../modele/m_get_suggestion.php';
-require '../modele/m_gen_suggestion.php';
+require_once '../modele/m_gen_suggestion.php';
 require_once '../modele/m_collect_avent_notseen.php';
 
 $expect = $_POST['action'];
@@ -16,8 +16,8 @@ var_dump($expect);
 
 if($expect == "like") //fonctionne plus toucher   1
 {
-    require '../modele/m_fav_unfav_db.php';
-    require '../modele/m_collect_avent_is_like.php';
+    require_once '../modele/m_fav_unfav_db.php';
+    require_once '../modele/m_collect_avent_is_like.php';
 
     if(islike(get_userID($_COOKIE["email"]),$avent))
     {
