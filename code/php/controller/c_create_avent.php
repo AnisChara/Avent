@@ -33,4 +33,4 @@ $value = insert_img($_FILES,'image',$uniqid);
 $photo_id = get_image_id($uniqid);
 insert_img_for_avent(get_avent_id($_POST['nom']),$photo_id);
 
-require 'c_afficher_page_avent.php';
+require 'c_avent.php';
