@@ -35,8 +35,7 @@
     <div class="list_avent_container">
         <!-- Suggestions Section -->
         <div class="list_avent_content">
-            <div class="list_avent">
-                <?php
+            <?php
                 if(COUNT($list_avent_inscrit) < 1)
                 {
                     echo "<p class = 'nothing'> Vous n'êtes pas encore inscrit à un AVENT ! </p>";
@@ -46,21 +45,22 @@
                     for($a = 0; $a < COUNT($list_avent_inscrit); $a++)
                     {
                         echo '
-                            <div class="avent">
-                                <div class="image">
-                                <img src=data:image/jpg;base64,'.img_avent($list_avent_inscrit[$a]['avent_id']).' alt="" class="suggestion-image">
-                                </div>
-                                <div class="content">
-                                    <strong><p class="titre">'.$list_avent_inscrit[$a]['nom'].'</p></strong>
-                                    <p class="createur">'.nom_from_user($list_avent_inscrit[$a]['createur']).'</p>
-                                    <p class="description">'.$list_avent_inscrit[$a]['information'].'</p>
+                            <div class="list_avent">
+                                <div class="avent">
+                                    <div class="image">
+                                    <img src=data:image/jpg;base64,'.img_avent($list_avent_inscrit[$a]['avent_id']).' alt="" class="suggestion-image">
+                                    </div>
+                                    <div class="content">
+                                        <strong><p class="titre">'.$list_avent_inscrit[$a]['nom'].'</p></strong>
+                                        <p class="createur">'.nom_from_user($list_avent_inscrit[$a]['createur']).'</p>
+                                        <p class="description">'.$list_avent_inscrit[$a]['information'].'</p>
+                                    </div>
                                 </div>
                             </div>
                         ';
                     }
                 }
-                ?>
-            </div>
+            ?>
         </div>
     </div>
 </body>
