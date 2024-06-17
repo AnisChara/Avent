@@ -36,6 +36,7 @@
         <!-- Suggestions Section -->
         <div class="list_avent_content">
             <div class="list_avent">
+                
                 <?php
                     if(COUNT($list_avent_fav) < 1)
                     {
