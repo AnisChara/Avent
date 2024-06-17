@@ -22,6 +22,8 @@
         <form method="GET" action="">
             <input type="text" name="search" placeholder="Mots-clés">
             <input type="submit" name="res" value="Rechercher">
+            <input type="text" name="search" placeholder="Mots-clés">
+            <input type="submit" name="res" value="Rechercher">
         </form>
         <!-- Floating Button -->
         <div class="floating-btn">
