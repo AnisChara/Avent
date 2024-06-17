@@ -22,7 +22,7 @@
             <h3>Créer votre AVent !</h3>
             <fieldset>
             <div class="liste-produits">
-                <form class="produit" action="" method="POST">
+                <form class="produit" action="c_create_avent.php" method="POST" enctype="multipart/form-data">
                     <div class="message">
                         <?php 
                             if (isset($message)) 
@@ -52,21 +52,31 @@
                         }; ?>
                     </select>
                     <label>date de début de l'évènement</label>
-                    <input type="date">
+                    <input type="date" name="date_debut">
                     <label>date de fin de l'évènement</label>
-                    <input type="date">
+                    <input type="date" name="date_fin">
                     <label>date de fin de l'inscription</label>
-                    <input type="date">
-                    <label><input type="checkbox" name="interest" value="" /> Évènement publique</label>
+                    <input type="date" name="fin_inscription">
+                    <label>Type d'evenement <input type="radio" name="is_public" value="false" />privé
+                        <input type="radio" name="is_public" value="true" />public</label>
                     <label>Description :</label>
                     <textarea name="information" cols="30" rows="10"></textarea>
                     <label>Lien de votre site web (facultatif)</label>
-                    <input type="text" name="lien" value="" placeholder="url site web">
-                    <label><input type="checkbox" name="interest" value="" /> Évènement payant</label>
+                    <input type="text" name="lien_site" value="" placeholder="url site web">
+                    <label>Evenement payant <input type="radio" name="is_payant" value="false" />non
+                        <input type="radio" name="is_payant" value="true" />oui</label>
                     <label>lien de la billeterie</label>
-                    <input type="text" name="billeterie" value="" placeholder="url billeterie">
-                    <label>Autre Tag :</label>
-                    <textarea name="tag" cols="30" rows="10"></textarea>
+                    <input type="text" name="lien_billeterie" value="" placeholder="url billeterie">
+                    <label>Vos sous themes</label>
+                    <input type="text" name="sous_theme1">
+                    <input type="text" name="sous_theme2">
+                    <input type="text" name="sous_theme3">
+                    <label>Votre lieu</label>
+                    <input type="text" name="lieu" value="" placeholder="lieu">
+                    <label>Capacité</label>
+                    <input type="number" name="capacity">
+                    <label>age minimum</label>
+                    <input type="number" name="age_minimum">
                     <label>Ajouter une image</label>
                     <input type="file" name="image">
                     <div class="image">
