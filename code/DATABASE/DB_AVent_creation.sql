@@ -30,7 +30,8 @@ CREATE TABLE theme
 CREATE TABLE photo
 (
     photo_id INT PRIMARY KEY AUTO_INCREMENT,
-    photo_file LONGBLOB
+    photo_file LONGBLOB,
+    image_key VARCHAR(255)
 );
 
 CREATE TABLE sous_theme
