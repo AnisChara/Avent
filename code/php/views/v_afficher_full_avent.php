@@ -53,7 +53,7 @@
                         <p class="prix">payant:'; if($avent[0]["is_payant"] == 1){echo 'oui';}else{echo 'non';};echo '</p>
                         <p class="creation">date de création:'  . $avent[0]["date_creation"].'</p>
                         <p class="age">Âge minimum :'  . $avent[0]["age_minimum"].'</p>
-                        <p class="stheme">Sous thèmatiques :'; if($avent[0]["sous_theme"] == null){echo 'Aucun thème donné';}else{foreach($avent[4] as $theme){echo $theme.', ';}};echo '</p> ';
+                        <p class="stheme">Sous thèmatiques :'; if(COUNT($avent[5]) == 0){echo 'Aucune sous thèmatiques données';}else{foreach($avent[4] as $theme){echo $theme.', ';}};echo '</p> ';
                         if($_COOKIE['email'] == $emailCreator)
                         {
                             echo '

@@ -17,7 +17,11 @@ function get_info_avent_full_display($avent_id)
     $requete->execute(array(":avent_id"=>$avent_id));
     $result = $requete->fetchAll();
 
-    array_push($result, $img, $inscrit_count, $fav_count, $themes);
+    $req_sous_theme = $db ->prepare("SELECT sous_theme_name FROM sous_theme WHERE avent_id = :avent_id");
+    $req_sous_theme->execute(array(":avent_id"=>$avent_id));
+    $sous_theme = $req_sous_theme->fetchAll();
+    
+    array_push($result, $img, $inscrit_count, $fav_count, $themes, $sous_theme);
 
     return $result;
     
