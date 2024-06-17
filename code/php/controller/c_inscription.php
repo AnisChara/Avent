@@ -6,7 +6,6 @@ require "../modele/m_getID_from_mail.php";
 require "../modele/m_get_theme.php";
 
 $data = array('nom','prenom','date_naissance','email','genre','pseudo','mot_de_passe','theme1','theme2','theme3');
-
 $themelist = get_theme();
 
 for ($i = 0; $i <COUNT($data); $i++) {
@@ -17,7 +16,6 @@ for ($i = 0; $i <COUNT($data); $i++) {
         exit();
     }
 }
-
 $inscription = verif_inscription($_POST['email'],$_POST['pseudo']);
 
 if ($inscription[0] == true && $inscription[1] == true) {
@@ -51,4 +49,3 @@ else if ($inscription[0] == false && $inscription[1] == false)
     $error_inscription_msg = "pseudo et mail utilisés";
     require "./c_afficher_page_inscription.php";
 }
-

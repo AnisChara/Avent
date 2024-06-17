@@ -53,14 +53,14 @@
 				</div>
                 <!-- thème -->
                 <div class = "box">
-                    <select name="theme2">
+                    <select name="theme1">
                         <option></option>
                         <?php foreach ($themelist as $theme) {
                             echo '<option>'.$theme['theme_name'].'</option>';
                         };
                         ?>
                     </select>
-                    <label>Thème</label>
+                    <label>Thème 1</label>
                 </div>
                 <div class = "box">
                     <select name="theme2">
@@ -70,17 +70,17 @@
                         };
                         ?>
                     </select>
-                    <label>Thème</label>
+                    <label>Thème 2</label>
                 </div> 
                 <div class = "box">
-                    <select name="theme2">
+                    <select name="theme3">
                         <option></option>
                         <?php foreach ($themelist as $theme) {
                             echo '<option>'.$theme['theme_name'].'</option>';
                         };
                         ?>
                     </select>
-                    <label>Thème</label>
+                    <label>Thème 3</label>
                 </div>   
                 <!-- inscription -->
 				<div class = "connect">
