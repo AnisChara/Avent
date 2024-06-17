@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
     background-color: #f0f0f0;
 }
 
@@ -20,7 +21,6 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
 }
 
 .nav_options ul {
@@ -49,39 +49,34 @@ body {
 }
 
 .main-content {
-    position: relative;
-    margin: 0 auto;
-    width: calc(100% - 250px);
-    max-width: 1000px;
-    min-height: 120vh;
-    padding-bottom: 200px;
-    flex-shrink: 1;
+    margin-left: 200px;
+    padding: 20px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    flex: 1;
 }
 
 .navbar {
-    width: calc(100% - 250px);
-    margin-left: 250px;
+    width: calc(100% - 280px);
     display: flex;
     justify-content: center;
     padding: 20px 0;
     position: fixed;
     top: 0;
-    z-index: 999;
+    left: 250px;
     background-color: #f0f0f0;
 }
 
 .navbar form {
     display: flex;
+    flex: 1;
+    justify-content: center;
 }
 
 .navbar input[type="text"] {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 25px 0 0 25px;
@@ -92,43 +87,33 @@ body {
     padding: 15px 30px;
     border: none;
     border-radius: 0 25px 25px 0;
-    background-color: #00f;
+    background-color: #F1A03C;
     color: white;
     cursor: pointer;
 }
 
 .container_sug {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    padding: 20px 0;
-    position: relative;
-    max-width: 100%;
-    min-height: 100vh;
-    padding-bottom: 100px;
-    height: auto;
     justify-content: center;
-    margin: 0 auto;
+    width: 100%;
+    padding-top: 150px;
 }
 
 .suggestion {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 600px;
-}
-
-.card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
+    position: relative; 
+}
+
+.card {
+    max-width: 550px;
+    width: 100%;
     position: relative;
-    min-height: 500px;
 }
 
 .image {
@@ -205,15 +190,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    pointer-events: none;
 }
 
 .nav-buttons.left {
-    left: -50px;
+    left: -85px; /* Ajustement pour être beaucoup plus proche de la carte */
 }
 
 .nav-buttons.right {
-    right: -50px;
+    right: -80px; /* Ajustement pour être beaucoup plus proche de la carte */
 }
 
 .nav-link {
@@ -227,24 +211,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    pointer-events: all;
     text-decoration: none;
     cursor: pointer;
 }
 
+/* Responsive adjustments */
 @media screen and (max-width: 1024px) {
     .nav_options {
         width: 200px;
-        height: 100vh;
     }
 
     .navbar {
         width: calc(100% - 200px);
-        margin-left: 200px;
+        left: 200px;
     }
 
     .main-content {
-        width: calc(100% - 200px);
+        margin-left: 200px;
+        padding-top: 80px; /* Add space for fixed navbar */
     }
 }
 
@@ -255,15 +239,15 @@ body {
 
     .navbar {
         width: calc(100% - 150px);
-        margin-left: 150px;
+        left: 150px;
     }
 
     .main-content {
-        width: calc(100% - 150px);
+        margin-left: 150px;
     }
 
     .navbar input[type="text"] {
-        width: 300px;
+        max-width: 300px;
     }
 }
 
@@ -281,22 +265,16 @@ body {
 
     .navbar {
         width: 100%;
-        margin-left: 0;
-        position: relative;
+        left: 0;
     }
 
     .navbar input[type="text"] {
-        width: 200px;
+        max-width: 200px;
     }
 
     .main-content {
-        width: 100%;
-    }
-
-    .container_sug {
-        width: 100%;
         margin-left: 0;
-        padding-bottom: 80px; /* Ajuster si nécessaire pour l'espacement */
+        padding-top: 100px; /* Add space for fixed navbar */
     }
 
     .floating-btn {
@@ -308,5 +286,11 @@ body {
         top: auto;
         bottom: 50px;
         transform: none;
+    }
+
+    .nav-buttons.left,
+    .nav-buttons.right {
+        left: 20px;
+        right: 20px;
     }
 }
