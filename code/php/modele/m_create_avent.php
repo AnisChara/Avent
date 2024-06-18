@@ -11,7 +11,7 @@ function insert_theme_for_avent($avent_id, $theme1, $theme2, $theme3) {
     try {
         for ($i = 0; $i < COUNT($theme_ids); $i++)
         {
-            if ($theme_ids[$i] !== 31)
+            if ($theme_ids[$i] !== 1)
             {
                 $argument = [[':avent_id' , $avent_id], [':theme_id', $theme_ids[$i]]];
                 $result = queryDB($db,$requete,$argument);

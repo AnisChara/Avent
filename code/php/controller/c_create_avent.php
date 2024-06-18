@@ -13,7 +13,7 @@ verif_cookies();
 //Array de sous theme
 $sous_themes = array($_POST['sous_theme1'], $_POST['sous_theme2'], $_POST['sous_theme3']);
 
-$infos = array('nom','date_debut','date_fin','fin_inscription','information','capacity','is_payant','is_public','theme1','theme2','theme3');
+$infos = array('nom','date_debut','date_fin','information','is_payant','is_public','theme1','theme2','theme3');
 
 foreach($infos as $info)
 {

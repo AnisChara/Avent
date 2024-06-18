@@ -2,6 +2,7 @@ USE db_avent;
 
 INSERT INTO theme (theme_name) VALUES 
 
+('Aucune'),
 ('Musique'),
 ('Art'),
 ('Cuisine'),
@@ -31,8 +32,7 @@ INSERT INTO theme (theme_name) VALUES
 ('Famille'),
 ('Musées'),
 ('Caritatif'),
-('Rencontres'),
-('Aucun');
+('Rencontres');
 
 INSERT INTO genre (genre_name) VALUES
 
