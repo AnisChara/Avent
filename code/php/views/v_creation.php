@@ -64,29 +64,20 @@
                     <input type="date" name="date_fin">
                     <label>date de fin de l'inscription</label>
                     <input type="date">
-                    <!-- évènement publique -->
-                    <label><input type="checkbox" name="interest" value="" /> Évènement publique</label>
                     <!-- description -->
-                    <label>Description :</label>
-                    <input type="date" name="fin_inscription">
                     <label>Type d'evenement * <br><input type="radio" name="is_public" value="false" />privé
                     <input type="radio" name="is_public" value="true" />public</label>
                     <label>Description *</label>
                     <textarea name="information" cols="30" rows="10"></textarea>
-                    <!-- lien d'un potentiel site web -->
-                    <label>Lien de votre site web (facultatif)</label>
-                    <input type="text" name="lien" value="" placeholder="url site web">
                     <!-- évènement payant + lien billeterie -->
                     <label><input type="checkbox" id="price" name="interest" value="" /> Évènement payant</label>
-                    <label>lien de la billeterie</label>
-                    <input type="text" name="billeterie" id="link" value="" placeholder="url billeterie">
                     <!-- Ajout d'une image -->
                     <label>Lien de votre site web</label>
                     <input type="text" name="lien_site" value="" placeholder="url site web">
                     <label>Evenement payant * <br><input type="radio" name="is_payant" value="false" />non
                         <input type="radio" name="is_payant" value="true" />oui</label>
                     <label>lien de la billeterie *</label>
-                    <input type="text" name="lien_billeterie" value="" placeholder="url billeterie">
+                    <input type="text" name="lien_billeterie" id="link" value="" placeholder="url billeterie">
                     <!-- Sous thème -->
                     <label>Vos sous themes</label>
                     <input type="text" name="sous_theme1">
