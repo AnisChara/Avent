@@ -80,7 +80,7 @@
                     <input type="file" name="image">
                     <div class="image">
                         <div class="image-prod">
-                            <img src="../views/images/fond_oasis.jpg" alt="Affiche d'événement">
+                            <img src="../views/images/fond_blanc.jpeg" alt="Affiche d'événement">
                         </div>
                     </div>
                     <!-- ajout de l'évènement -->
