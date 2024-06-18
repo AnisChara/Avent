@@ -42,25 +42,25 @@
             }
             else
             {
+                echo '<div class="list_avent">';
                 for($a = 0; $a < COUNT($list_avent_fav); $a++)
                 {
                     echo '
-                            <div class="list_avent">
-                                <fieldset>
-                                    <div class="avent">
-                                        <div class="image">
-                                            <img src=data:image/jpg;base64,'.img_avent($list_avent_fav[$a]['avent_id']).' alt="" class="suggestion-image">
-                                        </div>
-                                        <div class="content">
-                                            <strong><p class="titre">'.$list_avent_fav[$a]['nom'].'</p></strong>
-                                            <p class="createur">'.nom_from_user($list_avent_fav[$a]['createur']).'</p>
-                                            <p class="description">'.$list_avent_fav[$a]['information'].'</p>
-                                        </div>
+                            <fieldset>
+                                <div class="avent">
+                                    <div class="image">
+                                        <img src=data:image/jpg;base64,'.img_avent($list_avent_fav[$a]['avent_id']).' alt="" class="suggestion-image">
                                     </div>
-                                    </fieldset>
+                                    <div class="content">
+                                        <strong><p class="titre">'.$list_avent_fav[$a]['nom'].'</p></strong>
+                                        <p class="createur">'.nom_from_user($list_avent_fav[$a]['createur']).'</p>
+                                        <p class="description">'.$list_avent_fav[$a]['information'].'</p>
+                                    </div>
                                 </div>
+                            </fieldset>
                     ';
                 }
+                echo '</div>';
             }
         ?>
         </div>

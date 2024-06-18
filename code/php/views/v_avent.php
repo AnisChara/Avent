@@ -42,10 +42,10 @@
                 }
                 else
                 {
+                    echo '<div class="list_avent">';
                     for($i = 0; $i < COUNT($list_avent); $i++)
                     {
                         echo'
-                            <div class="list_avent"> 
                                 <div class="avent">
                                     <div class="image">
                                         <img src=data:image/jpg;base64,'.img_avent($list_avent[$i]['avent_id']).' alt="" class="suggestion-image">
@@ -56,9 +56,9 @@
                                         <p class="description">'.$list_avent[$i]['information'].'</p>
                                     </div>
                                 </div>
-                            </div>
                         ';
                     }
+                    echo '</div>';
                 }
             ?>
         </div>
