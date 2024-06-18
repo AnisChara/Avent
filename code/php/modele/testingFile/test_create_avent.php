@@ -2,7 +2,7 @@
 
 require '../m_create_avent.php'; 
 
-$nom = "ZIZI4";
+$nom = "ZDFDFBS4";
 $date_debut = "2025/01/20" ;
 $date_fin = '2025/01/22' ;
 $fin_inscription ='2025/01/21';

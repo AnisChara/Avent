@@ -46,7 +46,9 @@ function create_avent($nom,$date_debut,$date_fin,$fin_inscription, $information,
 
     for($i =0; $i<count($sous_themes); $i++)
     {
-        if (isset($sous_themes[$i])) create_sous_theme($sous_themes[$i], $avent_id);
+        if (!empty($sous_themes[$i])) 
+        {
+            create_sous_theme($sous_themes[$i], $avent_id);
+        }
     }
-
 } 

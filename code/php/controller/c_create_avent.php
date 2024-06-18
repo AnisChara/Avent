@@ -3,7 +3,6 @@
 require '../modele/m_create_avent.php';
 require '../modele/m_getID_from_mail.php';
 require_once '../modele/m_get_aventID_from_name.php';
-require '../modele/m_insert_sous_theme.php';
 require '../modele/m_insert_img_for_avent.php';
 require_once 'c_verif_cookies.php';
 require_once '../modele/m_get_image_id.php';
@@ -13,7 +12,7 @@ verif_cookies();
 //Array de sous theme
 $sous_themes = array($_POST['sous_theme1'], $_POST['sous_theme2'], $_POST['sous_theme3']);
 
-$infos = array('nom','date_debut','date_fin','information','is_payant','is_public','theme1','theme2','theme3');
+$infos = array('nom','date_debut','date_fin','information','is_payant','is_public');
 
 foreach($infos as $info)
 {
@@ -22,6 +21,22 @@ foreach($infos as $info)
         echo 'non';
         exit();
     }
+}
+
+$themes = array('theme1','theme2','theme3');
+$nb_theme = 0;
+
+foreach($themes as $theme)
+{
+    if($theme !== 'Aucune')
+    {
+        $nb_theme++;
+    }
+}
+
+if ($nb_theme === 0)
+{
+    require 'c_afficher_create_avent.php';
 }
 
 //insert sous theme
