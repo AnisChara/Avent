@@ -13,5 +13,3 @@
 
         return base64_encode($img);
     }
-
-?>

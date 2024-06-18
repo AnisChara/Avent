@@ -12,5 +12,3 @@ function insert_sous_theme($sous_theme)
 
     return $res[0];
 }
-
-echo(insert_sous_theme('oui'));

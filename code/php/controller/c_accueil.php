@@ -11,7 +11,7 @@ require_once '../modele/m_gen_suggestion.php';
 require_once '../modele/m_collect_avent_is_like.php';
 
 $AventDisplay = get_suggestion(get_userID($_COOKIE['email']))[$_COOKIE['suggestion']];
-if($AventDisplay !== null)
+if(isset($AventDisplay))
 {
     $like = islike(get_userID($_COOKIE["email"]),$AventDisplay['avent_id']);
 }
