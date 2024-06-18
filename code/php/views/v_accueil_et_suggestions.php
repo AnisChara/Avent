@@ -48,7 +48,7 @@
                         echo '
                             <div class="card">
                                 <form action="./c_afficher_full_avent.php" method="post">
-                                    <button type="submit" name="avent_id" value="'.$AventDisplay['avent_id'].'" class="image">
+                                    <button type="submit" name="avent_id" value="'.$AventDisplay['avent_id'].'" class="card">
                                         <div class="image">
                                             <img src="data:image/jpg;base64,'.img_avent($AventDisplay['avent_id']).'" alt="" class="suggestion-image">
                                         </div>
@@ -61,10 +61,12 @@
                                     </button>
                                 </form>
                                 <!-- Boutons de navigation -->
-                            <div class="nav-buttons left">
-                                <button class="nav-button">theme_1</button>
-                                <button class="nav-button">theme_2</button>
-                                <button class="nav-button">theme_3</button>
+                            <div class="nav-buttons left">';
+                        foreach ($themelist as $theme)
+                        {
+                            echo '<button class="nav-button">'.$theme.'</button>';
+                        }        
+                        echo' 
                             </div>
                             <div class="nav-buttons right">
                                 <form action="./c_change_suggestion.php" method="post">
