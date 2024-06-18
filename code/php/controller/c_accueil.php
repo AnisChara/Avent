@@ -11,7 +11,7 @@ require_once '../modele/m_gen_suggestion.php';
 require_once '../modele/m_collect_avent_is_like.php';
 require_once '../modele/m_collect_theme_for_avent.php';
 
-$AventDisplay = get_suggestion(get_userID($_COOKIE['email']))
+$AventDisplay = get_suggestion(get_userID($_COOKIE['email']));
 
 if(COUNT($AventDisplay) > 0)
 {
