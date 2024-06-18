@@ -20,8 +20,9 @@
     <section class="result">
         <div class="result-content">
             <h3>Créer votre AVent !</h3>
-            <fieldset>
             <div class="liste-produits">
+                <form class="produit" action="" method="POST">
+                    <!-- message d'erreur -->
                 <form class="produit" action="c_create_avent.php" method="POST" enctype="multipart/form-data">
                 <p>Les champs obligatoires sont marqués par un *</p><br/>
 
@@ -33,8 +34,11 @@
                             }
                         ?>
                     </div>
+                    <!-- titre de l'évènement -->
                     <label>Nom de votre évènement *</label>
                     <input type="text" name="nom" value="" placeholder="Nom de l'AVent">
+                    <label>Choisissez vos différentes thématiques</label>
+                    <!-- Sélection des thèmes -->
                     <label>Choisissez vos différentes thématiques ( Au moins 1 thématique )</label>
                     <select name="theme1">
                         <option>Aucune</option>
@@ -54,16 +58,38 @@
                             echo '<option>'.$theme['theme_name'].'</option>';
                         }; ?>
                     </select>
+                    <!-- les trois dates (fin, debut, inscription) -->
+                    <label>date de début de l'évènement</label>
+                    <input type="date">
+                    <label>date de fin de l'évènement</label>
+                    <input type="date">
                     <label>date de début de l'évènement *</label>
                     <input type="date" name="date_debut">
                     <label>date de fin de l'évènement *</label>
                     <input type="date" name="date_fin">
                     <label>date de fin de l'inscription</label>
+                    <input type="date">
+                    <!-- évènement publique -->
+                    <label><input type="checkbox" name="interest" value="" /> Évènement publique</label>
+                    <!-- description -->
+                    <label>Description :</label>
                     <input type="date" name="fin_inscription">
                     <label>Type d'evenement * <br><input type="radio" name="is_public" value="false" />privé
                         <input type="radio" name="is_public" value="true" />public</label>
                     <label>Description *</label>
                     <textarea name="information" cols="30" rows="10"></textarea>
+                    <!-- lien d'un potentiel site web -->
+                    <label>Lien de votre site web (facultatif)</label>
+                    <input type="text" name="lien" value="" placeholder="url site web">
+                    <!-- évènement payant + lien billeterie -->
+                    <label><input type="checkbox" id="price" name="interest" value="" /> Évènement payant</label>
+                    <label>lien de la billeterie</label>
+                    <input type="text" name="billeterie" id="link" value="" placeholder="url billeterie">
+                    <!-- autre tag que l'utilisateur souhaite mettre -->
+                    <label>Autre Tag :</label>
+                    <textarea name="tag" cols="30" rows="10"></textarea>
+                    <!-- Ajout d'une image -->
+                    <label>Ajouter une image</label>
                     <label>Lien de votre site web</label>
                     <input type="text" name="lien_site" value="" placeholder="url site web">
                     <label>Evenement payant * <br><input type="radio" name="is_payant" value="false" />non
@@ -84,14 +110,15 @@
                     <input type="file" name="image">
                     <div class="image">
                         <div class="image-prod">
+                            <img src="../views/images/fond_blanc.jpeg" alt="Affiche d'événement">
                         </div>
                     </div>
+                    <!-- ajout de l'évènement -->
                     <div class="ajout">
                         <input type="submit" value="Ajouter" name="btn-ajouter">
                     </div>
                 </form>
             </div>
-            </fieldset>
         </div>
     </section>
     <!-- logo -->
