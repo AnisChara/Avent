@@ -37,7 +37,6 @@
                     <!-- titre de l'évènement -->
                     <label>Nom de votre évènement *</label>
                     <input type="text" name="nom" value="" placeholder="Nom de l'AVent">
-                    <label>Choisissez vos différentes thématiques</label>
                     <!-- Sélection des thèmes -->
                     <label>Choisissez vos différentes thématiques ( Au moins 1 thématique )</label>
                     <select name="theme1">
@@ -59,10 +58,6 @@
                         }; ?>
                     </select>
                     <!-- les trois dates (fin, debut, inscription) -->
-                    <label>date de début de l'évènement</label>
-                    <input type="date">
-                    <label>date de fin de l'évènement</label>
-                    <input type="date">
                     <label>date de début de l'évènement *</label>
                     <input type="date" name="date_debut">
                     <label>date de fin de l'évènement *</label>
@@ -75,7 +70,7 @@
                     <label>Description :</label>
                     <input type="date" name="fin_inscription">
                     <label>Type d'evenement * <br><input type="radio" name="is_public" value="false" />privé
-                        <input type="radio" name="is_public" value="true" />public</label>
+                    <input type="radio" name="is_public" value="true" />public</label>
                     <label>Description *</label>
                     <textarea name="information" cols="30" rows="10"></textarea>
                     <!-- lien d'un potentiel site web -->
@@ -85,21 +80,19 @@
                     <label><input type="checkbox" id="price" name="interest" value="" /> Évènement payant</label>
                     <label>lien de la billeterie</label>
                     <input type="text" name="billeterie" id="link" value="" placeholder="url billeterie">
-                    <!-- autre tag que l'utilisateur souhaite mettre -->
-                    <label>Autre Tag :</label>
-                    <textarea name="tag" cols="30" rows="10"></textarea>
                     <!-- Ajout d'une image -->
-                    <label>Ajouter une image</label>
                     <label>Lien de votre site web</label>
                     <input type="text" name="lien_site" value="" placeholder="url site web">
                     <label>Evenement payant * <br><input type="radio" name="is_payant" value="false" />non
                         <input type="radio" name="is_payant" value="true" />oui</label>
                     <label>lien de la billeterie *</label>
                     <input type="text" name="lien_billeterie" value="" placeholder="url billeterie">
+                    <!-- Sous thème -->
                     <label>Vos sous themes</label>
                     <input type="text" name="sous_theme1">
                     <input type="text" name="sous_theme2">
                     <input type="text" name="sous_theme3">
+                    <!-- lieu -->
                     <label>Votre lieu</label>
                     <input type="text" name="lieu" value="" placeholder="lieu">
                     <label>Capacité</label>
