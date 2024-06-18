@@ -40,7 +40,7 @@ function create_avent($nom,$date_debut,$date_fin,$fin_inscription, $information,
     $requete = $db->prepare("INSERT INTO avent (nom, date_debut, date_fin, fin_inscription, information, capacity, is_payant, is_public, lien_site, lien_billeterie, lieu, age_minimum, createur) VALUES (:nom, :date_debut, :date_fin, :fin_inscription, :information, :capacity, :payant, :public, :lien_site, :lien_billeterie, :lieu, :age_minimum, :createur)");
     $requete->execute(array(':nom' => $nom , ':date_debut' => $date_debut, ':date_fin' => $date_fin, ':information' => $information, ':fin_inscription' => $fin_inscription, ':capacity' => $capacity, ':payant' => $is_payant, ':public' => $is_public, ':lien_site' => $lien_site, ':lien_billeterie' => $lien_billeterie, ':lieu' => $lieu, ':age_minimum' => $age_minimum, ':createur' => $createur));
     
-    $avent_id = get_avent_id($nom);
+    $avent_id = get_avent_id($nom,$date_debut,$date_fin);
     
     insert_theme_for_avent($avent_id, $theme1, $theme2, $theme3);
 

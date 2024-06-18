@@ -18,8 +18,8 @@ foreach($infos as $info)
 {
     if(empty($_POST[$info]))
     {
-        echo 'non';
-        exit();
+        $message = "Veuillez remplir tous les champs.";
+        require 'c_afficher_create_avent.php';
     }
 }
 
@@ -37,6 +37,7 @@ foreach($themes as $theme)
 if ($nb_theme === 0)
 {
     require 'c_afficher_create_avent.php';
+    $message= 'Veuillez choisir au moins 1 thématiques.';
 }
 
 //insert sous theme
@@ -46,6 +47,6 @@ create_avent($_POST['nom'], $_POST['date_debut'], $_POST['date_fin'], $_POST['fi
 $uniqid = uniqid('image_');
 $value = insert_img($_FILES,'image',$uniqid);
 $photo_id = get_image_id($uniqid);
-insert_img_for_avent(get_avent_id($_POST['nom']),$photo_id);
+insert_img_for_avent(get_avent_id($_POST['nom'],$_POST['date_debut'],$_POST['date_fin']),$photo_id);
 
 require 'c_avent.php';
