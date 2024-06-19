@@ -20,6 +20,7 @@ foreach($infos as $info)
     {
         $message = "Veuillez remplir tous les champs.";
         require 'c_afficher_create_avent.php';
+        exit();
     }
 }
 
@@ -28,7 +29,7 @@ $nb_theme = 0;
 
 foreach($themes as $theme)
 {
-    if($theme !== 'Aucune')
+    if($_POST[$theme] !== 'Aucune')
     {
         $nb_theme++;
     }
@@ -36,8 +37,9 @@ foreach($themes as $theme)
 
 if ($nb_theme === 0)
 {
-    require 'c_afficher_create_avent.php';
     $message= 'Veuillez choisir au moins 1 thématiques.';
+    require 'c_afficher_create_avent.php';
+    exit();
 }
 
 //insert sous theme

@@ -21,9 +21,8 @@
         <div class="result-content">
             <h3>Créer votre AVent !</h3>
             <div class="liste-produits">
-                <form class="produit" action="" method="POST">
                     <!-- message d'erreur -->
-                <form class="produit" action="c_create_avent.php" method="POST" enctype="multipart/form-data">
+                <form action="./c_create_avent.php" class="produit" method="POST" enctype="multipart/form-data">
                     <div class="info">
                         <p>Les champs obligatoires sont marqués par un *</p><br/>
                         <div class="message">
@@ -92,7 +91,6 @@
                         <div class="photo"><!-- Ajout d'une image -->
                         <label>Ajouter/choisissez une image *</label>
                         <input type="file" name="image">
-                        <input type="checkbox" id="imagetest">
                         <div class="image">
                             <div class="image-prod">
                                 <img src="../views/images/fond_blanc.jpeg" alt="Affiche d'événement">
