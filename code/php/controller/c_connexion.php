@@ -15,8 +15,8 @@ require_once "../modele/m_getID_from_mail.php";
 
         if ($connexion !== false)
         {
-            setcookie("mot_de_passe", $_POST["mot_de_passe"]);
-            setcookie("email", $_POST["email"]);
+            setcookie("mot_de_passe", $_POST["mot_de_passe"],time()+3600);
+            setcookie("email", $_POST["email"],time()+3600);
             gen_suggestion(get_userID($_POST["email"]));
             setcookie("suggestion", 0);
 

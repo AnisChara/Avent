@@ -14,8 +14,8 @@ function verif_cookies()
             header("Location:./c_afficher_page_de_co.php");
         }
 
-        setcookie("mot_de_passe", $_COOKIE["mot_de_passe"]);
-        setcookie("email", $_COOKIE["email"]);
+        setcookie("mot_de_passe", $_COOKIE["mot_de_passe"],time()+3600);
+        setcookie("email", $_COOKIE["email"],time()+3600);
     }
     else
     {
