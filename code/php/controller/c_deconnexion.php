@@ -2,7 +2,7 @@
 
 require 'c_verif_cookies.php';
 
-unset($_COOKIE['email']);
-unset($_COOKIE['mot_de_passe']);
+setcookie('email', "", time()-3600);
+setcookie('mot_de_passe', "", time()-3600);
 
 verif_cookies();
