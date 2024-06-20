@@ -39,19 +39,16 @@
                         <!-- Sélection des thèmes -->
                         <label>Choisissez vos différentes thématiques ( Au moins 1 thématique )</label>
                         <select name="theme1" class="input-text">
-                            <option>Aucune</option>
                             <?php foreach ($themelist as $theme) {
                                 echo '<option>'.$theme['theme_name'].'</option>';
                             }; ?>
                         </select>
                         <select name="theme2" class="input-text">
-                            <option>Aucune</option>
                             <?php foreach ($themelist as $theme) {
                                 echo '<option>'.$theme['theme_name'].'</option>';
                             }; ?>
                         </select>
                         <select name="theme3" class="input-text">
-                            <option>Aucune</option>
                             <?php foreach ($themelist as $theme) {
                                 echo '<option>'.$theme['theme_name'].'</option>';
                             }; ?>

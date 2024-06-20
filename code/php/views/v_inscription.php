@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../views/css/v_inscription.css">
     <title>Page d'inscription AVent</title>
 </head>
 <body>
     <div class="login-box">
+        <div class="login-box_content">
         <form action="./c_inscription.php" method="POST">
 			<h1>inscription</h1>
-
+            <div class="liste-produits">
             <?php if (isset($error_inscription_msg)) echo $error_inscription_msg;?>
-            
                 <!-- nom -->
                 <div class = "box">
+                <label>Nom</label>
 					<input type="nom" name="nom" value="">
-				    <label>Nom</label>
 				</div>
                 <!-- prénom -->
                 <div class = "box">
+                <label>Prénom</label>
 					<input type="prenom" name="prenom" value="">
-				    <label>Prénom</label>
 				</div>
                 <!-- date de naissance -->
                 <div class = "box">
+                <label>Date de naissance</label>
                     <input type="date" name="date_naissance" value="" min="1900-01-01" max="2024-12-31" />
-                    <label>Date de naissance</label>
                 </div>
                 <!-- adresse mail -->
 				<div class = "box">
+                <label>Adresse mail</label>
 					<input type="text" name="email" value="">
-					<label>mail</label>
 				</div>
                 <!-- case genre -->
                 <div class = "box">
@@ -43,16 +44,17 @@
                 </div>
                 <!-- pseudo -->
                 <div class = "box">
-					<input type="pseudo" name="pseudo" value="">
-				    <label>Pseudo</label>
+                <label>Pseudo</label>
+                    <input type="pseudo" name="pseudo" value="">
 				</div>
                 <!-- mot de passe -->
 				<div class = "box">
+                <label>Mot de passe</label>    
 					<input type="password" name="mot_de_passe" value="">
-				    <label>Mot de passe</label>
 				</div>
                 <!-- thème -->
                 <div class = "box">
+                <label>Thème 1</label>    
                     <select name="theme1">
                         <option></option>
                         <?php foreach ($themelist as $theme) {
@@ -60,9 +62,10 @@
                         };
                         ?>
                     </select>
-                    <label>Thème 1</label>
+                    
                 </div>
                 <div class = "box">
+                <label>Thème 2</label>    
                     <select name="theme2">
                         <option></option>
                         <?php foreach ($themelist as $theme) {
@@ -70,9 +73,9 @@
                         };
                         ?>
                     </select>
-                    <label>Thème 2</label>
                 </div> 
                 <div class = "box">
+                <label>Thème 3</label>
                     <select name="theme3">
                         <option></option>
                         <?php foreach ($themelist as $theme) {
@@ -80,13 +83,14 @@
                         };
                         ?>
                     </select>
-                    <label>Thème 3</label>
                 </div>   
                 <!-- inscription -->
 				<div class = "connect">
 					<input type="submit" name="action" value="inscription">
 				</div>
+            </div>
 		</form>
+        </div>
     </div>
 </body>
 </html>

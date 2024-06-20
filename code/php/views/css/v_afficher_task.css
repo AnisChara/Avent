@@ -64,7 +64,6 @@ body {
     border: 6px solid #F1A03C;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
 }
@@ -102,6 +101,23 @@ fieldset {
     display: flex;
     background-color: darkgray;
     border-radius: 20px;
+}
+.finish_tasks {
+    margin: 20px 0;
+    display: flex;
+    background-color: rgb(126, 202, 12);
+    border-radius: 20px;
+}
+
+.finish_tasks .task {
+    margin-left: 15px;
+    overflow: hidden;
+    width: 80%;
+}
+.finish_tasks .task .description{
+    color: black;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 .tasks .task {
@@ -147,4 +163,25 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-task {
+    font-size: 16px;
+}
+
+.add-task-input {
+    margin: 10px;
+    background-color: darkgray;
+    border-radius: 20px;
+    width: 90%;
+    height: 80%;
+    padding: 10px;
+}
+
+
 

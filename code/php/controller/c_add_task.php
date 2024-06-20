@@ -2,9 +2,9 @@
 
 require_once "../modele/m_taches.php";
 
-if (isset($_POST["description"]) && trim($_POST["description"]) != "") {
-    ajouter_tache(trim($_POST["description"]), $_POST["avent_id"]);
+if (!empty($_POST["task"])) {
+    ajouter_tache($_POST["task"], $_POST["avent_id"]);
 } else {
     $erreur = "Veuillez remplir la description";
 }
-require "c_afficher_page_full_avent.php";
+require "c_afficher_tache.php";
