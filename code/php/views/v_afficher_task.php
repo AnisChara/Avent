@@ -19,33 +19,47 @@
     <!-- Affichage des tâches -->
     <div class="container">
         <div class="container-task">
-            <h3>Gestionnaires des tâches de l'AVent <?php ?></h3>
-            <fieldset>
-                <div class="liste-task">
-                    <div class="tasks">
-                        <div class="task">
-                            <p class="description">1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <form action="" method="POST">
+                <h3>Gestionnaires des tâches de l'AVent <?php ?></h3>
+                <fieldset>
+                    <div class="liste-task">
+                        <div class="tasks">
+                            <div class="task">
+                                <p class="description">1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <button class="valide">V</button>
+                            <button class="no-valide">X</button>
+                            <button class="supp">SU</button>
                         </div>
-                        <button class="valide">V</button>
-                        <button class="no-valide">X</button>
-                    </div>
-                    <div class="tasks">
-                        <div class="task">
-                            <p class="description">2 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="tasks">
+                            <div class="task">
+                                <p class="description">2 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <button class="valide">V</button>
+                            <button class="no-valide">X</button>
+                            <button class="supp">SU</button>
                         </div>
-                        <button class="valide">V</button>
-                        <button class="no-valide">X</button>
-                    </div>
-                    <div class="tasks">
-                        <div class="task">
-                            <p class="description">3 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="tasks">
+                            <div class="task">
+                                <p class="description">3 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <button class="valide">V</button>
+                            <button class="no-valide">X</button>
+                            <button class="supp">SU</button>
                         </div>
-                        <button class="valide">V</button>
-                        <button class="no-valide">X</button>
                     </div>
+                </fieldset>
+                <div class="add">
+                    <form action="./c_add_task.php">
+                        <input type="text" name="task" placeholder="Ajouter une tâche" class="add-task-input">
+                        <button class="add-task" name="description">+</button>
+                    </form>
                 </div>
-            </fieldset>
+            </form>
         </div>
+        <form action="./c_afficher_full_avent.php" method="POST">
+            <input type="submit" value="retour" class="retour">
+        </form>
     </div>
     <!-- Floating Button -->
     <div class="floating-btn">

@@ -61,12 +61,16 @@
                             <p class="favoris">nombre de favoris:'  . $avent[3].'</p>
                             <form action ="./c_afficher_full_avent.php" method ="post">
                             <button type="submit" name="edit" value ="true" class = "edit">
+                            </form>
                             ';
                         }
                         ?>
                         </div>
                 </div>
                 <a href=<?php echo '"'.$_COOKIE['MotherURL'].'"'?>>Retour</a>
+                <form action="./c_tache.php" metohd="POST">
+                    <button type="submit" name="tache" value ="" class = "tache">Tâche</button>
+                </form>
             </div>
         </div>
     </div>
