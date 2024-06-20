@@ -22,7 +22,28 @@
 		<h1>Avent, créez, partagez, profitez !</h1>
 		<div class="logo">
 			<img src="../views/images/AVent.png" alt="">
-		</div>	
+		</div>
+		<?php
+// Assuming you have a function to get the user data
+function getUserData() {
+    // Replace this with your actual database query or user data retrieval logic
+    $userData = array(
+        'nom' => 'John Doe',
+        'prenom' => 'John',
+        'pseudo' => 'johndoe',
+        'mot_de_passe' => 'password123'
+    );
+    return $userData;
+}
+
+$userData = getUserData();
+
+// Now you can use the variables
+$nom = $userData['nom'];
+$prenom = $userData['prenom'];
+$pseudo = $userData['pseudo'];
+$mot_de_passe = $userData['mot_de_passe'];
+?>	
 		<div class="info-box">
 			<form action="./c_afficher_page_compte.php" method="POST">
 				<div class ="titre">
