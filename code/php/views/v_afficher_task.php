@@ -50,7 +50,7 @@
                                     {
                                     echo   '<div class="finish_tasks">
                                             <div class="task">
-                                                <p class="description">'.($i+1)." - ".$tasks[$i]['content'].'</p>
+                                                <p class="description">'.($i+1).' - '.$tasks[$i]['content'].' - fini par '.$tasks[$i]['pseudo'].'</p>
                                             </div>
                                         <form action="./c_unfinish_task.php" method ="POST">
                                             <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
