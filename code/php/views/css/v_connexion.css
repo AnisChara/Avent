@@ -4,16 +4,14 @@ body{
   font-family: 'League Spartan';
 }
 
-.slogan{
+h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
-  font-weight:800;
-  margin-top: -5%;
+  font-size: 80px;
 }
 
-.form{
+.form-container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,21 +22,108 @@ body{
   height: 50%;
   width: 30%;
   position: relative;
-  left: 30%;
 }
 
 .logo-container{
-  height: 10%;
   width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-.box{
+.box1{
   background-color: black;
   color: white;
-  border-radius: 10px;
-  margin: 1%;
-  width: 10%;
-  height: 10%;
+  border-radius: 27px;
+  margin: 2% 1% 0% 1%;
+  width : 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 2% 2% 2% ;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  font-size: 150%;
+}
+
+.box2{
+  background-color: black;
+  color: white;
+  border-radius: 27px;
+  margin: 1% 1% 5% 1%;
+  width : 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 2% 2% 2% ;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  font-size: 150%;
+}
+
+.submit {
+  background-color: #F1A03C;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 1.1% 4%;
+  font-size: 150%;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create {
+  background-color: #F1A03C;
+  color: rgb(0, 0, 0);
+  border: none;
+  margin-top: 1%;
+  padding: 0.8% 2.5%;
+  font-size: 120%;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit:hover {
+  color: white;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.create:hover {
+  color: white;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submit:active {
+  background-color: #c27b2b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+.submit:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(241, 160, 60, 0.5);
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+  color: #cccccc;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  background-color: #1a1a1a;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
+  background-color: #1a1a1a;
 }

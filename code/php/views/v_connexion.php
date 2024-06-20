@@ -8,17 +8,16 @@
 	</head>
 <body>
 	<div class="logo-container">
-	<img src="../views/images/logo_avent.png" class="logo">
-	</div>
-	
-	<div class="slogan">
+		<img src="../views/images/logo_avent.png" class="logo">
 		<h2>Créez, partagez, profitez !</h2>
 	</div>
 	
-	<form action="c_connexion.php" method="POST" class="form">
-		<input type="text" name="email" class="box" placeholder="adresse mail">
-		<input type="password" name="mot_de_passe" class="box" placeholder="mot de passe">
-		<input type="submit" name="action" value="Se connecter">
+	<form action="c_connexion.php" method="POST" class="form-container">
+		<input type="text" name="email" class="box1" placeholder="adresse mail">
+		<input type="password" name="mot_de_passe" class="box2" placeholder="mot de passe">
+		<input type="submit" name="action" value="Se connecter" class="submit">
+		<a href="./c_afficher_page_inscription.php" class="create">Créer un compte</a>
 	</form>
+
 </body>
 </html>
