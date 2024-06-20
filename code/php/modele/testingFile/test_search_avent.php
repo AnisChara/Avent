@@ -12,5 +12,6 @@ echo '<form method="POST" action="">
 if (isset($_POST['res']))
     {
         $nom = $_POST['search'];
-    search_avent($nom);
+        var_dump(search_avent($nom));
+
     }
