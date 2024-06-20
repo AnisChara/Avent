@@ -34,7 +34,7 @@
 					<input type="text" name="email" value="">
 				</div>
                 <!-- case genre -->
-                <div class = "box">
+                <div class = "box genre-box">
                     <input type="radio" name="genre" value="1">
                     <label>Homme</label>
                     <input type="radio" name="genre" value="2">
