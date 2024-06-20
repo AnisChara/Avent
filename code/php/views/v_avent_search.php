@@ -19,9 +19,9 @@
     
     <!-- Search Bar -->
     <div class="navbar">
-        <form method="GET" action="">
-            <input type="text" placeholder="Mots-clés">
-            <input type="submit" value="Rechercher">
+        <form method="POST" action="./c_search.php">
+            <input type="text" name="search" placeholder="Mots-clés">
+            <input type="submit" name="res" value="Rechercher">
         </form>
         <!-- Floating Button -->
         <div class="floating-btn">
@@ -39,13 +39,21 @@
                 for($n = 0; $n < COUNT($AventList) && $n < 10; $n++)
                 {
                     $Avent = get_info_avent_full_display($AventList[$n][0]);
+                    if($Avent[0]['createur'] !== null)
+                    {
+                        $createur = recuperer_info_user($Avent[0]['createur'])['pseudo'];
+                    }
+                    else
+                    {
+                        $createur = 'inconnu';
+                    }
                     echo'
                         <div class="avent">
                             <div class="image">
                                 <img src=data:image/jpg;base64,'.$Avent[1].' alt="Fond Oasis" class="suggestion-image">
                                 <div class="content">
                                     <strong><p class="titre">'.$Avent[0]['nom'].'</p></strong>
-                                    <p class="createur">'.$Avent[0]['createur'].'</p>
+                                    <p class="createur">'.$createur.'</p>
                                 </div>
                             </div>
                         </div>
