@@ -68,8 +68,8 @@
                         </div>
                 </div>
                 <a href=<?php echo '"'.$_COOKIE['MotherURL'].'"'?>>Retour</a>
-                <form action="./c_tache.php" metohd="POST">
-                    <button type="submit" name="tache" value ="" class = "tache">Tâche</button>
+                <form action="./c_afficher_tache.php" method="POST">
+                    <button type="submit" name="avent_id" value='<?php echo $_POST['avent_id']?>' class = "tache">Tâche</button>
                 </form>
             </div>
         </div>
