@@ -2,7 +2,7 @@
 
 require_once "../modele/m_taches.php";
 
-if (isset($_POST["task"])) {
+if (!empty($_POST["task"])) {
     ajouter_tache($_POST["task"], $_POST["avent_id"]);
 } else {
     $erreur = "Veuillez remplir la description";

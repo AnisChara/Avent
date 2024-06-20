@@ -26,8 +26,8 @@ function fin_tache($task_id, $finisseur) {
 }
 function nofin_tache($task_id, $finisseur) {
     require "m_connexion_bdd.php";
-    $requete = $db->prepare(" ALTER TABLE task SET finisseur = NULL WHERE task_id =? AND finisseur IS NOT NULL");
-    $requete->execute(array($finisseur, $task_id));
+    $requete = $db->prepare(" UPDATE task SET finisseur = NULL WHERE task_id =? AND finisseur IS NOT NULL");
+    $requete->execute(array($task_id));
     $resultat = $requete->fetchAll();
     return $resultat;
 }

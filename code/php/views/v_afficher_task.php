@@ -22,18 +22,52 @@
                 <h3>Gestionnaires des tâches de l'AVent <?php ?></h3>
                 <fieldset>
                     <div class="liste-task">
-                        <?php for ($i = 0;$i<count($tasks);$i++)
-                        {
-                            echo 
-                            '<div class="tasks">
-                            <div class="task">
-                                <p class="description">'.($i+1)." - ".$tasks[$i]['content'].'</p>
-                            </div>
-                            <button class="valide">V</button>
-                            <button class="no-valide">X</button>
-                            <button class="supp">SU</button>
-                            </div>';
-                        }
+                        <?php 
+                            if(count($tasks) > 0)
+                            {
+                                for ($i = 0;$i<count($tasks);$i++)
+                                {
+                                    if(empty($tasks[$i]['finisseur']))
+                                    {
+                                    echo   '<div class="tasks">
+                                            <div class="task">
+                                                <p class="description">'.($i+1)." - ".$tasks[$i]['content'].'</p>
+                                            </div>
+                                        <form action="./c_finish_task.php" method ="POST">
+                                            <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
+                                            <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
+                                            <input type="submit" value="V">
+                                        </form>
+                                        <form action="./c_remove_task.php" method ="POST">
+                                            <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
+                                            <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
+                                            <input type="submit" value="Supprimer">
+                                        </form>
+                                        </div>';
+                                    }
+
+                                    else
+                                    {
+                                    echo   '<div class="finish_tasks">
+                                            <div class="task">
+                                                <p class="description">'.($i+1)." - ".$tasks[$i]['content'].'</p>
+                                            </div>
+                                        <form action="./c_unfinish_task.php" method ="POST">
+                                            <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
+                                            <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
+                                            <input type="submit" value="X">
+                                        </form>
+                                        <form action="./c_remove_task.php" method ="POST">
+                                            <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
+                                            <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
+                                            <input type="submit" value="Supprimer">
+                                        </form>
+                                        </div>';
+                                    }
+                                    
+                                }
+                            }
+                            else echo "Vous n'avez pas encore de taches."
                         ?>
                     </div>
                 </fieldset>

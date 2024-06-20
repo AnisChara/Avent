@@ -30,7 +30,7 @@
     </div>
 
 <!-- Main Content -->
- <?php echo '
+<?php echo '
 <div class="main_content">
     <div class="avent_container">
         <div class="avent">
@@ -70,6 +70,14 @@
                 <a href=<?php echo '"'.$_COOKIE['MotherURL'].'"'?>>Retour</a>
                 <form action="./c_afficher_tache.php" method="POST">
                     <button type="submit" name="avent_id" value='<?php echo $_POST['avent_id']?>' class = "tache">Tâche</button>
+                </form>
+                <form action="./c_inscription_avent.php" method="POST">
+                    <button type="submit" name="avent_id" value='<?php echo $_POST['avent_id']?>' class = "tache">
+                        <?php 
+                            if($inscrit === true) echo 'se désinscrire';
+                            else echo's\'inscrire';
+                        ?>
+                    </button>
                 </form>
             </div>
         </div>
