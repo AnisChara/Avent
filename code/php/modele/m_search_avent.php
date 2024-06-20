@@ -19,27 +19,50 @@ function search_avent($recherche)
             {
                 $lieu = str_replace(",", " ", $resultat[$i]['lieu']);
                 $lieu = str_replace(";", " ", $lieu);
-                $lieu = explode(" ",$lieu);
-                
-                $content[$i][0] = [$resultat[$i]['avent_id'], $resultat[$i]['nom'], $lieu];
+                $lieuArray = explode(" ",$lieu);
+
+                $content[$i][0] = [$resultat[$i]['avent_id'], $resultat[$i]['nom']];
+
+                for($j = 0; $j < COUNT($lieuArray); $j++)
+                {
+                    if($lieuArray[$j] !== "")
+                    {
+                        $content[$i][0][COUNT($content[$i][0])] = $lieuArray[$j];
+                    }
+                }
+
             }
             else
             {
-                $content[$i][0] = [$resultat[$i]['avent_id'], $resultat[$i]['nom']];
+                $content[$i][0] = [$resultat[$i]['avent_id'], $resultat[$i]['nom'], 0];
             }
 
-            for ($j = 0; $j < COUNT($result_theme); $j++)
+            if(COUNT($result_theme) > 0)
             {
-                $content[$i][1][$j] = $result_theme[$j]['theme_name'];
+                for ($j = 0; $j < COUNT($result_theme); $j++)
+                {
+                    $content[$i][1][$j] = $result_theme[$j]['theme_name'];
+                }
+            }
+            else
+            {
+                $content[$i][1] = 0;
             }
 
             $sous_theme_req = $db->prepare("SELECT sous_theme.sous_theme_name FROM sous_theme WHERE avent_id = :id");
             $sous_theme_req->execute(array(':id' => $resultat[$i]['avent_id']));
             $sous_theme_result = $sous_theme_req->fetchAll(PDO::FETCH_ASSOC);
             
-            for ($j = 0; $j < COUNT($sous_theme_result); $j++)
+            if(COUNT($sous_theme_result) > 1)
             {
-                $content[$i][2][$j] = $sous_theme_result[$j]['sous_theme'];
+                for ($j = 0; $j < COUNT($sous_theme_result); $j++)
+                {
+                    $content[$i][2][$j] = $sous_theme_result[$j]['sous_theme'];
+                }
+            }
+            else
+            {
+                $content[$i][2] = 0;
             }
 
             $pseudo_req = $db->prepare("SELECT user.pseudo FROM user INNER JOIN avent ON avent.createur = user.user_id WHERE avent_id = :id");
@@ -51,11 +74,24 @@ function search_avent($recherche)
             {
                 $content[$i][COUNT($content[$i])] = $pseudo_result[0]['pseudo'];
             }
+            else
+            {
+                $content[$i][3] = 0;
+            }
         }
         
         $order = [];
         $recherche = str_replace(","," ",$recherche);
         $recherche = explode(" ", $recherche);
+        /*$recherche = [];
+        for($j = 0; $j < COUNT($recherchelist); $j++)
+        {
+            if($recherchelist[$j] !== "")
+            {
+                $recherche[COUNT($recherche)] = $recherchelist[$j];
+            }
+        }*/
+
 
         for($i = 0; $i < COUNT($content); $i++)
         {
@@ -111,7 +147,10 @@ function search_avent($recherche)
                     }
                     else
                     {
-                        $given[COUNT($given)] = $content[$i][$j];
+                        if($content[$i][$j] !== 0)
+                        {
+                            $given[COUNT($given)] = $content[$i][$j];
+                        }
                     }
                 
             }
@@ -121,7 +160,7 @@ function search_avent($recherche)
             //ajouter la partie calcul de compatibilité ici
             //var_dump($content[$i]);
             //var_dump($index);
-            var_dump($given);
+            //var_dump($given);
             //var_dump($recherche);
             $order[$i] = [$index, compatibility($recherche, $given)];
             //var_dump($order[$i]);

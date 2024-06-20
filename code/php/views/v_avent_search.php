@@ -34,91 +34,24 @@
         <!-- Suggestions Section -->
         <div class="list_avent_content">
             <div class="list_avent">
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
+            <?php
+
+                for($n = 0; $n < COUNT($AventList) && $n < 10; $n++)
+                {
+                    $Avent = get_info_avent_full_display($AventList[$n][0]);
+                    echo'
+                        <div class="avent">
+                            <div class="image">
+                                <img src=data:image/jpg;base64,'.$Avent[1].' alt="Fond Oasis" class="suggestion-image">
+                                <div class="content">
+                                    <strong><p class="titre">'.$Avent[0]['nom'].'</p></strong>
+                                    <p class="createur">'.$Avent[0]['createur'].'</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="list_avent">
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="list_avent">
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="avent">
-                    <div class="image">
-                        <img src="../views/images/fond_oasis.jpg" alt="Fond Oasis" class="suggestion-image">
-                        <div class="content">
-                            <strong><p class="titre">Je suis un titre</p></strong>
-                            <p class="createur">Créateur</p>
-                        </div>
-                    </div>
-                </div>
+                        ';
+                }
+            ?>
             </div>
         </div>
     </div>

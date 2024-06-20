@@ -19,7 +19,7 @@
     
     <!-- Search Bar -->
     <div class="navbar">
-        <form method="POST" action="">
+        <form method="POST" action="./c_search.php">
             <input type="text" name="search" placeholder="Mots-clés">
             <input type="submit" name="res" value="Rechercher">
         </form>
