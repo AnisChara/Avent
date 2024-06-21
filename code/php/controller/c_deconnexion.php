@@ -4,7 +4,7 @@ if (isset($_COOKIE['email']) || isset($_COOKIE['mot_de_passe'])) {
     //unset($_COOKIE['email']);
     if($_COOKIE['email'] == '0' || $_COOKIE['mot_de_passe'] == '0')
     {
-        header("Location:./c_afficher_page_de_co.php");
+        header("Location:../views/v_deconnexion_refresh.php");
     }
     else
     {
