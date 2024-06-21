@@ -46,6 +46,7 @@
                     for($i = 0; $i < COUNT($list_avent); $i++)
                     {
                         echo'
+                            <fieldset>
                                 <div class="avent">
                                     <div class="image">
                                         <img src=data:image/jpg;base64,'.img_avent($list_avent[$i]['avent_id']).' alt="" class="suggestion-image">
@@ -56,6 +57,7 @@
                                         <p class="description">'.$list_avent[$i]['information'].'</p>
                                     </div>
                                 </div>
+                            </fieldset>
                         ';
                     }
                     echo '</div>';
