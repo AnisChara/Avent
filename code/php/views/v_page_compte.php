@@ -13,6 +13,7 @@
             <li><a href="./c_avent.php">Avent</a></li>
             <li><a href="./c_afficher_compte.php">Compte</a></li>
             <li><a href="./c_afficher_create_avent.php">Création</a></li>
+			<li><a href="./c_deconnexion.php">deco</a></li>
         </ul>
     </nav>
 
