@@ -18,11 +18,19 @@ foreach($infos as $info)
 {
     if(empty($_POST[$info]))
     {
-        $message = "Veuillez remplir tous les champs.";
+        $message = "Veuillez remplir tous les champs obligatoires.";
         require 'c_afficher_create_avent.php';
         exit();
     }
 }
+
+if ($_POST['is_payant'] === 'true' && empty($_POST['lien_billeterie']))
+{
+    $message = "Veuillez fournir le lien de la billeterie.";
+    require 'c_afficher_create_avent.php';
+    exit();
+}
+
 
 $themes = array('theme1','theme2','theme3');
 $nb_theme = 0;
