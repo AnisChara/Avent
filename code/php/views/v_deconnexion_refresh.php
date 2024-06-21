@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="Refresh" content="2; ./v_connexion.php" />
+        <meta http-equiv="Refresh" content="2; ../controller/c_accueil.php" />
         <title>Deconnexion</title>
     </head>
 <body>
