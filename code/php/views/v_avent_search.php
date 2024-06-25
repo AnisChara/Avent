@@ -49,13 +49,17 @@
                     }
                     echo'
                         <div class="avent">
-                            <div class="image">
-                                <img src=data:image/jpg;base64,'.$Avent[1].' alt="Fond Oasis" class="suggestion-image">
-                                <div class="content">
-                                    <strong><p class="titre">'.$Avent[0]['nom'].'</p></strong>
-                                    <p class="createur">'.$createur.'</p>
-                                </div>
-                            </div>
+                            <form action="./c_afficher_full_avent.php" method="post">
+                                <button type="submit" name="avent_id" value="'.$Avent[0]['avent_id'].'" class="">
+                                    <div class="image">
+                                        <img src=data:image/jpg;base64,'.$Avent[1].' alt="Fond Oasis" class="suggestion-image">
+                                        <div class="content">
+                                            <strong><p class="titre">'.$Avent[0]['nom'].'</p></strong>
+                                            <p class="createur">'.$createur.'</p>
+                                        </div>
+                                    </div>
+                                </button>
+                            </form>
                         </div>
                         ';
                 }

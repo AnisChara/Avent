@@ -64,7 +64,7 @@
                             ';
                         }
                         ?>
-                        </div>
+                    </div>
                 </div>
                 <a href=<?php echo '"'.$_COOKIE['MotherURL'].'"'?>>Retour</a>
             </div>
