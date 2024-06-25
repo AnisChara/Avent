@@ -15,13 +15,22 @@ function search_avent($recherche)
             $theme_req->execute(array(':id' => $resultat[$i]['avent_id']));
             $result_theme = $theme_req->fetchAll(PDO::FETCH_ASSOC);
 
+            $nom = str_replace(",", " ", $resultat[$i]['nom']);
+            $nom = str_replace(";", " ", $nom);
+            $nomArray = explode(" ", $nom);
+
             if($resultat[$i]['lieu'] !== null)
             {
                 $lieu = str_replace(",", " ", $resultat[$i]['lieu']);
                 $lieu = str_replace(";", " ", $lieu);
                 $lieuArray = explode(" ",$lieu);
 
-                $content[$i][0] = [$resultat[$i]['avent_id'], $resultat[$i]['nom']];
+                $content[$i][0] = [$resultat[$i]['avent_id']];
+
+                for($j = 0; $j < COUNT($nomArray); $j++)
+                {
+                    $content[$i][0][COUNT($content[$i][0])] = $nomArray[$j]; 
+                }
 
                 for($j = 0; $j < COUNT($lieuArray); $j++)
                 {
@@ -34,7 +43,14 @@ function search_avent($recherche)
             }
             else
             {
-                $content[$i][0] = [$resultat[$i]['avent_id'], $resultat[$i]['nom'], 0];
+                $content[$i][0] = [$resultat[$i]['avent_id']];
+
+                for($j = 0; $j < COUNT($nomArray); $j++)
+                {
+                    $content[$i][0][COUNT($content[$i][0])] = $nomArray[$j]; 
+                }
+
+                $content[$i][0][COUNT($content[$i][0])] = 0;
             }
 
             if(COUNT($result_theme) > 0)
@@ -96,37 +112,7 @@ function search_avent($recherche)
         for($i = 0; $i < COUNT($content); $i++)
         {
             $given = [];
-            /*
-            for($j = 0; $j < COUNT($content[$i][0]); $j++)
-            {
-                $given[COUNT($given)] = $content[$i][0][$j];
-            }
-
-            if(is_array($content[$i][1]))
-            {
-                for($j = 0; $j < COUNT($content[$i][1]); $j++)
-                {
-                    if($content[$i][1][$j] !== "")
-                    {
-                        $given[COUNT($given)] = $content[$i][1][$j];
-                    }
-                }
-            }
-
-            if(COUNT($content[$i]) > 2)
-            {
-                if(is_array($content[$i][2]))
-                {
-                    for($j = 0; $j < COUNT($content[$i][2]); $j++)
-                    {
-                        if($content[$i][2][$j] !== "")
-                        {
-                            $given[COUNT($given)] = $content[$i][2][$j];
-                        }
-                    }
-                }
-            }
-            */
+           
             $index = 0;
             //var_dump($content[$i]);
             for($j = 0; $j < COUNT($content[$i]); $j++)
