@@ -36,6 +36,12 @@ function create_avent($nom,$date_debut,$date_fin,$fin_inscription, $information,
     require_once "m_get_aventID_from_name.php";
     require "m_insert_img.php";
 
+    if($is_public == true) $is_public = true;
+    if($is_public == false) $is_public = false;
+
+    if($is_payant == true) $is_payant = true;
+    if($is_payant == false) $is_payant = false;
+
 
     $requete = $db->prepare("INSERT INTO avent (nom, date_debut, date_fin, fin_inscription, information, capacity, is_payant, is_public, lien_site, lien_billeterie, lieu, age_minimum, createur) VALUES (:nom, :date_debut, :date_fin, :fin_inscription, :information, :capacity, :payant, :public, :lien_site, :lien_billeterie, :lieu, :age_minimum, :createur)");
     $requete->execute(array(':nom' => $nom , ':date_debut' => $date_debut, ':date_fin' => $date_fin, ':information' => $information, ':fin_inscription' => $fin_inscription, ':capacity' => $capacity, ':payant' => $is_payant, ':public' => $is_public, ':lien_site' => $lien_site, ':lien_billeterie' => $lien_billeterie, ':lieu' => $lieu, ':age_minimum' => $age_minimum, ':createur' => $createur));
