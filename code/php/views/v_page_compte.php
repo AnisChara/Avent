@@ -23,58 +23,40 @@
 		<div class="logo">
 			<img src="../views/images/AVent.png" alt="">
 		</div>
-		<?php
-// Assuming you have a function to get the user data
-function getUserData() {
-    // Replace this with your actual database query or user data retrieval logic
-    $userData = array(
-        'nom' => 'John Doe',
-        'prenom' => 'John',
-        'pseudo' => 'johndoe',
-        'mot_de_passe' => 'password123'
-    );
-    return $userData;
-}
 
-$userData = getUserData();
 
-// Now you can use the variables
-$nom = $userData['nom'];
-$prenom = $userData['prenom'];
-$pseudo = $userData['pseudo'];
-$mot_de_passe = $userData['mot_de_passe'];
-?>	
-		<div class="info-box">
-			<form action="./c_afficher_page_compte.php" method="POST">
+			<form action="c_modif_compte.php" method="POST">
 				<div class ="titre">
 					<h2 class="light">compte</h2>
 				</div>
 				<!-- <?php if ( isset($error_modif_msg)) echo $error_modif_msg; ?>-->
-				<div class="icon">
-					<img src="../views/images/user.svg" alt=""/>
-				</div>
+				
                 <div class = "box">
-                    <input type="text" name="nom" value=<?php echo $nom ?>>
+                    <input type="text" name="nom" value=<?php echo $info['nom'] ?>>
 					<label>nom</label>
                 </div>
                 <div class = "box">
-                    <input type="text" name="prenom" value="<?php echo $prenom ?>">
+                    <input type="text" name="prenom" value="<?php echo $info['prenom'] ?>">
 					<label>prenom</label>
                 </div>
                 <div class = "box">
-                    <input type="text" name="pseudo" value="<?php echo $pseudo ?>">
+                    <input type="text" name="pseudo" value="<?php echo $info['pseudo'] ?>">
 					<label>pseudo</label>
                 </div>
 				<div class = "box">
-					<input type="text" name="password" value="<?php echo $mot_de_passe ?>">
+					<input type="text" name="mot_de_passe" value="<?php echo $info['mot_de_passe'] ?>">
 					<label>Mot de passe</label>
+				</div>
+				<div class = "box">
+					<input type="text" name="email" value="<?php echo $info['email'] ?>">
+					<label>email</label>
 				</div>
                 <div class = "box" >
 				<input type="file" name="image">
 					<label>photo de profil</label>
                 </div>
 				<div class = "sauvegarder">
-					<input type="submit" name="c_modif_compte.php" value="Sauvegarder">
+					<input type="submit" value="Sauvegarder">
 				</div>
 			</form>
 		</div>
