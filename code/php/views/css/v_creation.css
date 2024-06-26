@@ -1,15 +1,22 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'League Spartan';
+    font-weight: bold;
 }
 
 body {
-    font-family: 'Poppins', 'sans-serif';
-    width: 100%;
     background-color: white;
-    overflow: hidden;
-    overflow: scroll; 
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
 }
 
 /* Partie de redirection vers différentes pages */
@@ -17,10 +24,9 @@ body {
     background-color: black;
     height: 100vh;
     padding-top: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    width : 10%;
     position: fixed;
 }
 
@@ -49,26 +55,19 @@ body {
     border-radius: 5px;
 }
 
-/* Section de création */
-.result {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; 
-    margin-left: 120px;  
-}
-
-.result-content {
+.container {
     background-color: #fff;
-    width: 60%;
+    width: 100%;
     height: 100%;
     border: 6px solid #fff;
-    padding: 20px;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     font-size:x-large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15%;
 }
 
 /* Scroll Bar */
@@ -83,18 +82,22 @@ body {
     border-radius: 4px;
 }
 
-.result-content h3 {
+.message{
+    color: red;
+    text-decoration: underline;
+}
+
+.container h3 {
     text-align: center;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-.liste-produits {
+.formulaire {
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
     flex-direction: row;
+    
 }
 
 input {
@@ -114,7 +117,8 @@ input[type="submit"] {
 }
 
 select {
-    margin: 0px 0px 2px 0px;
+    margin: 2px 0px 2px 0px;
+    font-size: large;
 }
 
 textarea {
@@ -126,47 +130,10 @@ textarea {
     resize: none;
 }
 
-.produit {
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.image {
-    height: calc(100vh - 100px); /* Ajuste la hauteur de l'image en fonction de la hauteur de l'écran */
-    width: 80%; /* */ 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10%;
-    border: 2px solid black;
-    border-radius: 6px;
-}
-
-.produit .image-prod {
-    height: 100%;
-    width: auto;
-}
-
-.produit .image-prod img {
-    height: 100%;
-    width: auto;
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: cover;
-}
-
 /* Logo */
-.logo {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-}
 
 .menu_avent {
     width: 60px;
-    cursor: pointer;
 }
 
 /* Responsive Design */
@@ -195,29 +162,47 @@ textarea {
 }
 
 .input-text{
-    background-color: rgb(239, 237, 237);
+    background-color: rgb(255, 234, 229);
     border : solid 2px orange;
     border-radius: 10px;
     width : 150px;
     height: 40px;
-    padding: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
 }
 
 .input-text-area{
-    background-color: rgb(239, 237, 237);
+    background-color: rgb(255, 234, 229);
     border : solid 2px orange;
     border-radius: 10px;
     padding: 10px 10px 10px 10px;
 }
 
-#imagetest{
-    background-color: black;
-}
 .info{
     display: flex;
     flex-direction: column;
 }
+
+.info label {
+    margin: 1%;
+}
 .photo{
     display: flex;
     flex-direction: column;
+    margin-left: 11%;
+}
+
+input[type='radio']{
+    margin: 10px;
+}
+
+input[type='text']{
+    font-size: large;
+
+}
+input[type='date']{
+    font-size: large;
+
+}
+input[type='number']{
+    font-size: large;
 }
