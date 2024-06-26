@@ -10,16 +10,28 @@ function create_user($nom,$prenom,$date_naissance,$email,$genre,$pseudo,$mot_de_
     } catch (Exception $error) { echo $error; return false;};
     return true;
 }
-function modif_user($nom, $prenom, $pseudo, $mot_de_passe, $pp) {
-    require "m_connexion_bdd.php";
-    $requete1 = $db->prepare("SELECT * FROM user WHERE email =?");
-    $requete1->execute(array($email));
-    $resultat1 = $requete1->fetch();
 
-    $requete2 = $db->prepare("UPDATE user SET nom =?, prenom =?, pseudo =?, mot_de_passe =? WHERE user_id =?");
-    $requete2->execute(array($nom, $prenom, $date_naissance, $email, $genre, $pseudo, $mot_de_passe, $id));
+function verif_modif($user_id, $pseudo, $email)
+{
+    require "m_connexion_bdd.php";
+    $requete1 = $db->prepare("SELECT * FROM user WHERE user_id <> :user_id AND (pseudo = :pseudo OR email = :email)");
+    $requete1->execute(array(':user_id' => $user_id, ':pseudo' => $pseudo, ':email' => $email));
+    $resultat1 = $requete1->fetchAll();
+    if (count($resultat1) > 0)
+    {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+function modif_user($id,$nom, $prenom, $email, $pseudo, $mot_de_passe) {
+    require "m_connexion_bdd.php";
+
+    $requete2 = $db->prepare("UPDATE user SET nom =?, prenom =?, email=?,pseudo =?, mot_de_passe =? WHERE user_id =?");
+    $requete2->execute(array($nom, $prenom, $email, $pseudo, $mot_de_passe, $id));
     $resultat2 = $requete2;
-    return [$resultat1,$resultat2];
+    return $resultat2;
 }
 function relier_themename_themeid($theme1, $theme2, $theme3) {
     require "m_connexion_bdd.php";
