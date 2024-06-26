@@ -56,7 +56,6 @@
                 <div class = "box">
                 <label>Thème 1</label>    
                     <select name="theme1">
-                        <option></option>
                         <?php foreach ($themelist as $theme) {
                             echo '<option>'.$theme['theme_name'].'</option>';
                         };
@@ -67,7 +66,6 @@
                 <div class = "box">
                 <label>Thème 2</label>    
                     <select name="theme2">
-                        <option></option>
                         <?php foreach ($themelist as $theme) {
                             echo '<option>'.$theme['theme_name'].'</option>';
                         };
@@ -77,7 +75,6 @@
                 <div class = "box">
                 <label>Thème 3</label>
                     <select name="theme3">
-                        <option></option>
                         <?php foreach ($themelist as $theme) {
                             echo '<option>'.$theme['theme_name'].'</option>';
                         };
