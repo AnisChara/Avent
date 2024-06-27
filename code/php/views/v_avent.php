@@ -49,14 +49,18 @@
                         echo'
                             <fieldset>
                                 <div class="avent">
-                                    <div class="image">
-                                        <img src=data:image/jpg;base64,'.img_avent($list_avent[$i]['avent_id']).' alt="" class="suggestion-image">
-                                    </div>
-                                    <div class="content">
-                                        <strong><p class="titre">'.$list_avent[$i]['nom'].'</p></strong>
-                                        <p class="createur">'.nom_from_user($list_avent[$i]['createur']).'</p>
-                                        <p class="description">'.$list_avent[$i]['information'].'</p>
-                                    </div>
+                                    <form action="./c_avent_manager.php" method="post">
+                                        <button type="submit" name="avent_id" value="'.$AventDisplay['avent_id'].'" class="card">
+                                            <div class="image">
+                                                <img src=data:image/jpg;base64,'.img_avent($list_avent[$i]['avent_id']).' alt="" class="suggestion-image">
+                                            </div>
+                                            <div class="content">
+                                                <strong><p class="titre">'.$list_avent[$i]['nom'].'</p></strong>
+                                                <p class="createur">'.nom_from_user($list_avent[$i]['createur']).'</p>
+                                                <p class="description">'.$list_avent[$i]['information'].'</p>
+                                            </div>
+                                        </button>
+                                    </form>
                                 </div>
                             </fieldset>
                         ';
