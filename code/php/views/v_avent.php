@@ -50,7 +50,7 @@
                             <fieldset>
                                 <div class="avent">
                                     <form action="./c_avent_manager.php" method="post">
-                                        <button type="submit" name="avent_id" value="'.$AventDisplay['avent_id'].'" class="card">
+                                        <button type="submit" name="avent_id" value="'.$list_avent[$i]['avent_id'].'" class="card">
                                             <div class="image">
                                                 <img src=data:image/jpg;base64,'.img_avent($list_avent[$i]['avent_id']).' alt="" class="suggestion-image">
                                             </div>
