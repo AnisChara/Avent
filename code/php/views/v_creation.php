@@ -97,7 +97,9 @@
                 </div>
                     <div class="photo"><!-- Ajout d'une image -->
                     <label>Ajouter/choisissez une image *</label>
-                    <input type="file" name="image">
+                    <input type="file" name="image" onchange="previewPicture(this)" accept=".jpg, .png">
+                    <img src="#" alt="" id="image" style="max-width: 80%; margin-top: 20px;" >
+
                     <div class="ajout">
                         <input type="submit" value="Ajouter" name="btn-ajouter">
                     </div>
@@ -126,6 +128,32 @@
                 lien.style.display = 'none';
             }
         }
+
+        let image = document.getElementById("image");
+         
+         // La fonction previewPicture
+         let previewPicture  = function (e) {
+     
+             // e.files contient un objet FileList
+             const [picture] = e.files
+     
+             // "picture" est un objet File
+             if (picture) {
+     
+                 // L'objet FileReader
+                 let reader = new FileReader();
+     
+                 // L'événement déclenché lorsque la lecture est complète
+                 reader.onload = function (e) {
+                     // On change l'URL de l'image (base64)
+                     image.src = e.target.result
+                 }
+     
+                 // On lit le fichier "picture" uploadé
+                 reader.readAsDataURL(picture)
+     
+             }
+         } 
     </script>
 </body>
 </html>
