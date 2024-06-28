@@ -151,37 +151,43 @@ function search_avent($recherche)
             $order[$i] = [$index, compatibility($recherche, $given)];
             //var_dump($order[$i]);
         }
-            
-            function quickSort($array) { 
-                $length = count($array); 
-              
-                if ($length <= 1) { 
-                    return $array; 
-                } else { 
-                    $pivot = $array[0]; 
-                    $left = $right = array(); 
-              
-                    for ($i = 1; $i < $length; $i++) { 
-                        if ($array[$i][1] > $pivot[1]) { 
-                            $left[] = $array[$i]; 
-                        } else { 
-                            $right[] = $array[$i]; 
-                        } 
-                    } 
-              
-                    return array_merge( 
-                        quickSort($left),
-                        array($pivot),  
-                        quickSort($right) 
-                    ); 
-                } 
-            }
 
+        function quickSort($array) { 
+            $length = count($array); 
+          
+            if ($length <= 1) { 
+                return $array; 
+            } else { 
+                $pivot = $array[0]; 
+                $left = $right = array(); 
+          
+                for ($i = 1; $i < $length; $i++) {
+                    if ($array[$i][1] > $pivot[1]) { 
+                        $left[] = $array[$i]; 
+                    } else { 
+                        $right[] = $array[$i]; 
+                    } 
+                } 
+          
+                return array_merge( 
+                    quickSort($left),
+                    array($pivot),
+                    quickSort($right) 
+                ); 
+            } 
+        }
 
         
+        $order = quickSort($order);
+            
+            $res = [];
+            for($x = 0; $order[$x][1] > 0; $x++)
+            {
+                $res[$x] = $order[$x];
+            }
 
-        return quickSort($order);
+        return $res;
 
         //return $content;
 
-}
+};
