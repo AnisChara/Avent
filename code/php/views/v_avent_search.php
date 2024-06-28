@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../views/css/v_avent_search.css">
-    <title>result search</title>
+    <title>Result Search</title>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -14,7 +14,7 @@
             <li><a href="./c_avent.php">Avent</a></li>
             <li><a href="./c_afficher_compte.php">Compte</a></li>
             <li><a href="./c_afficher_create_avent.php">Création</a></li>
-            <li><a href="./c_deconnexion.php">deco</a></li>
+            <li><a href="./c_deconnexion.php">Déconnexion</a></li>
         </ul>
     </nav>
     
@@ -36,39 +36,51 @@
         <div class="list_avent_content">
             <div class="list_avent">
             <?php
+            // mettre dans un controller
+            $avent_page = 6;
+            $page_affiche = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+            $debut = ($page_affiche - 1) * $avent_page;
 
-                for($n = 0; $n < COUNT($AventList) && $n < 10; $n++)
-                {
-                    $Avent = get_info_avent_full_display($AventList[$n][0]);
-                    if($Avent[0]['createur'] !== null)
-                    {
-                        $createur = recuperer_info_user($Avent[0]['createur'])['pseudo'];
-                    }
-                    else
-                    {
-                        $createur = 'inconnu';
-                    }
-                    echo'
-                        <div class="avent">
-                            <form action="./c_afficher_full_avent.php" method="post">
-                                <button type="submit" name="avent_id" value="'.$Avent[0]['avent_id'].'" class="">
-                                    <div class="image">
-                                        <img src=data:image/jpg;base64,'.$Avent[1].' alt="Fond Oasis" class="suggestion-image">
-                                        <div class="content">
-                                            <strong><p class="titre">'.$Avent[0]['nom'].'</p></strong>
-                                            <p class="createur">'.$createur.'</p>
-                                        </div>
-                                    </div>
-                                </button>
-                            </form>
-                        </div>
-                        ';
+            for ($n = $debut; $n < min($debut + $avent_page, count($AventList)); $n++) {
+                $Avent = get_info_avent_full_display($AventList[$n][0]);
+                if ($Avent[0]['createur'] !== null) {
+                    $createur = recuperer_info_user($Avent[0]['createur'])['pseudo'];
+                } else {
+                    $createur = 'inconnu';
                 }
+                echo '
+                    <form action="./c_afficher_full_avent.php" method="post">
+                        <button type="submit" name="avent_id" value="' . $Avent[0]['avent_id'] . '" class="">
+                            <fieldset>
+                                <div class="avent">
+                                    <div class="image">
+                                        <img src="data:image/jpg;base64,' . $Avent[1] . '" class="suggestion-image">
+                                    </div>
+                                    <div class="content">
+                                        <strong><p class="titre">' . $Avent[0]['nom'] . '</p></strong>
+                                        <p class="createur">' . $createur . '</p>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </button>
+                    </form>
+                ';
+            }
             ?>
+            </div>
+            <!-- Pagination -->
+            <div class="pagination">
+                <?php
+                // a mettre dans le controller 
+                $total_page = ceil(count($AventList) / $avent_page);
+                
+                // view 
+                for ($i = 1; $i <= $total_page; $i++) {
+                    echo '<a href="?page=' . $i . '" class="' . ($i === $page_affiche ? 'active' : '') . '">' . $i . '</a>';
+                }
+                ?>
             </div>
         </div>
     </div>
-</body>
-</html>
 </body>
 </html>

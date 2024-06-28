@@ -19,7 +19,7 @@ $mot_de_passe = $info['mot_de_passe'];
 $date_de_naissance = $info['date_naissance'];
 $is_verif = $info['is_verif'];
 $is_brand = $info['is_brand'];
-$pp = img_profil($user_id);
+// $pp = img_profil($user_id);
 $genre = $info['genre'];
 $date_de_creation = $info['date_creation'];
 
