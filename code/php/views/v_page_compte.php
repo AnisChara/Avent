@@ -51,10 +51,7 @@
 					<input type="text" name="email" value="<?php echo $info['email'] ?>">
 					<label>email</label>
 				</div>
-                <div class = "box" >
-				<input type="file" name="image">
-					<label>photo de profil</label>
-                </div>
+                
 				<div class = "sauvegarder">
 					<input type="submit" value="Sauvegarder">
 				</div>
