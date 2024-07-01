@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -98,7 +97,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-top: 150px;
+    padding-top: 32%;
 }
 
 .suggestion {
@@ -112,10 +111,11 @@ body {
 
 .card {
     max-width: 600px;
-    max-height : 950px;
-    height : 950px;
+    max-height : 850px;
+    height : 800px;
     width: 100%;
-    position: relative;
+    position: fixed;
+    border-radius: 16px;
 }
 
 .image {
