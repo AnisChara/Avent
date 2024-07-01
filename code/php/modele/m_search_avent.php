@@ -5,7 +5,7 @@ function search_avent($recherche)
     require_once 'm_algo_compatibility.php';
     require 'm_connexion_bdd.php';
 
-        $requete = $db->prepare("SELECT * FROM avent");
+        $requete = $db->prepare("SELECT * FROM avent WHERE avent.etat <> 0");
         $requete->execute();
         $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
         $content = [];
@@ -148,7 +148,7 @@ function search_avent($recherche)
             //var_dump($index);
             //var_dump($given);
             //var_dump($recherche);
-            $order[$i] = [$index, compatibility($recherche, $given)];
+            $order[$i] = [$index, compatibility($recherche, $given, 80)];
             //var_dump($order[$i]);
         }
 

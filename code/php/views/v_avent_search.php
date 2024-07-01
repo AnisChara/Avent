@@ -49,7 +49,7 @@
                     $createur = 'inconnu';
                 }
                 echo '
-                    <form action="./c_afficher_full_avent.php" method="post">
+                    <form action="./c_add_search.php" method="post">
                         <button type="submit" name="avent_id" value="' . $Avent[0]['avent_id'] . '" class="">
                             <fieldset>
                                 <div class="avent">

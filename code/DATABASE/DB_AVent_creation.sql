@@ -143,6 +143,13 @@ CREATE TABLE views
     date_view TIMESTAMP
 );
 
+CREATE TABLE search
+(
+    user_id INT,
+    avent_id INT,
+    date_view TIMESTAMP
+);
+
 ALTER TABLE user ADD FOREIGN KEY (is_brand) REFERENCES brand(brand_id);
 ALTER TABLE user ADD FOREIGN KEY (genre) REFERENCES genre(genre_id);
 ALTER TABLE user ADD FOREIGN KEY (pp) REFERENCES photo(photo_id);
