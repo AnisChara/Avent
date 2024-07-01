@@ -6,6 +6,7 @@ verif_cookies();
 
 require_once '../modele/m_getID_from_mail.php';
 require_once '../modele/m_recuperation_mes_avents.php';
+require_once '../modele/m_collect_theme_for_avent.php';
 
 $list_avent = recuperer_mes_avents(get_userID($_COOKIE['email']));
 
