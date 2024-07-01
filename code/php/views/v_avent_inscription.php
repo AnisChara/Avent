@@ -14,7 +14,7 @@
             <li><a href="./c_avent.php">Avent</a></li>
             <li><a href="./c_afficher_compte.php">Compte</a></li>
             <li><a href="./c_afficher_create_avent.php">Création</a></li>
-            <li><a href="./c_deconnexion.php">deco</a></li>
+            <li><a href="./c_deconnexion.php">deconnexion</a></li>
         </ul>
     </nav>
     
@@ -37,6 +37,11 @@
         <!-- Suggestions Section -->
         <div class="list_avent_content">
             <?php
+                // mettre dans un controller
+                $avent_page = 6;
+                $page_affiche = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+                $debut = ($page_affiche - 1) * $avent_page;
+
                 if(COUNT($list_avent_inscrit) < 1)
                 {
                     echo "<p class = 'nothing'> Vous n'êtes pas encore inscrit à un AVENT ! </p>";
@@ -47,6 +52,7 @@
                     for($a = 0; $a < COUNT($list_avent_inscrit); $a++)
                     {
                         echo '
+                        <form action="./c_avent_manager.php" method="post">
                             <fieldset>
                                 <div class="avent">
                                     <div class="image">
@@ -59,10 +65,22 @@
                                     </div>
                                 </div>
                             </fieldset>
+                        </form>
                         ';
                     }
                     echo '</div>';
                 }
+            ?>
+            <?php
+                echo '<div class="pagination">';
+                    // a mettre dans le controller 
+                    $total_page = ceil(count($list_avent_inscrit) / $avent_page);
+                
+                    // view 
+                    for ($i = 1; $i <= $total_page; $i++) {
+                        echo '<a href="?page=' . $i . '" class="' . ($i === $page_affiche ? 'active' : '') . '">' . $i . '</a>';
+                    }
+                echo'</div>';
             ?>
         </div>
     </div>
