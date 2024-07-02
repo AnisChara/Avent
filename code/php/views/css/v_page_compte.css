@@ -1,24 +1,20 @@
-*
-{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body
-{
+body {
     font-family: 'Poppins', sans-serif;
 }
 
 .nav_options {
     background-color: black;
     width: 250px;
-    height: 120vh;
     height: 100vh;
     padding-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
 }
 
 .nav_options ul {
@@ -38,47 +34,132 @@ body
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px 20px;
+    display: block;
 }
 
 .nav_options ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
-.navbar {
-    width: calc(100% - 250px);
-    margin-left: 250px;
+
+/* Section de profil */
+
+.container {
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    background-color: #f0f0f0;
+    height: 100vh;   
+    margin-left: 250px;
 }
 
-.navbar form {
+.container_content {
+    background-color: white;
+    width: 75%;
+    height: 70%;
+    border: 3px solid #F1A03C;
+    border-radius: 6px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
     display: flex;
+    flex-direction: row; /* Change column to row */
 }
 
-.navbar input[type="text"] {
-    width: 500px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 25px 0 0 25px;
+/* container left */
+.container_left {
+    background-color: white;
+    width: 30%; 
+    height: 100%;
+    border-right: 2px solid black;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box_start {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+input {
+    max-width: 190px;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+      
+label {
+    margin: .9rem;
+    display: block;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.input:hover, .input:focus, .input-group:hover .input {
     outline: none;
+    border-color: #05060f;
+}
+  
+.input-group:hover .label, .input:focus {
+    color: #05060fc2;
 }
 
-.navbar input[type="submit"] {
-    padding: 15px 30px;
-    border: none;
-    border-radius: 0 25px 25px 0;
-    background-color: #00f;
-    color: white;
-    cursor: pointer;
+/* container right */
+.container_right {
+    background-color: white;
+    width: 70%; 
+    height: 100%;
+    border-radius: 6px;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #05060f99;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.box_one {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 3em;
+}
+
+.box_two {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+}
+
+.sauvegarder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 6em;
+}
+
+input[type="submit"] {
+    margin: 20px 0px 5px 0px;
+    width: 30%;
+    height: 40px;
 }
 
 /* logo */
-
 .floating-btn {
     position: fixed;
     top: 8px;
@@ -93,143 +174,21 @@ body
     cursor: pointer;
 }
 
-.container {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    margin-left: 20px;
-}
-
-h1 {
-    font-size: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    display:inline-block;
-    margin: 10px 8px 10px 8px;
-    color: #000000;
-}
-
-.info-box
-{
-    position: relative;
-    max-width: 400px;
-    height: 650px;
-    background-color: transparent;
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 20px;
-    background-color: #F1A03C;
+/* Logo user */
+.user {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 2rem 3rem;
-}
-
-.logo 
-{
-    text-align: center;
-    margin: 0px 0px 0px 0px;
-    width: 50%;
-}
-
-.titre {
-    text-align: center;
-}
-
-h2
-{
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    display:inline-block;
-    margin: 40px 8px 10px 8px; 
-    color: #000000;
-}
-
-.info-box .box
-{
-    position: relative;
-    margin: 30px 0;
-    max-width: 310px;
-    border-bottom: 2px solid #000000;
-}
-
-.info-box input:focus~label,
-.info-box input:valid~label
-{
-    top: -30px;
-    left: 0;
-    color: #000000;
-    font-size: 18px;
-}
-
-.info-box input
-{
+    justify-content: center;
+    border-bottom: 2px solid black;
     width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    outline: none;
-    font-size: 16px;
-    padding: 10px 0;
 }
 
-.info-box label
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #000000;
-    pointer-events: none;
-    transition: 5s;
-}
-
-.info-box .sauvegarder input 
-{
-    color: #000000;
-    text-decoration: none;
-    font-weight: 700;
-    border-bottom: none;
-    position: relative;
-    max-width: 300px;
-    height: 35px;
-    background-color: whitesmoke;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 20px;
-    backdrop-filter: blur(55px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 3rem;
-}
-
-.info-box .sauvegarder input:hover
-{
-    box-shadow: 0 0 5px #e4c7a5, 0 0 25px #e4c7a5, 0 0 50px #e4c7a5;
-}
-
-.info-box .sauvegarder 
-{
-    font-size: 1em;
-    color: #000000;
-    text-align: center;
-    margin: 20px 0 10px;
-}
-
-p 
-{
-    color: #000000;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.icon {
-    text-align: center;
-}
-
-img {
-    width: 20%;
+.user img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black
 }
