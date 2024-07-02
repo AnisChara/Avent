@@ -1,6 +1,5 @@
 * {
-    font-family: 'League Spartan';
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -22,12 +21,12 @@ body {
 /* Partie de redirection vers différentes pages */
 .nav_options {
     background-color: black;
+    width: 250px;
     height: 100vh;
     padding-top: 20px;
-    margin: 0;
-    padding: 0;
-    width : 10%;
     position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .nav_options ul {
@@ -68,6 +67,8 @@ body {
     align-items: center;
     justify-content: center;
     margin-left: 15%;
+    font-family: 'League Spartan';
+    font-weight: bold;
 }
 
 /* Scroll Bar */

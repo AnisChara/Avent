@@ -14,7 +14,7 @@
             <li><a href="./c_avent.php">Avent</a></li>
             <li><a href="./c_afficher_compte.php">Compte</a></li>
             <li><a href="./c_afficher_create_avent.php">Création</a></li>
-            <li><a href="./c_deconnexion.php">deco</a></li>
+            <li><a href="./c_deconnexion.php">deconnexion</a></li>
         </ul>
     </nav>
     
@@ -37,6 +37,11 @@
         <!-- Suggestions Section -->
         <div class="list_avent_content">
             <?php
+                // mettre dans un controller
+                $avent_page = 6;
+                $page_affiche = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+                $debut = ($page_affiche - 1) * $avent_page;
+
                 if(COUNT($list_avent) < 1)
                 {
                     echo ("<p class = "."nothing".">Vous n'avez pas encore crée d'AVENT !".'</p>');
@@ -44,29 +49,41 @@
                 else
                 {
                     echo '<div class="list_avent">';
-                    for($i = 0; $i < COUNT($list_avent); $i++)
+                    for($i = $debut; $i < min($debut + $avent_page, COUNT($list_avent)); $i++)
                     {
                         echo'
-                            <fieldset>
-                                <div class="avent">
-                                    <form action="./c_avent_manager.php" method="post">
-                                        <button type="submit" name="avent_id" value="'.$list_avent[$i]['avent_id'].'" class="card">
-                                            <div class="image">
-                                                <img src=data:image/jpg;base64,'.img_avent($list_avent[$i]['avent_id']).' alt="" class="suggestion-image">
-                                            </div>
-                                            <div class="content">
-                                                <strong><p class="titre">'.$list_avent[$i]['nom'].'</p></strong>
-                                                <p class="createur">'.nom_from_user($list_avent[$i]['createur']).'</p>
-                                                <p class="description">'.$list_avent[$i]['information'].'</p>
-                                            </div>
-                                        </button>
-                                    </form>
-                                </div>
-                            </fieldset>
+                        <form action="./c_avent_manager.php" method="post">
+                            <button type="submit" name="avent_id" value="'.$list_avent[$i]['avent_id'].'" class="card">
+                                <fieldset>
+                                    <div class="avent">
+                                        <div class="image">
+                                            <img src=data:image/jpg;base64,'.img_avent($list_avent[$i]['avent_id']).' alt="" class="suggestion-image">
+                                        </div>
+                                        <div class="content">
+                                            <strong><p class="titre">'.$list_avent[$i]['nom'].'</p></strong>
+                                            <p class="createur">'.nom_from_user($list_avent[$i]['createur']).'</p>
+                                            <p class="description">'.$list_avent[$i]['information'].'</p>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </button>
+                        </form>
                         ';
                     }
                     echo '</div>';
                 }
+            ?>
+            <?php
+            echo '<div class="pagination">';
+                
+                // a mettre dans le controller 
+                $total_page = ceil(count($list_avent) / $avent_page);
+            
+                // view 
+                for ($i = 1; $i <= $total_page; $i++) {
+                    echo '<a href="?page=' . $i . '" class="' . ($i === $page_affiche ? 'active' : '') . '">' . $i . '</a>';
+                }
+                echo'</div>';
             ?>
         </div>
     </div>
