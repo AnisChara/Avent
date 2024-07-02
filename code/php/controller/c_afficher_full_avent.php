@@ -12,7 +12,7 @@ require_once '../modele/m_recuperation_info_user.php';
 $inscrit = is_inscrit(get_userID($_COOKIE['email']),$_POST['avent_id']);
 $avent = get_info_avent_full_display($_POST['avent_id']);
 $infoCreator = recuperer_info_user($avent[0]["createur"]);
-$show_task = ($infoCreator['email'] === $_COOKIE['email']);
+$owner = ($infoCreator['email'] === $_COOKIE['email']);
 $emailCreator = $infoCreator['email'];
 $avent[0]["createur"] = $infoCreator['pseudo'];
 //var_dump($avent);

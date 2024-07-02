@@ -73,7 +73,7 @@ function search_avent($recherche)
             {
                 for ($j = 0; $j < COUNT($sous_theme_result); $j++)
                 {
-                    $content[$i][2][$j] = $sous_theme_result[$j]['sous_theme'];
+                    $content[$i][2][$j] = $sous_theme_result[$j]['sous_theme_name'];
                 }
             }
             else
