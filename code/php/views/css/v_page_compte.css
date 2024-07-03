@@ -96,8 +96,22 @@ label {
     display: block;
     font-size: .9rem;
     font-weight: bold;
-    color: #05060f99;
     transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.nav_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50px;
+    border-radius: 6px;
+    border: 2px solid #F1A03C;
+    background-color: #F1A03C;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 10px;
 }
 
 .input:hover, .input:focus, .input-group:hover .input {
