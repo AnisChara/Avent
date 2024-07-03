@@ -276,6 +276,12 @@ body {
     }
 }
 
+@media screen and (max-height: 800px) {
+    .card {
+        max-height: 500px;
+    }
+}
+
 @media screen and (max-width: 890px) {
     .nav_options {
         transform: translateX(-100%);
