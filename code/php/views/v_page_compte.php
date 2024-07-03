@@ -35,7 +35,7 @@
                         <?php
                             foreach ($themelist as $theme)
                             {
-                                echo '<button class="nav-button" disabled>'.$theme.'</button>';
+                                echo '<button class="nav_button" disabled>'.$theme.'</button>';
                             }    
                         ?> 
                     </div>
