@@ -36,10 +36,10 @@
                                 <li>
                                         <p>'.($i+1)." - ".$tasks[$i]['content'].'</p>
                                 
-                                <form action="./c_remove_task.php" method ="POST">
+                                <form action="./c_remove_task.php" method ="POST" style="width:50%">
                                     <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
                                     <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
-                                    <input type="submit" value="Supprimer">
+                                    <button type="submit" class="delete"><img src="../views/images/poubelle-de-recyclage.png" class="image"></button>
                                 </form>
                                 </li>
                                  <div class="unfinish">
@@ -58,10 +58,10 @@
                             <li>
                                         <p>'.($i+1)." - ".$tasks[$i]['content'].' - fini par '.$tasks[$i]['pseudo'].'</p>
                                 
-                                <form action="./c_remove_task.php" method ="POST" >
+                                <form action="./c_remove_task.php" method ="POST" style="width:50%">
                                     <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
                                     <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
-                                    <input type="submit" value="Supprimer">
+                                    <button type="submit" class="delete"><img src="../views/images/poubelle-de-recyclage.png" class="image"></button>
                                 </form>
                                
                                 </li>

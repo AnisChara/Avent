@@ -1,18 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', 'sans-serif';
     width: 100%;
     background-color: white;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-self: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .nav_options {
@@ -161,4 +160,25 @@ h1 {
     background-color: transparent;
     width: 100%;
     height: 100%;
+    cursor: pointer;
+}
+
+button.delete{
+    width: 10%;
+    right: -45%;
+    position: relative;
+    border: none;
+    cursor: pointer;
+}
+
+.image{
+    width: 100%;
+}
+
+.retour
+{
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    margin-left: -400px;
 }
