@@ -6,9 +6,8 @@ $data = array('nom','prenom','pseudo','mot_de_passe' );
 for ($i = 0; $i <COUNT($data); $i++) {
 
     if (empty($_POST[$data[$i]])) {
-        echo "tatzjoi";
         $error_modif_msg = "Veuillez ne pas laisser de champs vides.";
-        require "./c_afficher_page_compte.php";
+        require "./c_afficher_compte.php";
         exit();
     }
 }
