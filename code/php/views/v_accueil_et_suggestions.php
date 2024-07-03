@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="../views/css/v_accueil_et_suggestions.css">
 </head>
 <body>
+    <!-- Menu Toggle Button -->
+    <div class="menu-toggle">
+        <div class="circle-btn">
+            <p class="color">></p>
+        </div>
+    </div>
+
     <!-- Navigation Bar -->
     <nav class="nav_options">
         <ul>
@@ -87,5 +94,16 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navOptions = document.querySelector('.nav_options');
+            const circleBtn = document.querySelector('.circle-btn');
+
+            circleBtn.addEventListener('click', function() {
+                navOptions.classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 </html>
