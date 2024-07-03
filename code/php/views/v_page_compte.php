@@ -60,10 +60,11 @@
                         	<label>Mot de passe</label>
                         	<input type="password" name="mot_de_passe" value="<?php echo $info['mot_de_passe']?>">
                     	</div>
-                    	<div class="sauvegarder">
+                    	
+					</div>
+                    <div class="sauvegarder">
 							<input type="submit" value="Sauvegarder">
                     	</div>
-					</div>
                 </form>
             </div>
         </div>
