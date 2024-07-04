@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../views/css/v_afficher_task.css">
-    <title>taches</title>
+    <title>Gestionnaire de Tâches</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="nav_options">
         <ul>
             <li><a href="./c_accueil.php">Home</a></li>
@@ -17,82 +16,77 @@
             <li><a href="./c_deconnexion.php">deco</a></li>
         </ul>
     </nav>
-    <!-- Affichage des tâches -->
-    <div class="container">
-        <div class="container-task">
-                <h3>Gestionnaires des tâches de l'AVent <?php ?></h3>
-                <fieldset>
-                    <div class="liste-task">
-                        <?php 
-                            if(count($tasks) > 0)
-                            {
-                                for ($i = 0;$i<count($tasks);$i++)
-                                {
-                                    if(empty($tasks[$i]['finisseur']))
-                                    {
-                                    echo   '<div class="tasks">
-                                            <div class="task">
-                                                <p class="description">'.($i+1)." - ".$tasks[$i]['content'].'</p>
-                                            </div>
-                                        <form action="./c_finish_task.php" method ="POST">
-                                            <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
-                                            <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
-                                            <input type="submit" value="V">
-                                        </form>
-                                        <form action="./c_remove_task.php" method ="POST">
-                                            <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
-                                            <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
-                                            <input type="submit" value="Supprimer">
-                                        </form>
-                                        <form action="./c_action_task.php" method="POST">
-                                        <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
-                                            <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
-                                            <input type="submit" value="edit">
-                                        </form>
-                                        </div>';
-                                    }
 
-                                    else
-                                    {
-                                    echo   '<div class="finish_tasks">
-                                            <div class="task">
-                                                <p class="description">'.($i+1).' - '.$tasks[$i]['content'].' - fini par '.$tasks[$i]['pseudo'].'</p>
-                                            </div>
-                                        <form action="./c_unfinish_task.php" method ="POST">
-                                            <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
-                                            <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
-                                            <input type="submit" value="X">
-                                        </form>
-                                        <form action="./c_remove_task.php" method ="POST">
-                                            <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
-                                            <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
-                                            <input type="submit" value="Supprimer">
-                                        </form>
-                                        </div>';
-                                    }
-                                    
-                                }
-                            }
-                            else echo "Vous n'avez pas encore de taches."
-                        ?>
-                    </div>
-                </fieldset>
-                <div class="add">
-                    <form action="./c_add_task.php" method ="POST">
-                        <input type="text" name="task" placeholder="Ajouter une tâche" class="add-task-input">
-                        <input type="hidden" name="avent_id"value="<?php echo $_POST['avent_id']?>">
-                        <input type="submit" value="Ajouter">
-                    </form>
-                </div>
-        </div>
-        <form action="./c_afficher_full_avent.php" method="POST">
+    <div class="task-manager">
+        <h1>Gestionnaire de Tâches</h1>
+        <form class="task-form" action="./c_add_task.php" method ="POST">
+            <input type="text" name="task" class="task-input" placeholder="Nouvelle tâche">
             <input type="hidden" name="avent_id"value="<?php echo $_POST['avent_id']?>">
-            <input type="submit" value="retour" class="retour">
+            <button type="submit" class="add-task-button">Ajouter</button>
         </form>
+        <ul class="task-list">
+        <?php 
+                    if(count($tasks) > 0)
+                    {
+                        for ($i = 0;$i<count($tasks);$i++)
+                        {
+                            if(empty($tasks[$i]['finisseur']))
+                            {
+                            echo   '<div class="task">
+                                <li>
+                                        <p>'.($i+1)." - ".$tasks[$i]['content'].'</p>
+                                
+                                <form action="./c_remove_task.php" method ="POST" style="width:50%">
+                                    <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
+                                    <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
+                                    <button type="submit" class="delete"><img src="../views/images/poubelle-de-recyclage.png" class="image"></button>
+                                </form>
+                                </li>
+                                 <div class="unfinish">
+                                 <form action="./c_finish_task.php" method ="POST" style="height:100%">
+                                    <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
+                                    <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
+                                    <input type="submit" value=""class="task_switch">
+                                </form>
+                                </div>
+                                </div>';
+                            }
+
+                            else
+                            {
+                            echo   '<div class="task">
+                            <li>
+                                        <p>'.($i+1)." - ".$tasks[$i]['content'].' - fini par '.$tasks[$i]['pseudo'].'</p>
+                                
+                                <form action="./c_remove_task.php" method ="POST" style="width:50%">
+                                    <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
+                                    <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
+                                    <button type="submit" class="delete"><img src="../views/images/poubelle-de-recyclage.png" class="image"></button>
+                                </form>
+                               
+                                </li>
+                                 <div class="finish">
+                                 <form action="./c_unfinish_task.php" method ="POST" style="height:100%" >
+                                    <input type="hidden" name="avent_id" value="'.$_POST["avent_id"].'">
+                                    <input type="hidden" name="task_id" value="'.$tasks[$i]['task_id'].'">
+                                    <input type="submit" value=""class="task_switch">
+                                </form>
+                                </div>
+                                </div>';
+                            }
+                            
+                        }
+                    }
+                    else echo "Vous n'avez pas encore de taches."
+                ?>
+                
+
+
+        </ul>
     </div>
-    <!-- Floating Button -->
-    <div class="floating-btn">
-        <img src="../views/images/AVent.png" alt="Floating Menu" class="menu_avent">
-    </div>
+                <form action="./c_afficher_full_avent.php" method="POST">
+                    <input type="hidden" name="avent_id"value="<?php echo $_POST['avent_id']?>">
+                    <input type="submit" value="retour" class="retour">
+                </form>
 </body>
 </html>

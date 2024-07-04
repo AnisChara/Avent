@@ -18,15 +18,59 @@
             <li><a href="./c_deconnexion.php">deconnexion</a></li>
         </ul>
     </div>
+    <!-- Floating Button -->
+    <div class="floating-btn">
+        <img src="../views/images/AVent.png" alt="">
+    </div>
     <!-- partie de la création -->
+    <form action="./c_create_avent.php" class="formulaire" method="POST" enctype="multipart/form-data">
         <div class="container">
+            <div class="container_content">
+                <div class="container_left">
+                    <!-- titre de l'évènement -->
+                    <label>Nom de votre évènement *</label>
+                    <input type="text" name="nom" value="<?php if(isset($_POST["nom"])) echo $_POST['nom'];?>" placeholder="Nom de l'AVent" class="input-text">
 
-            <div class="header">
-                <h1>Créez votre AVent !</h1>
-                <img src="../views/images/AVent.png" alt="menu" class="menu_avent">
+                    <!-- les trois dates (fin, debut, inscription) -->
+                    <label>date de début de l'évènement *</label>
+                    <input type="date" name="date_debut" class="input-text" value="<?php if(isset($_POST["date_debut"])) echo $_POST['date_debut'];?>">
+                    <label>date de fin de l'évènement *</label>
+                    <input type="date" name="date_fin" min=<?php echo $date['year'].'-'.$date['mon'].'-'.$date['mday']?> class="input-text" value="<?php if(isset($_POST["date_fin"])) echo $_POST['date_fin'];?>">
+                    <label>date de fin de l'inscription</label>
+                    <input type="date" name="fin_inscription" min=<?php echo $date['year'].'-'.$date['mon'].'-'.$date['mday']?> class="input-text" value="<?php if(isset($_POST["fin_inscription"])) echo $_POST['fin_inscription'];?>">
+
+                    <!-- lieu -->
+                    <label>Votre lieu</label>
+                    <input type="text" name="lieu" placeholder="lieu" class="input-text" value="<?php if(isset($_POST["lieu"])) echo $_POST['lieu'];?>">
+                    <label>Capacité</label>
+                    <input type="number" name="capacity" class="input-text" value="<?php if(isset($_POST["capacity"])) echo $_POST['capacity'];?>">
+                    <label>age minimum</label>
+                    <input type="number" name="age_minimum" class="input-text" value="<?php if(isset($_POST["age_minimum"])) echo $_POST['age_minimum'];?>">
+
+                    <label>Ajouter/choisissez une image *</label>
+                    <input type="file" name="image" onchange="previewPicture(this)" accept=".jpg, .png">
+                    <img src="#" alt="" id="image" style="max-width: 80%; margin-top: 20px;" >
+
+                    <label>Type d'evenement * <br><input type="radio" name="is_public" value="false" /> privé
+                    <input type="radio" name="is_public" value="true" /> public</label>
+                    <!-- évènement payant + lien billeterie -->
+                    <label>Lien de votre site web</label>
+                    <input type="text" name="lien_site" value="" placeholder="url site web" class="input-text" value="<?php if(isset($_POST["lien_site"])) echo $_POST['lien_site'];?>">
+                    <label>Evenement payant * <br><input type="radio" name="is_payant" value="false" onclick="hide_billeterie(this)"/> Non
+                        <input type="radio" name="is_payant" value="true" onclick="show_billeterie(this)"/> Oui</label>
+                    <div id='billeterie' style='display:none'>
+                    <label>lien de la billeterie *</label>
+                    <input type="text" name="lien_billeterie" id="link" value="" placeholder="url billeterie" class="input-text" value="<?php if(isset($_POST["lien_billeterie"])) echo $_POST['lien_billeterie'];?>">
+                    </div>
+                </div>
+                <div class="container_right">
+                    <!-- description -->
+                    <label>Description *</label>
+                    <textarea name="information" cols="30" rows="10"  class="input-text-area" ><?php if(isset($_POST["information"])) echo $_POST['information'];?></textarea>
+                </div>
             </div>
-
-            <form action="./c_create_avent.php" class="formulaire" method="POST" enctype="multipart/form-data">
+        </div>
+    </form>
                 <div class="info">
                     <p>Les champs obligatoires sont marqués par un *</p><br/>
                     <div class="message">
@@ -37,9 +81,6 @@
                             }
                         ?>
                     </div><br/>
-                    <!-- titre de l'évènement -->
-                    <label>Nom de votre évènement *</label>
-                    <input type="text" name="nom" value="<?php if(isset($_POST["nom"])) echo $_POST['nom'];?>" placeholder="Nom de l'AVent" class="input-text">
                     <!-- Sélection des thèmes -->
                     <label>Choisissez vos différentes thématiques ( Au moins 1 thématique )</label>
                     <div class="themes">
@@ -59,27 +100,7 @@
                             }; ?>
                         </select>
                     </div>
-                    <!-- les trois dates (fin, debut, inscription) -->
-                    <label>date de début de l'évènement *</label>
-                    <input type="date" name="date_debut" class="input-text" value="<?php if(isset($_POST["date_debut"])) echo $_POST['date_debut'];?>">
-                    <label>date de fin de l'évènement *</label>
-                    <input type="date" name="date_fin" min=<?php echo $date['year'].'-'.$date['mon'].'-'.$date['mday']?> class="input-text" value="<?php if(isset($_POST["date_fin"])) echo $_POST['date_fin'];?>">
-                    <label>date de fin de l'inscription</label>
-                    <input type="date" name="fin_inscription" min=<?php echo $date['year'].'-'.$date['mon'].'-'.$date['mday']?> class="input-text" value="<?php if(isset($_POST["fin_inscription"])) echo $_POST['fin_inscription'];?>">
-                    <!-- description -->
-                    <label>Type d'evenement * <br><input type="radio" name="is_public" value="false" /> privé
-                    <input type="radio" name="is_public" value="true" /> public</label>
-                    <label>Description *</label>
-                    <textarea name="information" cols="30" rows="10"  class="input-text-area" ><?php if(isset($_POST["information"])) echo $_POST['information'];?></textarea>
-                    <!-- évènement payant + lien billeterie -->
-                    <label>Lien de votre site web</label>
-                    <input type="text" name="lien_site" value="" placeholder="url site web" class="input-text" value="<?php if(isset($_POST["lien_site"])) echo $_POST['lien_site'];?>">
-                    <label>Evenement payant * <br><input type="radio" name="is_payant" value="false" onclick="hide_billeterie(this)"/> Non
-                        <input type="radio" name="is_payant" value="true" onclick="show_billeterie(this)"/> Oui</label>
-                    <div id='billeterie' style='display:none'>
-                    <label>lien de la billeterie *</label>
-                    <input type="text" name="lien_billeterie" id="link" value="" placeholder="url billeterie" class="input-text" value="<?php if(isset($_POST["lien_billeterie"])) echo $_POST['lien_billeterie'];?>">
-                    </div>
+                
                     <!-- Sous thème -->
                     <label>Vos sous themes ( des mots clés par lesquels les utilisateurs pourront rechercher votre AVent )</label>
                     <div class="sous-theme">
@@ -104,12 +125,6 @@
                         <input type="submit" value="Ajouter" name="btn-ajouter">
                     </div>
                 </div>
-                <!-- ajout de l'évènement -->
-                
-            </form>
-            </div>
-    </div>
-    <!-- logo -->
     
     <script>
 
