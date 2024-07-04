@@ -1,85 +1,128 @@
+
+/* CSS chatGPT ici*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
 .login-box {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin-left: auto; /* Center the box horizontally */
-    margin-right: auto; /* Center the box horizontally */
+    width: 1200px;
+    max-width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.login-box_content {
+.left-panel_content {
+    background-color: #f7b100;
+    width: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-message {
+    text-align: center;
+}
+
+.avatar {
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display : flex;
+    position : relative;
+    background-image : url("../views/images/AVent.png");
+}
+
+.right-panel_content {
     background-color: #fff;
     width: 60%;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+form {
     display: flex;
-    flex-direction: column; /* Align children vertically */
-    overflow: auto;
+    flex-direction: column;
 }
 
-/* Style for the scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-    background-color: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-}
-
-.login-box_content h1 {
+h1 {
     text-align: center;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.liste-produits {
-    display: flex;
-    flex-direction: column; /* Align children vertically */
-    align-items: center; /* Center children horizontally */
-    width: 100%; /* Take full width of the parent */
-    padding: 1px;
+    margin-bottom: 20px;
 }
 
 .box {
-    width: 100%; /* Take full width of the parent */
-    margin-bottom: 15px; /* Add some space between the boxes */
+    margin-bottom: 20px;
 }
 
-
-input, select {
-    width: 100%; /* Make inputs and selects take full width */
-    margin-bottom: 15px; /* Add some space after each input/select */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-/* Style for the genre box to align items in a row */
+input[type="text"],
+input[type="nom"],
+input[type="prenom"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="pseudo"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
 .genre-box {
     display: flex;
-    justify-content: start; /* Align items to the start of the box */
-    align-items: center; /* Center items vertically */
-    gap: 2px; /* Add some space between the radio buttons and labels */
+    align-items: center;
+    gap: 10px;
 }
 
-/* Style for the labels in the genre box for better spacing and alignment */
+.genre-box input[type="radio"] {
+    margin: 0;
+}
+
 .genre-box label {
-    margin-right: 100px; /* Add some space after each label */
-}
-
-/* You may want to adjust the width of the inputs if they are too wide */
-input[type="radio"] {
-    margin-right: 5px; /* Add space between radio button and its label */
+    margin-right: 20px;
 }
 
 .connect {
     display: flex;
-    justify-content: center; /* Center the submit button horizontally */
-    width: 100%; /* Take full width of the parent */
+    justify-content: center;
 }
 
 input[type="submit"] {
-    width: 50%; /* Adjust the width of the submit button as needed */
-    height: 40px;
-    margin-top: 20px; /* Add some space before the submit button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d79506;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #f6c206;
+}
+
+.clc {
+    width : 100%;
+    height : 100%;
+    margin-left: 3%;
+    margin-top: 3%;
 }
