@@ -12,4 +12,6 @@ $list_avent_fav = recuperer_avent_fav_user(get_userID($_COOKIE['email']));
 require '../modele/m_collect_nom_user_from_id.php';
 require '../modele/m_collect_img_avent.php';
 
+setcookie("MotherURL", 'c_avent_fav.php');
+
 require 'c_afficher_page_avent_fav.php';

@@ -12,4 +12,6 @@ $list_avent = recuperer_mes_avents(get_userID($_COOKIE['email']));
 require_once '../modele/m_collect_nom_user_from_id.php';
 require_once '../modele/m_collect_img_avent.php';
 
+setcookie("MotherURL", 'c_avent.php');
+
 require 'c_afficher_page_avent.php';

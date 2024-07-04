@@ -72,19 +72,23 @@
                             <div class="nav-buttons left">';
                         foreach ($themelist as $theme)
                         {
-                            echo '<button class="nav-button">'.$theme.'</button>';
-                        }        
+                            if ($theme !== 'Aucune') echo '<button  class="nav-link-image" disbaled><img src="../views/images/'.$theme.'.png" class="image"></button>';
+                        }
+
+                        if ($like === true) $like_image = "like";
+                        else $like_image = "unlike";
+
                         echo' 
                             </div>
                             <div class="nav-buttons right">
                                 <form action="./c_change_suggestion.php" method="post">
-                                    <button type="submit" name="action" value="plus" class="nav-link">up</button>
+                                    <button type="submit" name="action" value="plus" class="nav-link"><img src="../views/images/up.png" class="image"></button>
                                 </form>
                                 <form action="./c_change_suggestion.php" method="post">
-                                    <button type="submit" name="action" value="like" class="nav-link">like</button>
+                                    <button type="submit" name="action" value="like" class="nav-link"><img src="../views/images/'.$like_image.'.png" class="image"></button>
                                 </form>
                                 <form action="./c_change_suggestion.php" method="post">
-                                    <button type="submit" name="action" value="minus" class="nav-link">down</button>
+                                    <button type="submit" name="action" value="minus" class="nav-link"><img src="../views/images/down.png" class="image"></button>
                                 </form>
                             </div>
                             </div>

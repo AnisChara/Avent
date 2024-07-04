@@ -233,7 +233,7 @@ body {
 }
 
 .nav-link {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: white;
     border: none;
     border-radius: 50%;
     color: white;
@@ -245,6 +245,19 @@ body {
     align-items: center;
     text-decoration: none;
     cursor: pointer;
+}
+.nav-link-image {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 /* Responsive adjustments */
