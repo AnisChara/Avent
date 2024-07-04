@@ -43,7 +43,6 @@
             </div>
             <div class="container_right">
 				<h2>Votre Profil</h2>
-                <form action="c_modif_compte.php" method="POST">
 					<div class="box">
                     	<div class="box_one">
                         	<!-- <?php if ( isset($error_modif_msg)) echo $error_modif_msg; ?>-->
@@ -64,7 +63,7 @@
 							<input type="submit" value="Sauvegarder">
                     	</div>
 					</div>
-                </form>
+                </div>
             </div>
         </div>
     </div>  
