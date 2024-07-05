@@ -14,13 +14,13 @@
             <li><a href="./c_avent.php">Avent</a></li>
             <li><a href="./c_afficher_compte.php">Compte</a></li>
             <li><a href="./c_afficher_create_avent.php">Création</a></li>
-            <li><a href="./c_deconnexion.php">deco</a></li>
+            <li><a href="./c_deconnexion.php">deconnexion</a></li>
         </ul>
     </nav>
-    
+
     <!-- Search Bar -->
     <div class="navbar">
-        <form method="GET" action="">
+        <form method="POST" action="./c_search.php">
             <input type="text" name="search" placeholder="Mots-clés">
             <input type="submit" name="res" value="Rechercher">
         </form>
@@ -30,65 +30,67 @@
         </div>
     </div>
 
-<!-- Main Content -->
-<?php echo '
-<div class="main_content">
-    <div class="avent_container">
-        <div class="avent">
-            <div class="card_avent">
-                <div class="image">
-                    <img src=data:image/jpg;base64,'.$avent[1].' alt="" class="suggestion-image">
+    <!-- Main Content -->
+    <div class="main_content">
+        <div class="event_presentation">
+            <div class="text_section">
+                <h1 class="titre"><?php echo $avent[0]["nom"]; ?></h1>
+                
+                <div class="category">
+                    <h2>Informations Générales</h2>
+                    <p class="createur"><strong>Créateur:</strong> <?php echo $avent[0]["createur"]; ?></p>
+                    <p class="description"><strong>Description:</strong> <?php echo $avent[0]["information"] ?? "Le créateur n'a pas fourni d'information"; ?></p>
                 </div>
-                <div class="full_content">
-                    <div class="full">
-                        <strong><p class="titre">titre:'. $avent[0]["nom"] . '</p></strong>
-                        <p class="createur">Créateur:' .  $avent[0]["createur"] .'</p>
-                        <p class="description">description:'; if($avent[0]["information"] == null){echo 'Le créateur n'."'".'a pas fourni d'."'".'information';}else{echo $avent[0]["information"];} echo'</p>
-                        <p class="debut">date_debut:' .  $avent[0]["date_debut"].'</p>
-                        <p class="fin">date_fin:' .  $avent[0]["date_fin"].'</p>
-                        <p class="deadline">fin_inscription:'  . $avent[0]["fin_inscription"].'</p>
-                        <p class="site">lien_site:'  . $avent[0]["lien_site"].'</p>
-                        <p class="billeterie">lien_billeterie:'  . $avent[0]["lien_billeterie"].'</p>
-                        <p class="Lieu">lieu:'  . $avent[0]["lieu"].'</p>
-                        <p class="capacity">capacité d'."'".'accueil :'  . $avent[0]["capacity"].'</p>
-                        <p class="prix">payant:'; if($avent[0]["is_payant"] == 1){echo 'oui';}else{echo 'non';};echo '</p>
-                        <p class="creation">date de création:'  . $avent[0]["date_creation"].'</p>
-                        <p class="age">Âge minimum :'  . $avent[0]["age_minimum"].'</p>
-                        <p class="stheme">Sous thèmatiques :'; if(COUNT($avent[5]) == 0){echo 'Aucune sous thèmatiques données';}else{foreach($avent[4] as $theme){echo $theme.', ';}};echo '</p> ';
-                        if($_COOKIE['email'] == $emailCreator)
-                        {
-                            echo '
-                            <p class="inscrit">nombre d'."'".'inscrit :'  . $avent[2].'</p>
-                            <p class="favoris">nombre de favoris:'  . $avent[3].'</p>
-                            <form action ="./c_afficher_full_avent.php" method ="post">
-                            <button type="submit" name="edit" value ="true" class = "edit">
+                
+                <div class="category">
+                    <h2>Détails de l'Événement</h2>
+                    <p class="debut"><strong>Date de début:</strong> <?php echo $avent[0]["date_debut"]; ?></p>
+                    <p class="fin"><strong>Date de fin:</strong> <?php echo $avent[0]["date_fin"]; ?></p>
+                    <p class="deadline"><strong>Fin des inscriptions:</strong> <?php echo $avent[0]["fin_inscription"]; ?></p>
+                    <p class="site"><strong>Site:</strong> <a href="<?php echo $avent[0]["lien_site"]; ?>"><?php echo $avent[0]["lien_site"]; ?></a></p>
+                    <p class="billeterie"><strong>Billeterie:</strong> <a href="<?php echo $avent[0]["lien_billeterie"]; ?>"><?php echo $avent[0]["lien_billeterie"]; ?></a></p>
+                    <p class="lieu"><strong>Lieu:</strong> <?php echo $avent[0]["lieu"]; ?></p>
+                </div>
+                
+                <div class="category">
+                    <h2>Autres Informations</h2>
+                    <p class="capacity"><strong>Capacité d'accueil:</strong> <?php echo $avent[0]["capacity"]; ?></p>
+                    <p class="prix"><strong>Payant:</strong> <?php echo $avent[0]["is_payant"] == 1 ? 'Oui' : 'Non'; ?></p>
+                    <p class="creation"><strong>Date de création:</strong> <?php echo $avent[0]["date_creation"]; ?></p>
+                    <p class="age"><strong>Âge minimum:</strong> <?php echo $avent[0]["age_minimum"]; ?></p>
+                    <p class="stheme"><strong>Sous thématiques:</strong> <?php echo COUNT($avent[5]) == 0 ? 'Aucune sous thématiques données' : implode(', ', $avent[4]); ?></p>
+                </div>
+                
+                <?php if($_COOKIE['email'] == $emailCreator) { ?>
+                    <div class="category">
+                        <h2>Informations de l'Organisateur</h2>
+                        <p class="inscrit"><strong>Nombre d'inscrits:</strong> <?php echo $avent[2]; ?></p>
+                        <p class="favoris"><strong>Nombre de favoris:</strong> <?php echo $avent[3]; ?></p>
+                        <div class="buttons">
+                            <form action="./c_afficher_full_avent.php" method="post">
+                                <button type="submit" name="edit" value="true" class="edit">Éditer</button>
                             </form>
-                            ';
-                        }
-                        ?>
+                            
+                            <form action="./c_afficher_tache.php" method="POST">
+                                <button type="submit" name="avent_id" value="<?php echo $_POST['avent_id']; ?>" class="tache">Tâche</button>
+                            </form>
+                        </div>
                     </div>
+                <?php } ?>
+
+                <div class="buttons">
+                    <a href="<?php echo $_COOKIE['MotherURL']; ?>" class="back-link">Retour</a>
+
+                    <?php $action = $inscrit === true ? 'se désinscrire' : 's\'inscrire'; ?>
+                    <form action="./c_inscription_avent.php" method="POST">
+                        <button type="submit" name="avent_id" value="<?php echo $_POST['avent_id']; ?>" class="tache"><?php echo $action; ?></button>
+                    </form>
                 </div>
-                <a href=<?php echo '"'.$_COOKIE['MotherURL'].'"'?>>Retour</a>
-                <?php 
-                    if($owner === true)
-                    {
-                        echo '<form action="./c_afficher_tache.php" method="POST">
-                                <button type="submit" name="avent_id" value='.$_POST['avent_id'].' class = "tache">Tâche</button>
-                            </form>';
-                    }
-                    else { 
-                        if($inscrit === true) $action = 'se désinscrire';
-                                else $action='s\'inscrire';
-                        echo '<form action="./c_inscription_avent.php" method="POST">
-                                <button type="submit" name="avent_id" value='.$_POST['avent_id'].' class = "tache">
-                                '.$action.'
-                                </button>
-                                </form>';
-                    }
-                        ?>
+            </div>
+            <div class="image_section">
+                <img src="data:image/jpg;base64,<?php echo $avent[1]; ?>" alt="Event Poster" class="event-image">
             </div>
         </div>
     </div>
-</div>
 </body>
 </html>
