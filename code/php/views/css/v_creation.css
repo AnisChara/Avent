@@ -1,12 +1,17 @@
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'League Spartan', sans-serif;
 }
 
 body {
-    background-color: white;
+    background-color: #f5f5f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Partie de redirection vers différentes pages */
+/* Styles de la navigation */
 .nav_options {
     background-color: black;
     width: 250px;
@@ -15,6 +20,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    transition: transform 0.3s ease;
+    z-index: 1000;
 }
 
 .nav_options ul {
@@ -35,6 +42,7 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     display: block;
+    font-size: 18px;
 }
 
 .nav_options ul li a:hover {
@@ -42,13 +50,18 @@ body {
     border-radius: 5px;
 }
 
-.message{
+
+.message {
     color: red;
     text-decoration: underline;
 }
 
-/* logo */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+/* Logo */
 .floating-btn {
     position: fixed;
     top: 20px;
@@ -63,42 +76,88 @@ body {
     cursor: pointer;
 }
 
-/* creation */
-
+/* Formulaire de création */
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;   
-    margin-left: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 800px;
+    margin-left: 280px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container_content {
-    background-color: white;
-    width: 75%;
-    height: 70%;
-    border: 3px solid #F1A03C;
-    border-radius: 6px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: row; /* Change column to row */
-}
-
-/* container left */
-.container_left {
-    background-color: white;
-    width: 50%; 
-    height: 100%;
-    border-right: 2px solid black;
-    border-radius: 6px;
     display: flex;
     flex-direction: column;
 }
 
-/* container right */
-.container_right {
-    background-color: white;
-    width: 50%; 
-    height: 100%;
-    border-radius: 6px;
+.containers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container_left, .container_right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-text, .input-text-area, .input-text select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-text-area {
+    resize: none;
+}
+
+.image-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image_upload input {
+    margin-bottom: 10px;
+}
+
+.preview_image {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.themes select, .sous-theme input {
+    margin-bottom: 10px;
+}
+
+.ajout {
+    text-align: right;
+}
+
+.btn-ajouter {
+    background-color: #eead5d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-ajouter:hover {
+    background-color: #F1A03C;
 }
