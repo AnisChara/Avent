@@ -49,7 +49,7 @@
                 else
                 {
                     echo '<div class="list_avent">';
-                    for($a = 0; $a < COUNT($list_avent_inscrit); $a++)
+                    for($a = $debut; $a < min($debut + $avent_page, COUNT($list_avent_inscrit)); $a++)
                     {
                         echo '
                         <form action="./c_avent_manager.php" method="post">
