@@ -33,8 +33,10 @@ body {
     color: white;
     text-transform: uppercase;
     text-decoration: none;
+    width: 30%;
     padding: 10px 20px;
     display: block;
+    font-size: 18px; /* Augmenter la taille de police */
 }
 
 .nav_options ul li a:hover {
@@ -193,6 +195,12 @@ input[type="submit"] {
     position: fixed;
     top: 8px;
     right: 20px;
+}
+.nav_image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 7px;
 }
 
 .floating-btn img {

@@ -16,6 +16,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    transition: transform 0.3s ease;
+    z-index: 1000;
 }
 
 .nav_options ul {
@@ -34,8 +36,10 @@ body {
     color: white;
     text-transform: uppercase;
     text-decoration: none;
+    width: 30%;
     padding: 10px 20px;
     display: block;
+    font-size: 18px; /* Augmenter la taille de police */
 }
 
 .nav_options ul li a:hover {
@@ -207,6 +211,12 @@ button {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+}
+.nav_image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 7px;
 }
 
 .pagination a {

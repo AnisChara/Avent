@@ -10,11 +10,11 @@
     <!-- Navigation Bar -->
     <nav class="nav_options">
         <ul>
-            <li><a href="./c_accueil.php">Home</a></li>
-            <li><a href="./c_avent.php">Avent</a></li>
-            <li><a href="./c_afficher_compte.php">Compte</a></li>
-            <li><a href="./c_afficher_create_avent.php">Création</a></li>
-            <li><a href="./c_deconnexion.php">Déconnexion</a></li>
+            <li><a href="./c_accueil.php"><img src="../views/images/home.png" class="nav_image">Home</a></li>
+            <li><a href="./c_avent.php"><img src="../views/images/my_avent.png" class="nav_image">Avent</a></li>
+            <li><a href="./c_afficher_compte.php"><img src="../views/images/compte.png" class="nav_image">Compte</a></li>
+            <li><a href="./c_afficher_create_avent.php"><img src="../views/images/creation.png" class="nav_image">Création</a></li>
+            <li><a href="./c_deconnexion.php"><img src="../views/images/deconnexion.png" class="nav_image">deconnexion</a></li>
         </ul>
     </nav>
     
