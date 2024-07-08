@@ -50,7 +50,3 @@ if($avent_time % ($year * 2) > 1)
 $statsGlobal = stats_avent($id); // nombre de : [0]like [1]inscrit [2]vue [3]search
 $list_taches = taches($id);
 $list_orga = organisateurs($id);
-
-setcookie("MotherURL", 'c_avent_manager.php');
-
-require_once '../views/v_avent_manager.php';

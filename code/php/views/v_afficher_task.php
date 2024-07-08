@@ -84,9 +84,63 @@
 
         </ul>
     </div>
-                <form action="./c_afficher_full_avent.php" method="POST">
+    <div class = "chart">
+    
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+            ['Task', 'Count type'],
+            <?php 
+            $non = 0;
+            $oui = 0;
+            for($i = 0; $i < COUNT($list_taches); $i++)
+            {
+                if($list_taches[$i]['finisseur'] == null)
+                {
+                    $non++;
+                }
+                else
+                {
+                    $oui++;
+                }
+            }
+            echo  '["Réalisées", '.$oui.'],';
+            echo  '["Inachevés", '.$non.']';
+            ?>
+            ]);
+
+            var options = {
+            title: 'Tâches'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('pie'));
+
+            chart.draw(data, options);
+        }
+        </script>
+        
+        </div>
+        <!--Pie -->
+
+        <!-- Main Content -->
+        <div class="list_avent_container">
+
+        <div id="pie" style="width: 900px; height: 500px;"></div>
+        <div id="views"><?php echo 'Nombre de vues : '.$statsGlobal[2];?></div>
+        <div id="favories"><?php echo 'Nombre de favoris : '.$statsGlobal[0];?></div>
+        <div id="Inscrit"><?php echo "Nombre d'inscrits : ".$statsGlobal[1];?></div>
+        <div id="Search"><?php echo 'Nombre de recherches : '.$statsGlobal[3];?></div>
+        
+        <form action="./c_afficher_full_avent.php" method="POST">
                     <input type="hidden" name="avent_id"value="<?php echo $_POST['avent_id']?>">
                     <input type="submit" value="retour" class="retour">
                 </form>
+        </div>
+                
 </body>
 </html>

@@ -14,5 +14,6 @@ foreach ($tasks as $key => $value) {
     }
 }
 
+require './c_avent_manager.php';
 
 require "../views/v_afficher_task.php";
