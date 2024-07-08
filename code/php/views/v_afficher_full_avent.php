@@ -68,11 +68,11 @@
                         <p class="favoris"><strong>Nombre de favoris:</strong> <?php echo $avent[3]; ?></p>
                         <div class="buttons">
                             <form action="./c_afficher_full_avent.php" method="post">
-                                <button type="submit" name="edit" value="true" class="edit">Éditer</button>
+                                <button type="submit" name="edit" value="true" class="back-link">Éditer</button>
                             </form>
                             
                             <form action="./c_afficher_tache.php" method="POST">
-                                <button type="submit" name="avent_id" value="<?php echo $_POST['avent_id']; ?>" class="tache">Tâche</button>
+                                <button type="submit" name="avent_id" value="<?php echo $_POST['avent_id']; ?>" class="back-link">Tâche</button>
                             </form>
                         </div>
                     </div>
@@ -83,12 +83,42 @@
 
                     <?php $action = $inscrit === true ? 'se désinscrire' : 's\'inscrire'; ?>
                     <form action="./c_inscription_avent.php" method="POST">
-                        <button type="submit" name="avent_id" value="<?php echo $_POST['avent_id']; ?>" class="tache"><?php echo $action; ?></button>
+                        <button type="submit" name="avent_id" value="<?php echo $_POST['avent_id']; ?>" class="back-link"><?php echo $action; ?></button>
                     </form>
+                    <?php
+                    if ($like === false) $like_image = "like";
+                        else $like_image = "unlike";
+
+                    echo '
+                    <form action="./c_afficher_full_avent.php" method="post" class="form-like">
+                        <button type="submit" name="action" value="like" class="like"><img class="like" src="../views/images/'.$like_image.'.png"></button>
+                        <input type="hidden" name="avent_id" value="'.$_POST['avent_id'].'"/>
+                    </form>
+                    '
+                    ?>
                 </div>
             </div>
             <div class="image_section">
                 <img src="data:image/jpg;base64,<?php echo $avent[1]; ?>" alt="Event Poster" class="event-image">
+                <!--<div class="buttons">
+                    <a href="<?php //echo $_COOKIE['MotherURL']; ?>" class="back-link">Retour</a>
+
+                    <?php //$action = $inscrit === true ? 'se désinscrire' : 's\'inscrire'; ?>
+                    <form action="./c_inscription_avent.php" method="POST">
+                        <button type="submit" name="avent_id" value="<?php //echo $_POST['avent_id']; ?>" class="back-link"><?php //echo $action; ?></button>
+                    </form>
+                    <?php /*
+                    if ($like === false) $like_image = "like";
+                        else $like_image = "unlike";
+
+                    echo '
+                    <form action="./c_afficher_full_avent.php" method="post" class="form-like">
+                        <button type="submit" name="action" value="like" class="like"><img class="like" src="../views/images/'.$like_image.'.png"></button>
+                        <input type="hidden" name="avent_id" value="'.$_POST['avent_id'].'"/>
+                    </form>
+                    '*/
+                    ?>
+                </div>-->
             </div>
         </div>
     </div>

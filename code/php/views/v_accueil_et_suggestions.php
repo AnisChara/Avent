@@ -75,7 +75,7 @@
                             if ($theme !== 'Aucune') echo '<button  class="nav-link-image" disbaled><img src="../views/images/'.$theme.'.png" class="image"></button>';
                         }
 
-                        if ($like === true) $like_image = "like";
+                        if ($like === false) $like_image = "like";
                         else $like_image = "unlike";
 
                         echo' 
