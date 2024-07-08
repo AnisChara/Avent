@@ -86,15 +86,15 @@
                         <button type="submit" name="avent_id" value="<?php echo $_POST['avent_id']; ?>" class="back-link"><?php echo $action; ?></button>
                     </form>
                     <?php
-                    if ($like === false) $like_image = "like";
+                    if ($like !== true) $like_image = "like";
                         else $like_image = "unlike";
 
                     echo '
                     <form action="./c_afficher_full_avent.php" method="post" class="form-like">
                         <button type="submit" name="action" value="like" class="like"><img class="like" src="../views/images/'.$like_image.'.png"></button>
                         <input type="hidden" name="avent_id" value="'.$_POST['avent_id'].'"/>
-                    </form>
-                    '
+                    </form> 
+                    ';
                     ?>
                 </div>
             </div>

@@ -202,4 +202,10 @@ body {
     height : 100%;
     overflow: hidden;
     object-fit: cover;
+    border: none;
+}
+.event-image {
+
+    object-fit: cover;
+
 }

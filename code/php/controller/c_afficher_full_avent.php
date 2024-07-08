@@ -25,7 +25,7 @@ if(isset($_POST['action']))
         require_once '../modele/m_fav_unfav_db.php';
         require_once '../modele/m_collect_avent_is_like.php';
 
-        if(islike(get_userID($_COOKIE["email"]),$_POST['avent_id']))
+        if($like === true)
         {
             unfav(get_userID($_COOKIE['email']),$_POST['avent_id']);
         }
@@ -36,6 +36,7 @@ if(isset($_POST['action']))
 
     }
 }
+$like = islike(get_userID($_COOKIE["email"]),$_POST['avent_id']);
 
 //var_dump($avent);
 //var_dump($_POST['avent_id']);
