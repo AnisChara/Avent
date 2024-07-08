@@ -58,8 +58,9 @@ body {
     padding: 30px;
     width: 100%;
     max-width: 700px;
-    margin: 50px auto;
-    margin-top: 200px;
+    margin: 25px auto;
+    margin-left: 15%;
+    margin-top: 80px;
     text-align: center;
     border: #333 solid 1px;
 }
@@ -180,5 +181,8 @@ button.delete{
     width: 100px;
     height: 30px;
     border-radius: 50px;
-    margin-left: -300px;
+}
+.chart{
+    width: 100px;
+    height: 300px;
 }

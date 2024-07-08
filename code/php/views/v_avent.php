@@ -52,7 +52,7 @@
                     for($i = $debut; $i < min($debut + $avent_page, COUNT($list_avent)); $i++)
                     {
                         echo'
-                        <form action="./c_avent_manager.php" method="post">
+                        <form action="./c_afficher_full_avent.php" method="post">
                             <button type="submit" name="avent_id" value="'.$list_avent[$i]['avent_id'].'" class="card">
                                 <fieldset>
                                     <div class="avent">
