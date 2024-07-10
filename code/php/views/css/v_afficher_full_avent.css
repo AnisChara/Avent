@@ -12,6 +12,7 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Styles de la navigation */
 .nav_options {
     background-color: black;
     width: 250px;
@@ -20,6 +21,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    transition: transform 0.3s ease;
     z-index: 1000;
 }
 
@@ -39,7 +41,7 @@ body {
     color: white;
     text-transform: uppercase;
     text-decoration: none;
-    width: 30%;
+    width: 49%;
     padding: 10px 20px;
     display: block;
     font-size: 18px; /* Augmenter la taille de police */
