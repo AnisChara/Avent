@@ -210,8 +210,18 @@ button.delete {
 
 .retour {
     width: 100%;
-    height: 30px;
+    height: 40px;
     border-radius: 50px;
+    display: inline-block;
+    background-color: #F1A03C;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #D18B32;
+    border-radius: 5px;
+    color : white;
+    cursor: pointer;
+    
 }
 
 .bouton-retour {

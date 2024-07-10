@@ -150,7 +150,7 @@
             <div class="bouton-retour">
                 <form action="./c_afficher_full_avent.php" method="POST">
                     <input type="hidden" name="avent_id" value="<?php echo $_POST['avent_id']?>">
-                    <input type="submit" value="retour" class="retour">
+                    <button type="submit" value="retour" class="retour">Retour</button>
                 </form>
             </div>
         </div>
