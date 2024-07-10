@@ -131,10 +131,23 @@
         <div class="list_avent_container">
 
         <div id="pie" style="width: 900px; height: 500px;"></div>
-        <div id="views"><?php echo 'Nombre de vues : '.$statsGlobal[2];?></div>
-        <div id="favories"><?php echo 'Nombre de favoris : '.$statsGlobal[0];?></div>
-        <div id="Inscrit"><?php echo "Nombre d'inscrits : ".$statsGlobal[1];?></div>
-        <div id="Search"><?php echo 'Nombre de recherches : '.$statsGlobal[3];?></div>
+        
+        <div id="views">
+            <p>Nombre de vues : </p>
+            <?php echo $statsGlobal[2];?>
+        </div>
+        <div id="favories">
+            <p>Nombre de favoris : </p>
+            <?php echo $statsGlobal[0];?>
+        </div>
+        <div id="Inscrit">
+            <p>Nombre d'inscrits : </p>
+            <?php echo $statsGlobal[1];?>
+        </div>
+        <div id="Search">
+            <p>Nombre de recherches : </p>
+            <?php echo $statsGlobal[3];?>
+        </div>
         
         <form action="./c_afficher_full_avent.php" method="POST">
                     <input type="hidden" name="avent_id"value="<?php echo $_POST['avent_id']?>">
