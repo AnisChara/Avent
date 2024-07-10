@@ -130,27 +130,29 @@
             <!--Pie -->
             <div id="pie" class="chart"></div>
             <div class="stat">
-                <div id="views">
-                    <p>Nombre de vues : </p>
+                <div id="views" class="item-stat">
+                    <p>vues : </p>
                     <?php echo $statsGlobal[2];?>
                 </div>
-                <div id="favories">
-                    <p>Nombre de favoris : </p>
+                <div id="favories" class="item-stat">
+                    <p>favoris : </p>
                     <?php echo $statsGlobal[0];?>
                 </div>
-                <div id="Inscrit">
-                    <p>Nombre d'inscrits : </p>
+                <div id="Inscrit" class="item-stat">
+                    <p>inscrits : </p>
                     <?php echo $statsGlobal[1];?>
                 </div>
-                <div id="Search">
-                    <p>Nombre de recherches : </p>
+                <div id="Search" class="item-stat">
+                    <p>recherches : </p>
                     <?php echo $statsGlobal[3];?>
                 </div>
             </div>
-            <form action="./c_afficher_full_avent.php" method="POST">
-                <input type="hidden" name="avent_id" value="<?php echo $_POST['avent_id']?>">
-                <input type="submit" value="retour" class="retour">
-            </form>
+            <div class="bouton-retour">
+                <form action="./c_afficher_full_avent.php" method="POST">
+                    <input type="hidden" name="avent_id" value="<?php echo $_POST['avent_id']?>">
+                    <input type="submit" value="retour" class="retour">
+                </form>
+            </div>
         </div>
     </div>            
 </body>
