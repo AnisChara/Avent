@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,8 @@
 
 body {
     width: 100%;
-    background-color: white;
+    height : 100vh;
+    background-color: #f0f0f0;
     display: flex;
     align-items: center;
     justify-self: center;
@@ -53,18 +55,29 @@ body {
 }
 
 /* Styles pour le gestionnaire de tâches */
+
 .task-manager {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 100%;
+    width: 700px;
     max-width: 700px;
+    height : 70vh;
     margin: 25px auto;
-    margin-left: 15%;
+    margin-left: -1%;
     margin-top: 80px;
+    margin-bottom: 80px;
     text-align: center;
     border: #333 solid 1px;
+}
+
+.list-container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width : 700px;
+    padding : 30px;
+    height : 70vh;
 }
 
 h1 {
@@ -106,6 +119,7 @@ h1 {
     list-style: none;
     padding: 0;
     margin: 0;
+    scrollbar-width: 10px;
 }
 
 .task-list li {
@@ -178,6 +192,17 @@ button.delete{
     width: 100%;
 }
 
+/* autre */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
 .retour
 {
     width: 100px;
@@ -185,12 +210,23 @@ button.delete{
     border-radius: 50px;
 }
 .chart{
-    width: 100px;
-    height: 300px;
+    width: 600px;
+    height: 500px;
 }
 .nav_image {
     width: 100%;
     height: 100%;
     overflow: hidden;
     margin-bottom: 7px;
+}
+
+.gestion {
+    /*width: calc(100% - 250px);
+    height: calc(100vh - 80px);*/
+    height : 100vh;
+    margin: 80px 0px 0px 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
